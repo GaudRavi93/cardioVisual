@@ -1,0 +1,49 @@
+page-signupwithsocialnoemail {
+
+	.selectdrop{
+	    background: #ffffff;
+	    border: 1px solid #dbdbdb;
+	    border-radius: 3px;
+	    color: #333333;
+	    font-family: inherit;
+	    font-size: 14px;
+	    height: 34px;
+	    outline: none;
+	    padding: 0px 10px;
+	    width: 90%;
+	    -webkit-appearance:none;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+
+	.ionic-selectable {
+	   display: block !important;
+	   max-width: 100% !important;
+	   margin: 0 auto;
+	}
+	ion-label {
+	    -webkit-flex: none!important; 
+	    flex: none!important; 
+	}
+
+	.ionic-selectable-icon { 
+	   display: none !important;
+	}
+	#registerfacebok{
+		top:60%;
+		display: inline-block; 
+		width: 100%;
+	}
+
+	.userConsent {max-width: 70%; padding-left:4% !important; }
+    .userConsent p { display: inline-block; max-width: 100%; font-weight: bold; font-size:1.8rem;}
+    .userConsent p:nth-child(1) { float:left; margin-left:3px;}
+    .userConsent p:nth-child(2) { float:right; margin-top:17px; margin-right:9px;}
+
+
+
+}
+
+.google-popup-pin .alert-wrapper {
+	min-width: 350px !important;
+}

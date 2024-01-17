@@ -1,0 +1,114 @@
+page-dashboard {
+
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  .skeleton-rectangle {
+    width: 56px;
+    height: 56px;
+    border-radius: 2px;
+    @extend .animated-background;
+  }
+
+  .skeleton-title, .skeleton-text {
+    height: 14px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    @extend .animated-background;
+  }
+  .skeleton-text {
+    height: 8px;
+    width: 80%;
+  }
+
+
+	.dashboard-cont {
+		height: 100%;
+	}
+	.dashboard-cont:before,
+	.dashboard-cont:after {
+		display: table;
+	  	content: " ";
+	}
+	.dashboard-cont:after {
+		clear: both;
+	}
+
+	.dashboard-tile {
+		position: relative;
+		float: left;
+		height:33.35%;
+		width: 50%;
+	}
+
+	.skeleton-tile{
+		height:33.35px;
+		width: 50%;
+	}
+
+	.img-div{
+		text-align:center;
+	}
+
+	.home-logo{
+		padding: 15% 0 0 0;
+	}
+	.logo-design{
+		font-size: 60px; 
+		color: #fff;
+	}
+
+	.topic-shadow{
+		//margin-top: 5% !important;
+		//font-size: 10px; 
+	}
+
+	.row-label{
+		position: absolute;
+		bottom: 0;
+		padding: 8px 0;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		b {
+			font-size:20px;
+		}
+	}
+	.dashboard .toolbar-background{
+		background-color: #F0F0F0 !important;
+	}
+
+	.searchbar-md .searchbar-search-icon{
+		//left: 9px;
+	}
+
+	.searchbar-input{
+		//width: 100%;
+	}
+	.searchbar-md .searchbar-input{
+		//padding: 6px 35px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+	 
+	}
+
+
+	/* (720x1280) Galaxy Nexus, WXGA */
+	/*Screen resolution (1080 X 2280) */
+	@media (min-width: 350px) and (max-width: 430px) {
+	  ion-content{
+	  	top:-5px !important;
+	  }
+	}
+
+  @media (min-width: 767px) and (max-width: 1280px) {
+  	
+  }
+	
+}

@@ -1,0 +1,84 @@
+page-mycv {
+
+	.logo {
+		margin: auto;
+		width: 50%;
+		height: 100%;
+	}
+	.bgcolor {
+		background: #fff;
+	}
+	.subitem-title, .subitem-subtitle {
+		color: #000;
+	}
+	.nopadding {
+		padding: 0px !important;
+	}
+	.anchor-link a{
+		color: #3949ab;
+	    font-size: 10px;
+	    text-decoration: none;
+	    font-weight: 700;
+	}
+
+	.item-md p {
+	    margin: 0 0 5px; 
+	    font-size: 12px
+	}
+
+	.itemListWidth{
+		padding-top:8px;
+		padding-bottom:8px;
+
+		//padding-top:18px;
+		//padding-bottom:18px;
+	}
+
+	.iconStyling{
+		padding-right: 10px;
+		//padding-top: 15px;
+		padding-left:10px;
+	}
+	.iconStyling2{
+		padding-right: 10px;
+		//padding-top: 15px;
+		//padding-left:8px;
+	}
+
+	.textStyling{
+		//padding-top: 15px;
+		font-weight: 600;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	.textStyling2{
+		//padding-top: 0px;
+		font-weight: 600;
+		padding-top:6px;
+		padding-bottom:6px;
+	}
+	.textStyling3{
+		padding-left:50px;
+		padding-bottom:60px;
+	}
+	.farfromHeadr{
+		margin-top:-16px;
+	}
+
+	.mycvbellIconClass{
+		padding-top: 6px;
+	 	font-size: 19.5px;
+	 	font-weight: 600;
+	 	color:red important;
+	 	//background-color: blue; 
+	 	margin-left: 17.5px;
+	}
+
+	.bellText{
+		font-weight: bold;
+		padding-left: 16.3px; 
+		padding-bottom:19px;
+	}
+
+}
+

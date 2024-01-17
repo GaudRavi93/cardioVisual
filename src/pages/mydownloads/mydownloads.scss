@@ -1,0 +1,77 @@
+page-mydownloads {
+
+	.logo {
+		margin: auto;
+		width: 50%;
+		height: 100%;
+	}
+	.bgcolor {
+		background: #fff;
+	}
+	.subitem-title, .subitem-subtitle {
+		color: #000;
+	}
+	.nopadding {
+		padding: 0px !important;
+	}
+	.anchor-link a{
+		color: #3949ab;
+	    font-size: 10px;
+	    text-decoration: none;
+	    font-weight: 700;
+	}
+
+	.item-md p {
+	    margin: 0 0 5px; 
+	    font-size: 12px
+	}
+
+	.downloadcontentGrid{
+
+		margin-bottom:70px;
+	}
+
+	.hide_row{
+		display:none;
+	}
+	/* iphone 6, 6s, 7, 8 */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+
+      .scroll-content {
+        margin-top:60px !important;
+        margin-bottom: 0px !important;
+        padding: 0 !important;
+      }
+
+    }
+
+
+.rectanglImg{
+
+    //min-width: 5rem;    
+    //min-height: 5rem;
+    padding-left:4px;
+    
+
+}
+
+.thumbnilBackground{
+  background-color: #000000
+}
+
+.itemClassHeight{
+  min-height: 115px;
+}
+
+
+.rectangl_img{
+
+  opacity: 0.7;
+  min-width: 144px !important;
+  min-height: 81px !important;
+  margin: 0px;
+  object-fit: cover;
+
+}
+
+}

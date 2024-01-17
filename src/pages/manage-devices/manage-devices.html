@@ -1,0 +1,55 @@
+<!--
+  Generated template for the ManageDevicesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>manageDevices</ion-title>
+  </ion-navbar>
+
+</ion-header>
+ -->
+<ion-header clean-header class="headerColor" [isTabs]="true" [hideMenu]="true" *ngIf="request_from != 'login_page'"></ion-header>
+
+<ion-content no-padding class="bgcolor" style="background-color: #ffffff;">
+	<ion-grid style="margin-bottom: 30%;">
+		<ion-row>
+			<ion-item transparent no-lines class="nopadding" style="background-color: #f0f0f0 !important;">
+				<div style="font-size: 1.4em;font-weight: bold;text-align: center;padding:10px;">
+	      	Active Devices
+	      </div>
+	    </ion-item>
+
+			<ion-col col-12 no-padding>
+	      <ion-list no-margin>
+
+	        <ion-item padding class="ion-item-border" *ngIf="request_from == 'login_page'">
+	        	<div (click)="backtologin()">Back to Login</div>
+	        </ion-item>
+
+	        <ion-item padding class="ion-item-border" *ngFor="let device of device_data" [ngClass]="{'hide_row': device.status == 0}">
+	        	<div float-right style="position: absolute;top:10px;height:210px;">
+
+	            <b item-title style="white-space: normal;word-wrap: break-word;" class="item-text-wrap">{{device.device_name}}</b>
+	            <p class="tab-desc-size tab-desc-size1" item-subtitle>
+	            	{{device.deviceType}} - {{device.osVersion}}
+	            </p>	
+	          </div>
+
+	          <div  float-right  style="position:absolute;bottom:10px;right:10px; color:#CCC;">
+              <p (click)="removeDevice(device)">Remove</p>
+            </div> 
+
+	        </ion-item>
+
+
+	      </ion-list>
+	    </ion-col>
+  	</ion-row>	
+  </ion-grid>	
+</ion-content>
+
+<ion-footer clean-footer style="background-color: #F0F0F0 !important;" [activeFootermenu]="false" [ismyCv]="true" *ngIf="request_from != 'login_page'"></ion-footer>

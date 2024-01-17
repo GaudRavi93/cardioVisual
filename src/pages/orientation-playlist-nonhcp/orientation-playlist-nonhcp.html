@@ -1,0 +1,90 @@
+<!-- Interested Playlist screen for HCP -->
+<ion-view hide-nav-bar="true">
+  <ion-content padding="false" class="user-interested-hcp interested-hcp-demo-content">
+    <!-- <ion-scroll scrollY="true" style="height: 100%; white-space: nowrap;" class="interests-page-wrapper"> -->
+
+      <h4 style="margin-top:5%; text-align: center;">
+        What are you interested in 
+      </h4>
+      <h4 style="text-align: center;">
+        learning about?
+      </h4>
+      
+      <div class="interests-new-wrapper" style="padding:10px 12px 10px 16px;" >
+
+        <div class="row">
+          <div id="risk" class="interested-tags newDesignHcp-nonhcp" (click)="interestSelected('RISK')" [ngClass]="activeClass">
+              <div class="classWithPad">Risk Factors for <br /> Heart Disease</div>
+          </div>
+          <div id="stroke" class="interested-tags div-height" (click)="interestSelected('STROKE')" [ngClass]="activeClass">
+            <div class="classWithPad" >Stroke</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="cad" class="interested-tags newDesignHcp-nonhcp" (click)="interestSelected('CAD')" [ngClass]="activeClass">
+            <div class="classWithPad">Heart Disease or <br />Coronary Artery <br /> Disease</div>
+          </div>
+          <div id="afib" class="interested-tags div-height" (click)="interestSelected('AFIB')" [ngClass]="activeClass">
+            <div class="classWithPad">Atrial Fibrillation <br />  (AFib) </div>           
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="chf" class="interested-tags newDesignHcp-nonhcp" (click)="interestSelected('CHF')" [ngClass]="activeClass">
+            <div class="classWithPad">Heart Failure <br /> (CHF) </div>
+          </div>
+          <div id="learn" class="interested-tags div-height" (click)="interestSelected('LEARN')" [ngClass]="activeClass">
+            <div class="classWithPad">The Heart and <br />Keeping it Healthy</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="pad" class="interested-tags newDesignHcp-nonhcp" (click)="interestSelected('PAD')" [ngClass]="activeClass">
+            <div class="classWithPad">Poor Leg Circulation <br />or Peripheral Artery <br />  Disease (PAD)</div>    
+          </div>
+          <div id="scd" class="interested-tags div-height" (click)="interestSelected('SCD')" [ngClass]="activeClass">
+            <div class="classWithPad">Sudden Cardiac <br /> Death (SCD)</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="av" class="interested-tags newDesignHcp-nonhcp" (click)="interestSelected('AV')" [ngClass]="activeClass">
+            <div class="classWithPad">Aortic Valve  <br /> Stenosis</div>
+          </div>
+          <div id="vein" class="interested-tags div-height" (click)="interestSelected('VEIN')" [ngClass]="activeClass">
+            <div class="classWithPad">Venous <br /> Disease</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="spanish" class="interested-tags newDesignHcp-nonhcp" (click)="interestSelected('SPANISH')" [ngClass]="activeClass">
+            <div class="classWithPad">Spanish <br /> Videos</div>
+          </div>
+          <div id="diabetes" style="" class="interested-tags div-height" (click)="interestSelected('DIABETES')"[ngClass]="activeClass">
+           <div class="classWithPad"> Diabetes </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="new" class="interested-tags newDesignHcp-nonhcp" (click)="interestSelected('NEW')" [ngClass]="activeClass">
+            <div class="classWithPad">New <br /> Videos</div>
+          </div>
+        </div>
+        
+        <div tappable class="containerLink" (click)="goToDashboard()">
+          <a  class="buttonLink" style="color:#e85f4f;">Skip</a>
+          <div class="" style="border-bottom: 1px solid grey; width:98%; margin:20px 4px 20px 3px;"></div>
+        </div>
+      </div>
+      <div tappable class="text-center hidden-tablet interested-hcp-demo" (click)="goToVideoDetail()">
+        <button class="button-btn-new" style="width:100%;" >Submit</button>
+      </div>
+
+      <div tappable class="text-center show-on-tablet bottom-div-interests interested-hcp-demo" (click)="goToVideoDetail()">
+        <button class="button-btn" >Submit</button>
+      </div>
+
+      <!-- </ion-scroll> -->
+    </ion-content>
+</ion-view>

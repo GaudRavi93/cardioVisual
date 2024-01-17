@@ -1,0 +1,41 @@
+
+<!-- <ion-split-pane when="md"> -->
+  <ion-menu [content]="content" *ngIf="params != null" persistent="true">
+    <!-- Menu Main Top -->
+    <!-- <ion-header padding background-size header-background-image class="back-color"
+    [ngStyle]="{'background-image': 'url(' + params.background + ')'}">
+      <ion-thumbnail>
+      </ion-thumbnail>
+       <h2 style="color: #e30808 !important;" item-title text-center>{{params.title}}</h2>
+    </ion-header> -->
+    <!-- Menu Main List -->
+    <!-- <ion-header>
+      <h2 style="color: #e30808 !important;" item-title text-center>{{params.title}}</h2>
+    </ion-header> -->
+
+    <ion-content class="menu custom-menu" style="background-color:#fff; min-height: 100% !important;opacity:2.6;">
+      <ion-list no-margin no-padding tappable class="menu_list">
+        <button  class="sidetrans boldtransition" menuClose ion-item  no-padding main-menu *ngFor="let p of pages" (click)="openPage(p)"  >
+        <ion-icon padding-left>
+          <i class="icon {{p.icon}}"></i>
+        </ion-icon>
+        {{p.title}}
+      </button>
+
+       
+    
+      </ion-list>
+    </ion-content>
+    <ion-footer class="bar-stable">
+        <ion-item nav-clear menu-close href="#" style="width: 100%; position:fixed;bottom:0; text-align: center;"><i style="color: #e30808 !important; font-size: 1.6em;" class="icon-footer-icon-mycv"></i> <p style="color: #0a0a0a !important;" item-title text-center>V {{app_version_number}}</p></ion-item>
+     
+    </ion-footer>
+  </ion-menu>
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+ <!--  <ion-nav [root]="rootPage" #content main swipeBackEnabled="false"></ion-nav> -->
+  <ion-nav [root]="rootPage" #content  swipeBackEnabled="false" style=""></ion-nav>
+<!-- </ion-split-pane> -->
+
+
+
+

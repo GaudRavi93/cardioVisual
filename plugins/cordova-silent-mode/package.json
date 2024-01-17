@@ -1,0 +1,56 @@
+{
+  "_from": "git+https://github.com/khevamann/cordova-silent-mode.git",
+  "_id": "cordova-silent-mode@0.9.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-silent-mode",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/khevamann/cordova-silent-mode",
+    "rawSpec": "https://github.com/khevamann/cordova-silent-mode",
+    "saveSpec": "git+https://github.com/khevamann/cordova-silent-mode.git",
+    "fetchSpec": "https://github.com/khevamann/cordova-silent-mode.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/khevamann/cordova-silent-mode.git#aea4f9a4db33c4b16877d4ff56764dfc0f870f89",
+  "_spec": "https://github.com/khevamann/cordova-silent-mode",
+  "_where": "C:\\Users\\pc\\Downloads\\myaapp2",
+  "author": {
+    "name": "khevamann"
+  },
+  "bugs": {
+    "url": "https://github.com/khevamann/cordova-silent-mode/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com.khevamann.silentmodeplugin",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Check if iOS device is in silent mode.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.6.0"
+    }
+  ],
+  "homepage": "https://github.com/khevamann/cordova-silent-mode#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-silent-mode",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khevamann/cordova-silent-mode.git"
+  },
+  "version": "0.9.0"
+}

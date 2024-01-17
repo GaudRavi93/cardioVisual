@@ -1,0 +1,218 @@
+<!--
+  Generated template for the WhatsNewSeeallPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>whats-new-seeall</ion-title>
+  </ion-navbar>
+</ion-header> -->
+<ion-header clean-header  class="headerColor" [isTabs]="true" [hideMenu]="true"></ion-header>
+
+<ion-content no-padding style="background-color: #ffffff;" >
+
+	<ion-item no-padding style="" class="sticky" [ngClass]="{'forOther':listintType !== 'Tweets','forTweets':listintType == 'Tweets'}">
+          <div class="item-divider" style="">
+            {{title}}
+          </div>
+    </ion-item>
+    
+<!--     <ion-row padding *ngIf="title == 'Topics'">
+		<div class="inline inlineGapTopic"  (tap)="goToDetails(topic, topic.template)"  *ngFor="let topic of displayData">
+			<div Class="topicNameClass" style="">{{topic.name}}</div>
+		</div>
+	</ion-row> -->
+
+	<ion-row padding *ngIf="listintType == 'Topics'">
+		<div class="inline  flex-container parentDiv"  (tap)="goToDetails(topic, topic.template, 'Featured Topics')"  *ngFor="let topic of displayData">
+			<div Class="aligner" style="">{{topic.name}}</div>
+			<!-- <div class="" [ngClass]="{'textBreak': topic.name.length <= 11, 'longtextBreak': topic.name.length > 10 }"> <b> {{topic.name}}</b> </div> -->
+		</div>
+	</ion-row>
+
+
+	<!-- <ion-row padding *ngIf="title == 'Experts'">
+		<div class="inline inlineGap" (tap)="goToDetails(expert, expert.template)" *ngFor="let expert of displayData1">
+	      	<div class="img-overlaynew">
+	      		<img src="{{expert.image}}"  class="expertClass" /> 
+	      	</div>		
+			<div class="expertName">
+				<b style="">{{expert.name}}</b>
+			</div>
+	    </div>
+	</ion-row> -->
+
+	<ion-row padding *ngIf="listintType == 'Experts'">
+		<div class="inline inlineGap seallExpertPicks" (tap)="goToDetails(expert, expert.template, 'Experts')" *ngFor="let expert of displayData1">
+			<div class="img-overlaynew">
+				<img src="{{expert.image_url}}"  class="topVidoClass" />
+				<!-- <img *ngIf="expert.local_image_url == '' || expert.local_image_url == null" src="{{expert.image_url}}"  class="expertClass" />  -->
+			<!--<img *ngIf="expert.local_image_url == '' && expert.local_image_url == null" src="{{expert.image_url}}"  class="topVidoClass" />-->
+			<!-- <img *ngIf="expert.local_image_url != '' && expert.local_image_url != null" src="{{path}}{{expert.local_image_url}}"  class="expertClass" /> -->
+			<!--<img *ngIf="expert.local_image_url != '' && expert.local_image_url != null" src="{{path}}{{expert.local_image_url}}"  class="topVidoClass" />-->
+			</div>	
+		<div class="expertName">
+		<b style="">{{expert.name}}</b>
+		</div>
+		</div>
+	</ion-row>
+
+	<!-- <ion-row padding *ngIf="title == 'Curated List'">
+		<div class="inline inlineGap" (tap)="goToDetails(playlist, playlist.template)" *ngFor="let playlist of displayData4">
+			<div class="img-overlaynew">
+				<img src="{{playlist.image}}"  class="playlistClass" /> 
+			</div>	
+			<div class="curatedName">
+				<b style="">{{playlist.name}}</b>
+			</div>
+		</div>
+	</ion-row> -->
+	
+	<ion-row padding *ngIf="listintType == 'TOP VIDEOS' &&  skeleton == true">
+		<div class="inline inlineGap seallExpertPicks" (tap)="goToDetails(topVideo_listindata, topVideotemplate, 'TOP VIDEOS')" *ngFor="let top_video of education_item">
+			<div class="img-overlaynew">
+				<img src="{{top_video.iconUrl}}" alt="{{top_video.name}}" style="width:176px;height:99px;" class="topVidoClassRact"/>
+				<i class="icon-play subtopic-card-img-icon" style=""></i>
+			</div>	
+		<div class="topVideoName">
+			<b style="">{{top_video.name}}</b>
+		</div>
+		</div>
+	</ion-row>
+
+	<ion-row padding *ngIf="listintType == 'TOP VIDEOS' &&  skeleton == false">
+		<div class="inline inlineGap seallExpertPicks" (tap)="goToDetails(expert, expert.template, 'Experts')" *ngFor="let expert of displayData7">
+			<div class="img-overlaynew">
+				<img *ngIf="expert.local_image_url == '' || expert.local_image_url == null" src="{{expert.image_url}}"  style="" class="topVidoClassRact"/> 
+				<img *ngIf="expert.local_image_url != '' && expert.local_image_url != null" src="{{path}}{{expert.local_image_url}}"  style="" class="topVidoClassRact"/>
+				<i class="icon-play subtopic-card-img-icon" style=""></i>
+			</div>	
+		<div class="topVideoName">
+		<b style="">{{expert.name}}</b>
+		</div>
+		</div>
+	</ion-row>
+
+
+	<ion-row padding *ngIf="listintType == 'Playlist'">
+		<div class="inline inlineGap seallExpertPicks" (tap)="goToDetails(playlist, playlist.template, 'Our Picks')" *ngFor="let playlist of displayData4">
+			<div class="img-overlaynew">
+				<img src="{{playlist.image_url}}"  class="playlistClass" style="width:176px;height:99px;"/>
+				<!--<img *ngIf="playlist.local_image_url == '' || playlist.local_image_url == null" src="{{playlist.image_url}}"  class="playlistClass" style="width:176px;height:99px;"/>-->
+				<!--<img *ngIf="playlist.local_image_url !='' && playlist.local_image_url != null" src="{{path}}{{playlist.local_image_url}}"  class="playlistClass" style="width:176px;height:99px;"/>-->
+				<i class="icon-play subtopic-card-img-icon" style=""></i>
+			</div>	
+			<div class="topVideoName">
+				<b style="">{{playlist.name}}</b>
+			</div>
+		</div>
+	</ion-row>
+
+
+
+	<ion-row padding *ngIf="listintType == 'Blogs'">
+		<div class="inline inlineGapBlog" *ngFor="let blog of displayData3" (tap)="goToDetails(blog, 'blog', 'Health Blogs')" >
+			<div class="expertimg">
+				<img src="{{blog.blog_image}}"  class="expertClassBlog" /> 
+			</div>	
+		</div>
+	</ion-row>
+
+
+	<ion-row padding *ngIf="listintType == 'Tweets'">
+		<div class = "card" style="border-radius: 10px;" *ngFor="let twiterr of displayData2" (tap)="goToDetails(twiterr, 'twitter_msg', 'Tweets')">
+			<div class = "item">
+				<span float-left class="forTwiterIcon" style="color: #00acee;"><img src="https://img.icons8.com/android/24/000000/twitter.png" style="height: 30px; width: 30px; "><b class="forDate">@CardioVisual {{ twiterr.createdAt | date: 'MMM d, yyyy' }} </b></span>
+			</div><br />	  
+			<div float-left class="cardContent"><span><b>@</b></span>{{ twiterr.tweet_text | slice:0:280 }}
+			</div>
+		</div>	
+	</ion-row>
+
+
+
+
+	<ion-row padding *ngIf="listintType == 'Forums'">
+
+		<div class="card parentDiv" style="background: radial-gradient(circle, #f76c57 11%, #d9442c 64%);
+		border: 1px solid #C0C0C0; color:#FFF;max-height:150px;height:150px;display: table;" *ngFor="let forum of displayData5" (tap)="onPromptForQna(forum)">
+			<div class="aligner"> <b> {{ forum.title | slice:0:280 }} </b> </div>
+		</div>	
+	</ion-row>
+
+	<!--<ion-row padding *ngIf="listintType == 'Calculators'">
+		<div class="inline  flex-container"  (tap)="goToDetails(topic, topic.template, 'Calculator')"  *ngFor="let topic of displayData6">
+		<div class="" [ngClass]="{'textBreak': topic.name.length <= 11, 'longtextBreak': topic.name.length > 10 }"> <b> {{topic.name}}</b> </div>
+		</div>
+	</ion-row>-->
+
+	<ion-list *ngIf="listintType == 'Calculators' || listintType == 'Quiz' || listintType == 'Survey' || listintType == 'Polls'"  no-padding class="knowMoreList">
+		<div *ngIf="knowMoreData.length>0">		
+			<ion-item class="borderBottem" (click)="onEvent('onItemClick', moreData, $event)" *ngFor="let moreData of knowMoreData">
+		      <ion-thumbnail item-start no-margin no-padding class="thumbImg">
+				  <p>{{moreData.image}}</p>
+				  <ion-icon  style="" class="icon-icon-class">
+					  <i [ngClass]="{'icon-icon-calculator': listintType == 'Calculators','icon-icon-quiz': listintType == 'Quiz', 'icon-icon-survey': listintType == 'Survey', 'icon-icon-poll': listintType == 'Polls'}"></i>
+				  </ion-icon>
+
+		       <!--  <img src="assets/heart_Rate_3436589.svg" alt="Calculators"> -->
+		      </ion-thumbnail>
+	
+		      <ion-label>
+		        <p class="textClass">{{ moreData.name }}</p>
+		        <div class="myShareIconClass" float-right>
+	              <!-- ion-icon  style="" class="moredatashere">                
+	                <i class="icon icon-cardio-like" ></i>
+	              </ion-iconź
+
+	              <ion-icon  style="" class="moredatashere">  
+	                <i class="icon icon-list-share"></i>
+	              </ion-icon>  
+					<ion-icon  style="" class="moredatashere" tappable (click)="onEvent('onFavorite', moreData, $event)">
+						<i class="icon icon-cardio-like" [ngClass]="{'active': group.isFavourite}"  ></i>
+					</ion-icon>
+
+					<ion-icon  style="" class="moredatashere" tappable  (click)="onEvent('onShare', group, $event)">  
+						<i class="icon icon-list-share" ></i>
+					</ion-icon>-->          
+	            </div> 
+		      </ion-label>
+		    </ion-item>
+	    </div>
+	    <ion-item style="" class="noDataFound" *ngIf="knowMoreData.length == 0">
+            <p class="noFound"> No data found </p>
+        </ion-item>
+	</ion-list>
+
+	<ion-list *ngIf="listintType == 'Drawn'"  no-margin no-padding class="DrawnList">
+	
+		<ion-item class="borderBottem itemHeight" (click)="onEvent('onDrawnItemClick', drawnData, $event)" *ngFor="let drawnData of displayData8">
+	      <ion-thumbnail item-start class="drawnthumbImg">
+	        <img [src]="drawnData.iconUrl" alt="{{drawnData.name}}" class=""/>
+	      </ion-thumbnail>	
+	      <ion-label>
+	        <p class="drawntextClass">{{drawnData.name}}</p>
+	        <span style="" class="desClass">{{drawnData.description}}</span>
+                <div  float-right  style="" class="shareContent">
+
+                  <ion-icon  style="" class="tabsfavshare" tappable (click)="onEvent('onFavorite', drawnData, $event)">
+                    
+                    <i class="icon icon-cardio-like" [ngClass]="{'active': drawnData.isFavourite}"  ></i>
+
+                  </ion-icon>
+
+                  <ion-icon  style="" class="tabsfavshare" tappable  (click)="onEvent('onShare', drawnData, $event)">  
+                    <i class="icon icon-list-share" ></i>
+                  </ion-icon>
+
+                </div> 
+	      </ion-label>
+
+	    </ion-item>
+
+	</ion-list>
+
+</ion-content>
+<ion-footer clean-footer style="background-color: #F0F0F0 !important;" [activeFootermenu]="false" [iswhatsNew]="true"></ion-footer>

@@ -1,0 +1,1009 @@
+page-whats-new {
+
+    .card-md + ion-card,
+    .card-ios + ion-card {
+        margin-top: 12px;
+    }
+    .hero-slideshow {
+        &.card-ios,
+        &.card-md {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            border-radius: 0;
+            width: 100%;
+        }
+        .swiper-slide {
+            figcaption {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                .brand-holder {
+                    img {
+                        width: 100%;
+                        max-width: 160px;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .swiper-pagination-bullet {
+            background-color: #E8604F;
+            opacity: 1;
+            width: 6px;
+            height: 6px;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #E8604F;
+            border-radius: 0;
+            width: 6px;
+            height: 6px;
+        }
+    }
+
+
+  .sponser-slideshow {
+    height:100%;
+    min-height:100px;
+    /*border-bottom: 1px solid #C0C0C0;*/
+    .swiper-slide {
+      height:150px;
+      /*border: 1px solid #C0C0C0;*/
+    }
+  }
+
+  ion-scroll[scrollX] {
+    /*white-space: nowrap;*/
+    /*height: 100%;*/
+    //overflow: hidden;
+    
+    .scroll-item {
+      display: inline-block;
+    }
+
+    /*.expertClass{
+      width:130px;
+      margin:3px; 
+
+      border: 1px solid #ccc;
+    }*/
+  }
+
+
+
+
+  /* Hide ion-content scrollbar */
+  ::-webkit-scrollbar{
+    display:none;
+  }
+
+    .inline{
+       display: inline-block;
+       //background-color: yellow;
+
+     }
+
+     ion-scroll{
+         white-space: nowrap; 
+         height: 190px;
+     } 
+
+     .expertClass{
+        position:absolute;
+        top:0px;
+        width:140px;
+        height:140px;
+        margin:7px;
+        //border-radius: 50%;
+        border: 3px solid #C0C0C0;
+     }
+
+     .blogexpertimg{
+        position:absolute;
+        top:0px;
+        width:290px;
+        height:250px;
+        margin:10px 0px 0px 0px;  // top right bottom left
+     }
+     .forumText{
+
+     }
+
+     .expertPlaylistClass{
+        position:absolute;
+        top:0px;
+        width:160px;
+        height:100px;
+        border-radius: 0%;
+        border: 3px solid #C0C0C0;
+        margin:7px;
+        //margin-left:6px;
+     }
+
+
+    .inlineGap{
+       margin:4px;
+       width:155px;
+       //margin-left:6px;
+    }
+
+    .inlineGapforVideo{
+      //margin:7px;
+      width:170px;
+    }
+
+    .inlineGapPlaylist{
+      margin:3.8px;
+      width:153px;
+    }
+
+    .inlineGapTopic{
+      margin:1.4px;
+      width:133px;
+      margin-left:7px;
+    }
+
+    .inlineGapSocial{
+      margin:1.4px;
+      width:110px;
+      //margin-left:7px;
+    }
+
+    .inlineGapKnowmore{
+      margin:1.4px;
+      margin-left:7px;
+      width: 130px;
+      height: 140px;
+      color:#FFF;
+      background-color: #0A434E;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    .inlineGapBlog{
+      margin:1.4px;
+      width:300px;
+      //margin-left:7px;
+    }
+
+    .inlineGapFourm{
+      margin:1.4px;
+      width:220px;
+      //margin-left:7px;
+    }
+
+    .expertClassBlog{
+        position:absolute;
+        width:290px;
+        height:80%;
+        border-radius: 0%;
+        border: 0.5px solid #C0C0C0;
+     }
+
+    .expertName {
+      height:40px;
+      position:relative;
+      top:144px;
+      left:7px;
+      //background: #d9d9d9;
+      //text-align: center;
+      font-size:14px !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500; 
+    }
+
+    .mydivClass{
+      //position:relative;
+      //width:155px;
+      //height:105px;
+      //margin:7px;
+    }
+
+    .topVidoClass{
+      //position:absolute;
+      //width:155px;
+      //height:105px;
+     // margin:7px;
+      //object-fit: cover;
+      //width: 155px;
+      //height: 103px;
+     // margin:7px;
+      //border: 3px solid #C0C0C0;
+    }
+
+
+    div.mydivClass{
+      width:180px; 
+      //height:100px; 
+      position:relative;
+      //overflow:hidden;
+
+    }
+
+    div.mydivClass img{
+      position:absolute; 
+      width:170px;
+      top: 50%;
+      height:100px; 
+      border: 3px solid #C0C0C0;
+      margin:5px 0px;
+      /*object-fit: scale-down;*/
+    }
+
+    .topVideoName {
+      height:50px;
+      position:relative;
+      top:95px;  
+    }
+
+    .textClass{
+      font-size:14px !important;
+      position:absolute;
+      top:19px;
+      white-space: normal;
+      margin: 0;
+      padding:0;
+      display: inline-block;
+      width: 95%;
+      height: 30%;
+      font-weight: 500; 
+      vertical-align:top;
+      left:9px;
+    }
+    
+    .expert_img{
+       line-height:40px;
+    }
+
+    .expertPlaylistName {
+      height:50px;
+      position:relative;
+      font-size:14px !important;
+      top:70px;
+      left:-8px;
+    }
+
+    .expertNameblog{
+
+    }
+
+    p{
+      //word-spacing:9999px;
+      word-spacing:4px;
+    }
+
+    .topicNameClass{
+      background-color: #E8604F;
+      color:#FFFFFF;
+      border-radius: 5px;
+      text-align: center;
+      display: block;
+      line-height:130px;
+      font-size:2.5rem;
+    }
+
+    .newTopicdiv{
+      height:130px;
+      background-color: #E8604F;
+      border-radius: 5px;
+    }
+
+    .flex-container {
+      width: 140px;
+      height: 140px;
+      background-color: #E8604F;
+      border-radius: 0px;
+      position: relative;
+      background: radial-gradient(circle, #f76c57 11%, #d9442c 64%);
+      border: 3px solid #C0C0C0;
+    }
+
+    .social-container{
+      position:relative;
+      width: 50px;
+      height: 50px;
+      margin:7px;
+    }
+
+    .main-social-container{
+      margin:0px 10px 0px 20px;
+    }
+
+    .iconCenter{
+      color:#FFFFFF; 
+      font-size:4.9rem;
+      padding:20px 15px 20px 20px;
+      position: absolute;
+    }
+
+    .for_forum{
+
+    }
+
+
+    .equalDiffDivClass{
+      margin-top: -40px;
+      /*background-color: blue;
+        border-top: 5px solid #000000;
+        vertical-align: text-top;
+      */
+    }
+
+    .fromTopourPicks{
+      margin-top: -35px;
+    }
+
+    .subtopic-card-img-icon{
+      position: absolute;
+      left: 50%;
+      top: 62px;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+      background-color:#fff; 
+      color:#C0C0C0; 
+      font-size: 25px; 
+      border-radius: 50px;
+    }
+
+    .ourPicks-img-icon{
+      position: relative;
+      left: 45%;
+      top: 63px;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+      background-color:#fff; 
+      color:#C0C0C0; 
+      font-size: 25px; 
+      border-radius: 50px;
+    }
+
+    .video-img-overlay{
+      //background-color: #000000;
+    }
+
+    .video-img-overlay img { 
+      min-width: 100px !important;
+      min-height: 100px !important;
+      margin: 8px 0px 8px 0px;
+      object-fit: cover;
+    }
+
+    .diffDivtopicClass {
+      /*margin-top: 15px;
+        height:215px;
+        padding: 17px 7px 0px 7px;
+        height:100%;
+        background-color:yellow;
+        border: 1.5px solid #C0C0C0;
+      */
+    }
+
+    .diffDivIntractClass{
+      margin-top: 55px;
+    }
+
+    .my-ourPicks{
+
+    }
+
+    .onlyforTopic{
+      padding: 30px 0px 0px 0px;  // top right bottom left
+      margin-bottom: -15px;
+    }
+
+    .onlyforSocial{
+      position:relative;
+
+      height:10px;
+      /*background-color:red;
+        border: 1.5px solid #C0C0C0;
+      */
+    }
+
+    .onlyForBlog{
+      position:relative;
+      margin: 25px 0px 10px 0px;  // top right bottom left
+      z-index: 1;
+    }
+
+    .diffDiv_topic_Class{
+      margin-top: 25px;
+      height:205px;
+    }
+
+    .intractlabel{
+      margin-top: 15px;
+    }
+
+    .intractforboderbottom{
+      border-bottom: 1.5px solid #C0C0C0;
+      margin: 7px 7px 0px 7px;  // top right bottom left
+    }
+
+    .playlistDiffDivClass{
+       margin-top: 15px;
+      //margin: 5px;
+      //border-top: 5px solid #000000;
+      //vertical-align: text-top;
+    }
+
+    .forlabel{
+      //background-color: blue;
+      margin-left:10px;
+      font-size:2rem;
+      //font-weight: 900;
+      color: #808080;
+    }
+
+    .backgroundForVideo{
+     /*background-color: #F5F5F5;*/
+     margin-top:15px;
+    }
+
+  /*16 dec19*/
+
+  .div-left{
+      float:left;
+      padding-left:0px;
+  }
+  .div-right{
+      float:right;
+      padding-right:10px;
+      color:#808080;
+      font-size:15px;
+      font-weight:400;
+      margin: 6px 0px 0px 5px;  // top right bottom left
+      /*color:#E8604F;*/
+  }
+  .div-forlabel{
+      height:40px;
+      max-width:980px;
+      /*border:1px solid salmon;
+        padding-top:2px;
+      */
+  }
+
+  .seeAll{
+    /*background-color:black;*/
+  }
+
+  .forboderbottom{
+    border-bottom: 1.5px solid #C0C0C0;
+    margin: -10px 7px 0px 7px;  // top right bottom left
+
+  }
+
+  .fromTop_forScroll{
+    margin-top:5px;
+    //width:70% !important;
+  }
+  .fromTop_forScrollOurPick{
+    margin-top:21px;
+  }
+
+  .backBtn{
+     position: relative;
+     left: 0vw;
+     //right: 40vw;
+     //top: 40vh;
+     width: 8vw;
+     //width: 10vw;
+     height: 8vw;
+     //height: 10vw;
+     border-radius: 50%;
+     border: none;
+     //background: #E8604F;
+     z-index:999;
+     bottom:78px;
+
+  }
+
+  .nextBtn{
+     position: relative;
+     left: 0vw;
+     right: 0vw;
+     //top: 40vh;
+     width: 8vw;
+     height: 8vw;
+     border-radius: 50%;
+     border: none;
+     //background: #E8604F;
+     color: #E8604F !important;
+     z-index:999;
+     bottom:78px;
+  }
+  .slides-container{
+    //position: fixed;
+    margin-top:8vh;
+    
+  }
+
+  .slides-container-forum{
+    //position: fixed;
+    margin-top:2vh;
+  }
+
+  .slideForumClass{
+    width: 240px;
+    height: 192px;
+    background-color: #E8604F;
+    color: #FFF;
+    border-radius: 0px;
+    position: relative;
+    background: radial-gradient(circle, #f76c57 11%, #d9442c 64%);
+    border: 3px solid #C0C0C0;
+  }
+
+
+
+  .twitterText{
+    position: relative;
+    top:5px;
+    height:210px;
+    outline: 0;
+  }
+
+  .divcenter1{
+    border-bottom: 5px solid #F0F0F0;
+    background-color: #D3EAF2;
+    box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.77); 
+  }
+
+  .text-justify-property{
+    position: relative;
+    top:14px;
+    //text-align: justify;
+    text-align: left;
+    text-justify: inter-word;
+    padding: 32px;
+    //padding-left: 32px;
+    //text-decoration-line: underline;
+    //font: 15px arial bold, sans-serif;
+    font-size:16px;
+    font-family: icomoon !important;
+  }
+
+
+  .smallTitle{
+    top:0px;
+    left:0px;
+    width:100%;
+    //position: absolute;
+    font-size:17px;
+    //line-height:6vh;
+    //background-color: #f0f0f0;
+    //background-color: #00acee;
+    //color:#ffffff;
+    border-radius: 5% 5% 0px 0px; 
+    border-bottom: 2px solid #0f5775;
+    opacity: none !important;
+  }
+
+  .forCardiologo{
+
+  }
+
+  .forTwiterIcon{
+      top: 15px;
+      left:-20px;
+      width:100%;
+      position: absolute;
+      //line-height:6vh;
+      //border-bottom: 2px solid #0f5775;
+      font-size:22px;
+  }
+
+  .forDate{
+    //position: relative;
+    //padding-top:12px;
+  }
+
+  .iconHeadercls{
+
+  }
+  .whatsnew-tile-banner {
+    position: static;
+    float: left;
+    height:33.35%;
+    width: 100%;
+  }
+  .whatsnew-tile-topic{
+    position: static;
+    height:33.35%;
+    margin-top: 35px;
+    //margin:1.4px;
+    padding-top:27px;
+    width:133px;
+    margin-left:7px;
+  }
+  .expertNameskeleton{
+    //top:139px;
+  }
+  .skeltonBlog{
+    position: relative;
+    width:320px;
+    height:100%;
+  }
+
+  .gapforipad{
+    margin-top:15px !important;
+  }
+
+
+
+  /////////////////////////////////////////////////////////////////22 jan
+
+
+  .icon-icon-class{
+    position:absolute;
+    padding: 35px 0px 10px 22px;  // top right bottom left
+    text-align: center; 
+  }
+
+  .intractIconQuiz{
+    font-size:60px;
+    font-weight:900;
+  }
+
+  div.desc {
+    font-size:13px !important;
+    position:absolute;
+    top:19px;
+    word-break: break-all;white-space: normal;margin: 0;padding:0;width:100%;position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 30%;
+    font-weight: bold; 
+    vertical-align:top;
+    text-align: center; 
+    padding: 77px 0px 0px 0px;  // top right bottom left
+  }
+
+  .parent { 
+    display: flex;  
+    flex-wrap: wrap;  
+    padding-top:10px; 
+  } 
+  .child {  
+    /*flex: 1 0 21%;  
+    margin: 2px;  
+    height: 100px;
+    text-align: center; */ 
+
+    display: inline-block;
+    flex-grow: 1;
+    height:100px;    
+    /*width: calc(100% * (1/5) - 0px - 1px);*/
+    width: calc(15% - 0px - 1px);
+  }
+
+
+  .intractIconClass{  
+    font-size:35px; 
+    font-weight:900;  
+  } 
+  .intractIconQuiz{ 
+    font-size:40px; 
+    font-weight:900;  
+  }
+
+  div.desc{
+    text-align: center;
+  }
+  // media query for ipad  (19dec2019)
+
+  @media (min-width:481px) and (orientation: portrait), (min-width:800px) and (orientation: landscape) {
+    .text-justify-property{
+      padding: 35px !important;
+      //padding-right: 35px !important;
+      //padding-left: 35px !important;
+      font-size:19px;
+      top:12px !important;
+    }
+
+    .nextBtn{
+       left: 1.8vw;
+       bottom:91px;
+    }
+
+    .backBtn{
+      left: -1.8vw;
+      bottom:91px;
+    }
+
+    .smallTitle{
+      font-size:20px !important;
+    }
+
+    .forTwiterIcon{
+      top:45px !important;
+      left: -150px !important;
+      font-size:25px;
+    }
+
+    .gapforipad{
+      margin-top:25px !important;
+    }
+
+    .diffDiv_topic_Class{
+      margin-top: -99px !important;
+    }
+
+    .inlineGapKnowmore{
+      width: 165px !important;
+    }
+
+    .flex-container {
+      width: 160px;
+      height: 140px;
+    }
+
+    .sponserClassTab{
+      //margin-top: 10px !important;
+    }
+
+    .intractClassTab{
+      margin-top: 10px !important;
+    }
+    .icon-icon-class{
+      padding: 29px 0px 10px 63px;  // top right bottom left
+      text-align: center; 
+    }
+
+    .intractIconClass{
+      font-size:65px;
+      font-weight:900;
+    }
+    .intractIconQuiz{
+      font-size:63px;
+      font-weight:900;
+    }
+    .backgroundForVideo{
+      margin-top:21px;
+    }
+    .onlyforSocial{
+      padding: 61px 0px 0px 0px;  // top right bottom left
+    }
+
+    .onlyforTopic{
+      padding: 45px 0px 10px 0px;  // top right bottom left
+    }
+
+    div.desc {
+      padding: 86px 9px 0px 68px;  // top right bottom left
+    }
+
+    .inlineGapFourm{
+      width:320px;
+    }
+
+    .slideForumClass{
+      width: 320px;
+      height: 200px;
+    }
+
+    .social-container{
+      width:100px;
+      height:100px;
+    }
+
+    .main-social-container{
+      margin:0px 20px 0px 80px;  // top right bottom left
+    }
+
+    .div-right{
+      font-size:18px;
+      font-weight:400;
+      margin: 6px 0px 0px 5px;  // top right bottom left
+    }
+
+    .onlyForBlog{
+      margin: 79px 0px 10px 0px;  // top right bottom left
+    }
+
+    .inlineGapBlog{
+      margin:7px;
+      width:320px;
+    }
+
+    .expertClassBlog{
+      width:320px;
+      height:90%;
+    }
+  }
+
+  /* iPhone X and iPhone XS  and iPhone 11 Pro and iPhone 12 Mini: by Sanjeev */
+
+  @media only screen 
+      and (device-width : 375px) 
+      and (device-height : 812px) 
+      and (-webkit-device-pixel-ratio : 3) { 
+      .diffDiv_topic_Class{
+        margin-top: -30px !important;
+      }
+
+      .sponserClassTab{
+        margin-top: 10px !important;
+      }
+
+      .intractClassTab{
+        margin-top: 70px !important;
+      }
+
+      .onlyforTopic{
+        padding: 50px 0px 10px 0px;  // top right bottom left
+      }
+      .backgroundForVideo{
+        margin-top:21px;
+      }
+
+      div.desc {
+        padding: 80px 12px 0px 11px;  // top right bottom left
+      }
+
+  }
+
+  /* iphone 6, 6s, 7, 8 */
+  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+
+    .diffDivExpertClass{
+      margin-top: -11px !important;
+    }
+
+  }
+
+  /* iphone 6+, 6s+, 7+, 8+ */
+  @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+
+    .flex-container {
+      width: 160px;
+      height: 145px;
+      top:12px;
+    }
+
+    .intractIconClass{
+      font-size:59px;
+      font-weight:900;
+    }
+
+    div.desc {
+      padding: 80px 9px 0px 25px;  // top right bottom left
+    }
+
+    .icon-icon-class{
+      padding: 29px 0px 10px 33px;  // top right bottom left
+      text-align: center; 
+    }
+
+    .inlineGapKnowmore{
+      width: 140px;
+    }
+
+    .main-social-container{
+      margin:0px 10px 0px 25px;  // top right bottom left
+    } 
+    .social-container{
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  /* iPhone XR  and iPhone 11 : by Sanjeev */
+
+  @media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+
+    .flex-container {
+      width: 160px;
+      height: 145px;
+      top:12px;
+    }
+
+    .intractIconClass{
+      font-size:59px;
+      font-weight:900;
+    }
+
+    div.desc {
+      padding: 80px 9px 0px 25px;  // top right bottom left
+    }
+
+    .icon-icon-class{
+      padding: 29px 0px 10px 33px;  // top right bottom left
+      text-align: center; 
+    }
+    .inlineGapKnowmore{
+      width: 140px;
+    }
+    .main-social-container{
+      margin:0px 10px 0px 28px;  // top right bottom left
+    }
+    .social-container{
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  /*iPhone 12 and iPhone 12 Pro */
+
+  @media only screen 
+      and (device-width: 390px) 
+      and (device-height: 844px) 
+      and (-webkit-device-pixel-ratio: 3) {
+
+      .flex-container {
+        width: 160px;
+        height: 145px;
+        top:12px;
+      }
+
+      .intractIconClass{
+        font-size:55px;
+        font-weight:900;
+      }
+
+      div.desc {
+        padding: 80px 9px 0px 20px;  // top right bottom left
+      }
+
+      .icon-icon-class{
+        padding: 29px 0px 10px 30px;  // top right bottom left
+        text-align: center; 
+      }
+      .inlineGapKnowmore{
+        width: 135px;
+      }
+      .main-social-container{
+        margin:0px 10px 0px 20px;  // top right bottom left
+      }
+      .social-container{
+        width: 55px;
+        height: 55px;
+      }
+  }
+
+  /* iPhone XS Max and iPhone 11 Pro Max: by Sanjeev 2688x1242px at 458ppi */
+  @media only screen 
+  and (device-width : 414px) 
+  and (device-height : 896px)  
+  and (-webkit-device-pixel-ratio : 3){
+    .flex-container {
+      width: 160px;
+      height: 145px;
+      top:12px;
+    }
+
+    .intractIconClass{
+      font-size:59px;
+      font-weight:900;
+    }
+
+    div.desc {
+      padding: 80px 9px 0px 25px;  // top right bottom left
+    }
+
+    .icon-icon-class{
+      padding: 29px 0px 10px 33px;  // top right bottom left
+      text-align: center; 
+    }
+    .inlineGapKnowmore{
+      width: 140px;
+    }
+    .main-social-container{
+      margin:0px 10px 0px 28px;  // top right bottom left
+    }
+    .social-container{
+      width: 55px;
+      height: 55px;
+    }    
+  }
+
+  
+}

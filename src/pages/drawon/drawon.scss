@@ -1,0 +1,80 @@
+page-drawon {
+
+	enable_click{
+		pointer-events : auto;
+		float: clear;
+	}
+
+	disable_click{
+		pointer-events : none;
+		overflow: scroll;
+		
+	}
+
+
+
+	ion-header {
+        height: 85px;//by default 56px
+    }
+
+    canvas {
+        display: block;
+        border: 1px solid rgb(187, 178, 178);
+    }
+    .color-block {
+        height: 40px;
+    }
+
+	.left-nav-button{
+		width: 10px !important;
+	}
+
+	.back-btn-logo{
+		vertical-align: top;
+	}
+	.drawon-bar{
+		margin-top: -7px;
+		width: 82%;
+	}
+
+	.drawon-title{
+		text-align: center;
+		width: 100%;
+		//margin-left: -10% !important;
+		color: black; 
+		font-weight: 900;
+		color: #000000;
+	}
+
+	.drawon-title .marleft{
+		margin-left: -14px;
+	}
+
+	 .suheader .toolbar-background{
+        background-color: #111111 !important;
+    }
+
+	ion-content{
+	    //margin-left: 100px;
+	    margin-top: 25px;
+	}
+
+	.maiDivCanvas{
+		//max-height: 100%;
+		height: auto !important;
+		width: auto !important;
+
+	}
+	.csnvssheight{
+		//width : 100% !important;
+		width : 100%;
+		height: auto !important;
+	}
+
+
+
+	#map{
+		touch-action: pan-x pan-y !important;
+	}
+
+}

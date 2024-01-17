@@ -1,0 +1,93 @@
+page-modal {
+
+    .about-logo{
+    	margin-top: 20px !important;
+    	width: 55px !important;
+    	height: 55px !important;
+    }
+
+    img.cover{
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        right: 0; 
+        margin: auto;
+        min-width: 50%;
+        min-height: 50%;
+        overflow-x: hidden;
+    }
+
+
+    .static-page-logo{
+    	width: 60px;
+    	height: auto;
+    	margin: 0 auto;
+    }
+
+    .button-btn-inappnew {
+        background-color: #E8604F;
+        border: none;
+        border-radius: 3px;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        padding: 8px 0;
+        width: 90%;
+        margin: 16px auto;
+        -webkit-appearance:none;
+    }
+
+    .subscription-terms-popup li {
+        font-size: 14px;
+        margin-left: 10px;
+        list-style-type: disc;
+     }
+
+    .mainDIV {
+        display: inline-block; 
+        width: 100%;
+        margin-top:16px;
+        margin-left: -6px;
+    }
+    .childOne {
+        float: right;
+        height:25px;
+        width: 20%;
+        //outline-color:Red;
+        //outline-style: outset;
+        padding-top:3px;
+        color:#e36666;
+        text-align: center;
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .childTwo {
+        float: left;
+        height:25px;
+        width: 20%;
+        //outline-color:Red;
+        //outline-style: outset;
+        padding-top:3px;
+        color:#185e2d;
+        text-align: center;
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .custom-playList-btn{
+        background-color: #E8604F;
+        border: none;
+        border-radius: 3px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 15px 0px 5px 20px; // top,right,bottom,left
+        width: 90%;
+        height:40px;
+    }
+
+}
+

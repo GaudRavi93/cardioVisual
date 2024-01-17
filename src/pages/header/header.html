@@ -1,0 +1,27 @@
+<ion-navbar hideBackButton class="search-center">
+
+  <div class="Row">
+    <div class="Column1">
+      <button  ion-button menuToggle  class="menuColor" *ngIf="!hideMenu"><ion-icon class="icon-hamburger-menu" style="font-size: 20px;color: black;"></ion-icon></button>
+
+      <div left *ngIf="isTabs" tappable (click)="doGoBack()" class="customIcon" >
+        <!-- <ion-icon class="" style="font-size: 1.5em;color: black;" ios="icon-backarrow" md="md-arrow-back" class="icon-backarrow"></ion-icon> -->
+        <ion-icon class="" style="font-size:2em;color: black;" class="customIcon" name="arrow-back"></ion-icon>
+      </div>
+    </div>
+    <div class="Column2" tappable (click)="gotoUpgradePlan()" style="font-size:20px;">
+      <span #upgradeIcon tappable class="forupgradeIcon"><i class="icon-upgrade subscription-upgrade-icon "></i></span>
+      <span #upgradeText class="subscription-upgrade-text effect3d">PRO</span>
+    </div>
+    <div class="Column3">
+      <input (keyup.enter)="searchInput(search)" class="search-input" type="text" placeholder="Search CardioVisual" [(ngModel)]="search">
+      <div tappable class="icon-search search-btn" (click)="searchInput(search)" style="font-size:20px; margin-left: 15px;"></div>
+      <!-- <div tappable class="icon-mic micClass" style="font-size: 20px;" (click)="getPermission()" style=""></div> -->
+    </div>
+    
+    <ion-badge class="cart-badge" *ngIf="messageUnSeen > 0 ">{{messageUnSeen}}</ion-badge>
+    <div tappable class="Column4" (click)="bellIconClick()">
+      <span class="icon-bell bellIconClass"></span>
+    </div>
+  </div>
+</ion-navbar>

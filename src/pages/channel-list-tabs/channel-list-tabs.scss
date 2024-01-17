@@ -1,0 +1,22 @@
+page-channel-list-tabs {
+
+  .channelcontentGrid{
+    position:relative;
+    bottom:7px;
+    margin-bottom:120px;
+  }
+  .bottom-left{
+    position: absolute;
+    bottom:30px;
+  }
+
+  .platform-android .itemClassHeight{
+    min-height:130px;
+    height:140px;
+  }
+  .share-tray{
+    position:absolute;
+    bottom:0px;
+    top:90px;
+  }
+}

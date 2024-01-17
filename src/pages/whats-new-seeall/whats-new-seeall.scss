@@ -1,0 +1,459 @@
+page-whats-new-seeall {
+
+  .inline{
+    display: inline-block;
+    //background-color: yellow;
+
+  }
+
+  .inlineGap{
+       margin:10px;
+       width:160px;
+       //margin-left:6px;
+    }
+
+    .topicNameClass{
+      background-color: #E8604F;
+      color:#FFFFFF;
+      border-radius: 5px;
+      text-align: center;
+      display: block;
+      font-size:2.5rem;
+      font-weight:600;
+    }
+
+    .inlineGapTopic{
+
+      //margin:10px;
+      //width:170px;
+      //line-height:120px;
+
+    }
+
+    .expertClass{
+        position:relative;
+        top:6px;
+        width:165px;
+        height:150px;
+        border-radius: 50%;
+    }
+
+    .expertName {
+      position:relative;
+      //height:20px;
+      top:3px;
+      text-align: center;
+      font-size:14px !important;
+      text-overflow: ellipsis;
+    }
+
+    .curatedName{
+      position:relative;
+      height:35px;
+      width:170px;
+      top:0px;
+      text-align: left;
+      font-size:14px !important;
+      text-overflow: ellipsis;
+    }
+
+    .expertClassBlog{
+      margin-top:6px;
+      padding:2px;
+        position:relative;
+        width:100%;
+        height:100%;
+        border-radius: 5%;
+    }
+
+    .sticky{
+      line-height: 35px; 
+      padding: 0px; 
+      position: sticky;
+      top: 0;
+      left: 0; 
+      right: 0;
+      z-index: 9999;
+      //background-color: #E8604F !important; 
+      border-bottom: 1px solid #E8604F;
+    }
+    .item-divider{
+      font-size: 1.4em;
+      font-weight: bold;
+      text-align: center; 
+      color:#FFFFFF;
+    }
+    .forOther{
+      //background-color: #E8604F !important;
+      background: radial-gradient(circle, #f76c57 11%, #d9442c 64%);
+      color:#FFFFFF;
+    }
+    .forTweets{
+      background-color: #00acee !important;
+      color:#FFFFFF;
+    }
+
+  .forTwiterIcon{
+    padding-top:5px;
+    padding-left:10px;
+    width:100%;
+    font-size:20px;
+    //border-bottom: 2px solid #0f5775;
+  }
+
+    //for twitter /////
+
+    .card{
+      //background-color: #fefefe;
+      background-color: #D3EAF2;
+      height:100%;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        position: relative;
+        //opacity: 0.4;
+        box-shadow: 0px 1px 9px 1px rgba(0,0,0,0.77);
+    }
+
+  .smallTitle{
+      top:0px;
+      left:0px;
+      //padding:2px;
+      width:100%;
+      text-align:center;
+      //font:15px/30px Georgia;
+      font-size:15px;
+      line-height:6vh;
+      background-color: #00acee;
+      color:#ffffff;
+      border-bottom: 2px solid #0f5775;
+  }
+
+  .cardContent{
+    position: relative;
+    top:7px;
+    padding: 3px;
+    font-size:17px;
+    margin-bottom: 15px;
+    //text-align: left;
+    text-justify: inter-word;
+    font-family: icomoon !important;
+  }
+
+  .playlistClass{
+    position:relative;
+    top:0px;
+    width:170px;
+    height:103px;       
+    //border-radius: 5%;
+    object-fit: cover;
+    //margin:7px;
+    border: 3px solid #C0C0C0;
+  }
+  .topVidoClass{
+    border: 3px solid #C0C0C0;
+  }
+
+  .topVidoClassRact{
+    //position:absolute;
+    object-fit: cover;
+    width: 160px;
+    height: 103px;
+    //margin:7px;
+    border: 3px solid #C0C0C0;
+  }
+
+  .topVideoName{
+    position:relative;
+    top:-25px;
+  }
+
+  .subtopic-card-img-icon{
+    position: relative;
+    left: 48%;
+    top: -50px;
+    //bottom:80px;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color:#fff; 
+    color:#C0C0C0; 
+    font-size: 25px; 
+    border-radius: 50px;
+  }
+
+  .flex-container {
+    margin:10px;
+    width: 160px;
+    height: 140px;
+    background-color: #E8604F;
+    border-radius: 0px;
+    position: relative;
+    background: radial-gradient(circle, #f76c57 11%, #d9442c 64%);
+    border: 3px solid #C0C0C0;
+    padding:2px;
+  }
+
+  .longtextBreak{
+    white-space: pre-line;
+    //width: min-content;
+    color:#FFFFFF; 
+    display: block;
+    font-size:1.9rem;
+    position: absolute;
+    text-align:center;
+    bottom: 40%;
+    min-width: 100%;
+  }
+
+  .textBreak{
+    white-space: pre-line;
+    width: min-content;
+    color:#FFFFFF; 
+    display: block;
+    font-size:1.9rem;
+    position: absolute;
+    text-align:center;
+    bottom: 45%;
+    min-width: 100%;
+  }
+
+  .icon-icon-class{
+    position:relative;
+    font-size:30px;
+    padding: 20px 0px 10px 0px;  // top right bottom left
+    //text-align: center; 
+  }
+
+
+
+  ///////////////
+
+
+  // media query for ipad  (17dec2019)
+
+  @media (min-width:481px) and (orientation: portrait), (min-width:800px) and (orientation: landscape) {
+    .inlineGapTopic{
+      //margin:12px !important;
+      //width:220px !important;
+      //line-height:200px !important;
+    }
+
+    .inlineGapBlog{
+      position:relative;
+      width: 350px !important;
+      height:300px !important;
+      margin:75px 10px 5px 5px;  // top right bottom left
+    }
+
+    .expertClassBlog{
+      margin-top:-50px !important;
+      padding:0px !important;
+    }
+
+    .flex-container {
+      width: 220px !important;
+      height: 200px !important;
+      //margin:10px !important;
+      //border-radius: 15px !important;
+    }
+
+    .longtextBreak{
+      font-size:2.9rem !important;
+      bottom: 38%;
+    }
+
+    .textBreak{
+      font-size:2.9rem !important;
+      bottom: 45%;
+    }
+
+    .topicNameClass{
+      border-radius: 10px !important;
+      text-align: center;
+      font-size:2.9rem !important;
+    }
+
+
+    .inlineGap{
+      margin:12px !important;
+      width:220px !important;
+      //margin-left:6px;
+    }
+
+    .expertClass{
+      top:10px;
+      width:219px !important;
+      height:215px !important;
+      border-radius: 50%;
+    }
+    .expertName {
+      top:11px !important;
+      font-size:18px !important;
+    }
+    .expertimg{
+      padding:0px;
+    }
+
+    .smallTitle{
+      padding-left:10px;
+      text-align:left;
+      font-size:20px;
+      line-height:4vh;
+    }
+
+    .cardContent{
+      padding: 15px;
+      font-size:19px;
+      //font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .playlistClass{
+      width:220px !important;
+      height:120px !important;  
+      border: 3px solid #C0C0C0;     
+    }
+
+    .curatedName{
+      margin-left:12px !important;
+      height:40px;
+      width:175px;
+    }
+
+    .topVidoClassRact{
+
+      width: 220px;
+      height: 120px;
+      border: 3px solid #C0C0C0;
+    }
+
+    .subtopic-card-img-icon{
+      position:relative;
+      left: 45%;
+      top: -62px !important;
+      //bottom:80px;
+      font-size: 35px; 
+      border-radius: 50px;
+    }
+  }
+
+
+  .textClass{
+    font-size:14px !important;
+    word-break: break-all;white-space: normal;margin: 0;padding:0;width:100%;position: relative;
+    display: inline-block;
+    font-weight: bold; 
+    //margin-top:15px;
+    margin-left:5px;
+  }
+  .thumbImg{
+    img {
+      width: 50px;
+      height: 50px;
+      margin-top:6px;
+    }
+    height:70px;
+  }
+  .borderBottem{
+    border-bottom: 0.5px solid grey !important;
+
+  }
+  .myShareIconClass{
+    position:relative;
+    margin-top:5px;
+  }
+
+  .moredatashere{
+    position:relative;
+    top:0px;
+    font-size:1.2em;
+    margin-right: 5px;
+    margin-left: 11px;
+  }
+
+  .active {
+    //color: #c54334 !important;
+    color: #000000 !important;
+  }
+
+  /* iphone 6+, 6s+, 7+, 8+ */
+  @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .flex-container {
+      width: 165px !important;
+      height: 150px !important;
+    }
+  }
+
+  /* iPhone XR  and iPhone 11 : by Sanjeev */
+
+  @media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+      .flex-container {
+        width: 165px !important;
+        height: 150px !important;
+      }
+    }
+
+  /*iPhone 12 and iPhone 12 Pro */
+
+  @media only screen 
+      and (device-width: 390px) 
+      and (device-height: 844px) 
+      and (-webkit-device-pixel-ratio: 3) {
+
+      .flex-container {
+        width: 155px !important;
+        height: 150px !important;
+      }
+
+      .inlineGap{
+         margin:10px;
+         width:150px;
+         //margin-left:6px;
+      }
+
+  }
+
+  /* ------------  iPad Pro 11-inch ------- */
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px)  { 
+    .flex-container {
+      width: 240px !important;
+      height: 200px !important;
+    }
+
+    .inlineGap{
+      margin:5px;
+      width:240px !important;
+      //margin-left:6px;
+    }
+  }
+  
+ .drawntextClass{
+    font-size:15px !important;
+    font-weight: bold; 
+    white-space: normal;
+    position:relative;
+    top:-2px;
+  }
+
+  .desClass{
+    font-size:13px !important;
+    color:#d1d1d1;
+    font-weight: bold; 
+    white-space: normal;
+    position:relative;
+    top:-10px;
+  }
+
+  .shareContent{
+    color: #ccc; 
+    position: absolute;
+    right:20px;
+    bottom:-5px;
+  }
+
+
+}

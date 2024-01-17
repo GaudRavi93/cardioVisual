@@ -1,0 +1,68 @@
+page-plandetails {
+
+	.page-title-planslist{
+		text-align: center;
+		padding: 16px;
+		color: #ffffff;
+	}
+	.page-title-planslist p{
+		margin: 0;
+	}
+	#dark-top-banner{
+		padding: 25px 16px 60px 16px;
+		width: 100%;
+		background-color: #f2f2f2;
+	}
+	.planslists #dark-top-banner, .pro-plans #dark-top-banner{
+		padding: 25px 16px;
+	}
+	#dark-top-banner .left{
+		display:inline-block;
+		width: 25%;
+		padding-right: 20px;
+		border-right:2px solid #dbdbdb;
+	}
+	#dark-top-banner .left img{
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+	#dark-top-banner .right{
+		display: inline-block;
+		width: 70%;
+		padding-left: 20px;
+		/*height: 100%;*/
+	}
+	.img-text-wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.planslist-wrapper{
+		position: relative;
+	}
+	.subscription-content-new{
+		padding: 20px;
+	}
+	.button-btn-inappnew {
+		background-color: #E8604F;
+		border: none;
+		border-radius: 3px;
+		color: #ffffff;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: 14px;
+		padding: 8px 0;
+		width: 90%;
+		margin: 16px auto;
+	  	-webkit-appearance:none;
+	}
+	.subscription-content{
+		//padding: 0px 2px;
+		padding: 0px 2px 10px 5px;
+		width: 100%;
+	}
+
+}

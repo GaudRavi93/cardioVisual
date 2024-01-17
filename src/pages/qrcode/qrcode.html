@@ -1,0 +1,89 @@
+<!--
+  Generated template for the QrcodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header clean-header  class="headerColor" [isTabs]="true" [hideMenu]="true"></ion-header> -->
+<ion-header class="headerColor">
+  <ion-navbar hideBackButton>
+    <div left tappable (click)="doGoBack()" class="customIcon" style="width:100%;">
+      <!-- <ion-icon class="" style="font-size: 1.5em;color: black;" ios="icon-backarrow" md="md-arrow-back" class="icon-backarrow"></ion-icon> -->
+      <ion-icon class="" style="font-size:2em;color: black;width:5%;float:left;" class="customIcon" name="arrow-back"></ion-icon>
+      <ion-title style="width:90%;text-align: center;">
+        <!-- <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 50px; width:50px;"/> -->
+        <!--  <p style="color: black; display: inline; position: relative;"> <b>SHARE</b> </p> -->
+        <b style="color: black;">{{headerTitle}}</b>
+      </ion-title>
+    </div>
+  </ion-navbar>
+  <!-- <ion-navbar class="suheader_qr" style="min-height: 56px;">
+      <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 50px; width:50px; left: 50;"/>
+      <p style="display: inline; background-color: transparent !important; color:#111111; height: 50px; width:50px;"> CardioVisual</p>
+  </ion-navbar> -->
+  <!-- <ion-navbar style="background-color:#ffffff !important;"> <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 52px; width:52px; margin-left: 140px !important; position: relative;"/> </ion-navbar> -->
+</ion-header>
+
+<!-- <ion-content padding class="">
+
+    <div class="qrcode-wrapper">
+        <div id="qrcode" style="text-align: center;"></div>
+        <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p>   
+    </div>        
+</ion-content> -->
+
+<ion-content style="background-color: #ffffff;">
+    <ion-card>
+        <ion-card-content>
+            <!-- <ion-input [(ngModel)]="code" type="text" placeholder="Enter code here"></ion-input>
+            <button ion-button block (click)="process();">Process</button> -->
+
+           <!--  <img *ngIf="displayQrCode()" [src]="generated" />
+             <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p> -->
+		    <div class="qrcode-wrapper">
+          <div class="" [innerHtml]="htmlToAdd"></div>
+
+	       <img *ngIf="displayQrCode()" [src]="generated" />
+	        <!-- <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p>   -->
+
+                <!--  <div style="text-align: center;" class="_orseperator" *ngIf="isShareOtherOption"> ------------ <b>OR</b> ------------ </div>
+
+                  <ion-grid style="background-color: transparent;" *ngIf="isShareOtherOption">
+                    <ion-row >
+                      <ion-col >
+                        <button ion-button icon-only (click)="shareSMS()" clear style="background-color: transparent; padding-right: 0px; color: #000000!important;">
+                            <ion-icon name="chatboxes"></ion-icon>
+                        </button>
+                      </ion-col>
+                      <ion-col >
+                        <button ion-button icon-only (click)="whatsappShare()" clear style="background-color: transparent; padding-right: 5px ; color: #25D366 !important;">
+                          <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+                        </button>
+                      </ion-col>
+                      <ion-col>
+                        <button ion-button icon-only (click)="facebookShare()" clear style="background-color: transparent; padding-right: 5px; color: #3B5998 !important;">
+                          <ion-icon  class="share-icon" name="logo-facebook"></ion-icon>
+                        </button>
+                      </ion-col>
+                      <ion-col>
+                        <button ion-button icon-only (click)="twitterShare()" clear style="background-color: transparent;  padding-right: 5px; color: #1DA1F2 !important;">
+                         <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+                        </button>
+                      </ion-col>
+                      <ion-col >
+                          <button ion-button icon-only (click)="emailShare()" clear style="background-color: transparent;  padding-right:0px; color: #DD4B39 !important;">
+                            <ion-icon class="share-icon" name="mail"></ion-icon>
+                        </button>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid> -->
+          <ion-col *ngIf="isShareOtherOption">
+            <button ion-button (click)="regularShare()" color="" clear style="background-color:#E74B37; height: 42px; width: 100%; color:#ffffff; padding-right: 0px !important;"><b>Share with Others</b>
+              <!-- <ion-icon class="share-icon" name="share"></ion-icon> -->
+            </button>
+          </ion-col> 
+		    </div>    
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+

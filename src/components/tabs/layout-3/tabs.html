@@ -1,0 +1,19 @@
+
+
+<ion-tabs #tabs tabsPlacement='top' tabs-content [ngClass]="coloR" *ngIf="page != 'Favorites' && page != 'channels'" class="category_tabs">
+        <ion-tab tabTitle="Condition" root="TabPage2" [rootParams]="condition_data" Class="condition"></ion-tab>
+
+        <ion-tab tabTitle="Treatment" root="TabPage2" [rootParams]="treatment_data" Class="treatment"></ion-tab>
+
+        <ion-tab tabTitle="Device" root="TabPage2" [rootParams]="device_data" Class="device"></ion-tab>
+        
+        <ion-tab *ngIf="request_from != 'whatsnew_page'||request_from != 'splash'" tabTitle="Playlist" root="PlaylistPage" Class="playlist" [rootParams]="category_data"></ion-tab>
+</ion-tabs>
+
+<ion-tabs #tabs tabsPlacement='top' tabs-content [ngClass]="coloR" *ngIf="page == 'channels'">
+	<ion-tab tabTitle="Video" root="ChannelListTabsPage" [rootParams]="videos_data" Class="videos"></ion-tab>
+	<ion-tab tabTitle="Document" root="ChannelListTabsPage" [rootParams]="documents_data" Class="documents"></ion-tab>
+	<ion-tab tabTitle="Image" root="ChannelListTabsPage" [rootParams]="image_data" Class="image"></ion-tab>
+	<ion-tab tabTitle="Other" root="ChannelListTabsPage" [rootParams]="others_data" Class="others"></ion-tab>
+	<!-- <ion-tab tabTitle="Playlist" root="PlaylistPage" Class="playlist"></ion-tab> -->
+</ion-tabs>

@@ -1,0 +1,292 @@
+/*  # Style Tabs Header tab - text
+==================================*/
+
+tabs-layout-2 {
+  .tabs-ios {
+    //margin-top: 69px;
+    margin-top: 107px;
+  }
+
+  .tabs-md {
+    //margin-top: 69px;
+    margin-top: 107px;
+  }
+
+   .platform-ios .scroll-content{
+      padding: 0 !important;
+      margin-bottom: 60px !important;
+      margin-top:47px !important;
+    }
+
+  .platform-android .scroll-content {
+    padding: 0 !important;
+    margin-bottom: 50px !important;
+    margin-top:61px !important; 
+  }
+
+  .tabbar {
+    background-color: #F0F0F0 !important;
+    opacity: 1;
+  }
+
+  .tab-button{
+    min-height: 4.6rem;
+    min-width: 35px;
+  }
+
+  .tab-button[aria-selected=false] {
+    .tab-button-text {
+
+      color: theme-colors('mainColors', 'mytabColor', 'opacity50');
+      text-transform: uppercase !important;
+    }
+  }
+
+  .tab-button[aria-selected=true] {
+    border-top: 0px solid theme-colors('mainColors', 'mytabColorSelected') !important;
+
+    .tab-button-text {
+      text-transform: uppercase !important;
+      font-weight: bold !important;
+      color: theme-colors('mainColors', 'mytabColorSelected') !important;
+    }
+  }
+
+  [background-size] {
+    @include darkening-blend-mode;
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    .tab-decription {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 30px;
+      z-index: 9;
+      position: relative;
+    }
+  }
+
+ //for tabs button text
+  .tab-button-text {
+    //font-size: 1.5em;//for ios
+  }
+
+  .cardiac{
+    div.tabbar {
+      background-color: #FOFOFO !important;
+      .tab-button[aria-selected="true"]{
+        .tab-button-text{
+          color: #c54333 !important;
+        }
+      }
+
+      .tab-button[aria-selected="false"]{
+        background-color: #FOFOFO !important;
+        .tab-button-text{
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+
+  .cardiac .tab-button[aria-selected="false"] .tab-button-text{ 
+    color: #c54333 !important; 
+  }
+  .heart .tab-button[aria-selected="false"] .tab-button-text{ 
+    color: #c54333 !important; 
+  }
+  .cardiac .tab-button[aria-selected="true"], .heart .tab-button[aria-selected="true"]{ 
+    background-color: #FOFOFO !important;
+    border-bottom:2px solid #c54333 !important;
+  }
+  .cardiac .tab-button[aria-selected="true"] .tab-button-text, .heart .tab-button[aria-selected="true"] .tab-button-text{ 
+    color:rgba(255, 255, 255, 0.5) !important; 
+  }
+
+
+  .ep{
+    div.tabbar {
+      background-color: #FOFOFO !important;
+      .tab-button[aria-selected="true"]{
+        .tab-button-text{
+          color: #003944 !important;
+        }
+      }
+
+      .tab-button[aria-selected="false"]{
+        background-color: #FOFOFO !important;
+        .tab-button-text{
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+
+  .ep .tab-button[aria-selected="false"] .tab-button-text{ color: #003944 !important; }
+  .ep .tab-button[aria-selected="true"]{ background-color: #FOFOFO !important; border-bottom:2px solid #003944 !important;}
+  .ep .tab-button[aria-selected="true"] .tab-button-text{ color: #003944 !important; }
+
+
+  .structural{
+    div.tabbar {
+      background-color: #FOFOFO !important;
+      .tab-button[aria-selected="true"]{
+        .tab-button-text{
+          color: #23928b !important;
+        }
+      }
+
+      .tab-button[aria-selected="false"]{
+        background-color: #FOFOFO !important;
+        .tab-button-text{
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+  
+  .structural .tab-button[aria-selected="false"] .tab-button-text{ color: #23928b !important; }
+  .structural .tab-button[aria-selected="true"]{ background-color: #FOFOFO !important; border-bottom:3px solid #23928b !important;}
+  .structural .tab-button[aria-selected="true"] .tab-button-text{ color: #23928b !important; }
+
+  .vascular{
+    div.tabbar {
+      background-color: #FOFOFO !important;
+      .tab-button[aria-selected="true"]{
+        .tab-button-text{
+          color: #872c3d !important;
+        }
+      }
+
+      .tab-button[aria-selected="false"]{
+        background-color: #FOFOFO !important;
+        .tab-button-text{
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+   
+  .vascular .tab-button[aria-selected="false"] .tab-button-text{ color: #872c3d !important; }
+  .vascular .tab-button[aria-selected="true"]{ background-color: #FOFOFO !important; border-bottom:3px solid #872c3d !important;}
+  .vascular .tab-button[aria-selected="true"] .tab-button-text{ color: #872c3d !important; }
+
+  .health{
+    div.tabbar {
+      background-color: #FOFOFO !important;
+      .tab-button[aria-selected="true"]{
+        .tab-button-text{
+          color: #62294c !important;
+        }
+      }
+
+      .tab-button[aria-selected="false"]{
+        background-color: #FOFOFO !important;
+        .tab-button-text{
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+
+  .health .tab-button[aria-selected="false"] .tab-button-text{ color: #62294c !important;}
+  .health .tab-button[aria-selected="true"]{ background-color: #FOFOFO !important; border-bottom:3px solid #62294c !important;}
+  .health .tab-button[aria-selected="true"] .tab-button-text{ color: #62294c !important; }
+
+  .diabetes{
+    div.tabbar {
+      //background-color: #C6D0F4 !important;
+      background-color: #FOFOFO !important;
+    }
+  }
+
+  .diabetes .tab-button[aria-selected="false"] .tab-button-text{ color: #41518C !important; }
+  .diabetes .tab-button[aria-selected="true"]{ 
+      //background-color: #41518C !important; 
+      //background-color: #C6D0F4 !important;
+      background-color: #FOFOFO !important;
+      border-bottom:3px solid #41518C !important;}
+  .diabetes .tab-button[aria-selected="true"] .tab-button-text{ 
+    //color: #C6D0F4 !important; 
+    color: #41518C !important;
+  }
+    
+  ion-label{ height:70%;}
+  ion-label div{
+    position:absolute;
+    right:15px;
+    top:70px;
+  }
+
+  .icon-video-icons-download::before{
+    //color:black;
+    font-size:1.5em;
+  }
+  ion-tabs.category_tabs{
+    margin-top: 168px !important;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) { 
+    /* Your Styles... */ 
+    ion-tabs.category_tabs{
+      margin-top: 168px !important;
+    }
+  }
+
+
+}
+
+.second_header.cardiac_header .toolbar-background, .second_header.heart_header .toolbar-background{
+  background-color: #c54333 !important;
+  color:#FFFFFF !important;
+}
+
+.second_header.ep_header .toolbar-background, .second_header.rhythm_header .toolbar-background{
+  background-color: #003944 !important;
+  color:#FFFFFF !important;
+}
+
+.second_header.structural_header .toolbar-background, .second_header.structure_header .toolbar-background{
+  background-color: #23928b !important;
+  color:#FFFFFF !important;
+}
+
+.second_header.vascular_header .toolbar-background, .second_header.circulation_header .toolbar-background{
+  background-color: #872c3d !important;
+  color:#FFFFFF !important;
+}
+
+.second_header.health_header .toolbar-background{
+  background-color: #62294c !important;
+  color:#FFFFFF !important;
+}
+
+.second_header.diabetes_header .toolbar-background{
+  background-color: #30407c !important;
+  color:#FFFFFF !important;
+}
+
+
+
+cardiac_header .toolbar-title, .ep_header .toolbar-title, .structural_header .toolbar-title, .vascular_header .toolbar-title, .health_header .toolbar-title, .diabetes_header .toolbar-title{
+  color:#FFFFFF !important;
+}
+
+/*.cardiac_header .back-button, .ep_header .back-button, .structural_header .back-button, .vascular_header .back-button, .health_header .back-button, .favorites_header .back-button{
+  color:#FFFFFF !important;
+}*/
+
+.page_name{
+ top:-9px;
+ //right:206px;
+ left:49% !important;
+ text-align:left;
+}
+
+.iconDash{
+ top:-12px !important;
+ left:42% !important;
+}

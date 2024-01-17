@@ -1,0 +1,50 @@
+page-channels {
+
+
+	ion-content {
+	    ion-col {
+	        display: flex;
+	    }
+	}
+
+	ion-card {
+
+	    img {
+	        //margin: 10px auto;
+	        //height: 25vh !important;
+	        width: 100% !important;
+	        max-width: 100%;
+	        height: 100px;
+	        align-items: center;
+	    }
+        ion-card-title {        
+            //padding-top: 1.5rem !important;
+           // padding-bottom: 1.5rem !important;
+
+        }
+
+	}
+
+	.channels_ion_item{
+		border-bottom: 2px solid #e7e7e7;padding: 0 3%;
+		font-size: 1.4em;font-weight: bold;text-align: left;
+	}
+
+	.channel_col{
+		margin:0%;width:33.33%;
+	}
+
+	.channel_div{
+		width:100%;
+		height:100%;
+		//height:auto;
+	}
+	.channel_img{
+		border-radius: 8px;
+	}
+	.channel_name{
+		font-weight:500;
+	}
+
+
+}

@@ -1,0 +1,38 @@
+page-aaplaunchlocation {
+
+	.selectdrop{
+	    background: #ffffff;
+	    border: 1px solid #dbdbdb;
+	    border-radius: 3px;
+	    color: #333333;
+	    font-family: inherit;
+	    font-size: 14px;
+	    height: 34px;
+	    outline: none;
+	    padding: 0px 10px;
+	    width: 90%;
+	    -webkit-appearance:none;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+
+	ionic-selectable {
+	   display: block !important;
+	   max-width: 100% !important;
+	   margin: 0 auto;
+	}
+	ion-label {
+	    -webkit-flex: none!important; 
+	    flex: none!important; 
+	}
+
+	ionic-selectable-icon { 
+	   display: none !important;
+	}
+
+	.user-register{
+		padding-top:35% !important;
+		//background-color:black !important;
+	}
+
+}

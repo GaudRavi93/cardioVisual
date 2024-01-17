@@ -1,0 +1,442 @@
+
+<ion-header clean-header  class="headerColor" ></ion-header>
+
+<ion-content no-padding no-margin style="background-color: #fff;top:-6px;" class="fromtheTop">
+	<ion-grid class="no-padding no-margin" style="margin-bottom:0px;">
+		<ion-card class="hero-slideshow" no-margin>
+			<!-- <ion-slides pager loop="true" *ngIf="slideshow"> -->
+			<ion-slides pager loop="false" *ngIf="slideshow && slideshow.length > 0">	
+				<ion-slide *ngFor="let slide of slideshow; let i = index;" (tap)="onBannerClick(slide ,'Banner')">
+					<figure no-margin>
+						<img *ngIf="slide.local_image_url == '' || slide.local_image_url == null" [src]="slide.image_url" alt="">
+						<img *ngIf="slide.local_image_url != '' && slide.local_image_url != null" src="{{path}}{{slide.local_image_url}}" alt="">						
+					</figure>
+				</ion-slide>
+			</ion-slides>
+
+			<ion-slides pager loop="false" *ngIf="!slideshow">
+				<div class="whatsnew-tile-banner">
+					<div class="avatarfortab">
+						<ion-avatar item-start>
+						<skeleton-item height="225px" width="100%" class="fortab"></skeleton-item>
+						</ion-avatar>
+					</div>
+				</div> 
+			</ion-slides>
+		</ion-card>
+
+	<!-- <div class="diffDivtopicClass" *ngIf="topic_data"> -->
+	<div class="diffDivtopicClass onlyforTopic" *ngIf="topic_data && topic_data.length>0">
+		<div class="div-forlabel">
+			<div class="div-left forlabel"><!-- <b>Featured Topics</b> --><b>{{title_data[0].name}}</b></div>
+			<div class="div-right forlabel" tappable (click)="seeAllClick('Topics',topic_data)">See all</div>
+		</div>
+		<div class="forboderbottom"></div>
+		<ion-scroll scrollX="true" class="fromTop_forScroll">
+		      <div class="inline inlineGapTopic flex-container parentDiv"  *ngFor="let topic of topic_data" (click)="gotoDetailPage(topic, topic.template, 'Featured Topics')" style="overflow-x: auto;">
+				<div Class="aligner" style="">{{topic.name}}</div>
+				 <!-- <div class="" [ngClass]="{'textBreak': topic.name.length <= 11, 'longtextBreak': topic.name.length > 10 }"> <b> {{topic.name}} </b> </div> -->
+			  </div>
+		</ion-scroll>		
+	</div>
+
+	<div *ngIf="!topic_data">
+		<ion-scroll>
+			<div class="inline inlineGapTopic whatsnew-tile-topic" *ngFor="let i of [0,1,2,3,4,5,6,7]">
+				<div style="" class="avatarfortab">
+					<ion-avatar item-start>
+					<skeleton-item height="130px" width="133px" class="fortab"></skeleton-item>
+					</ion-avatar>
+				</div>
+			</div> 
+		</ion-scroll>
+	</div>	
+
+	<!-- <div class="" *ngIf="expert_data"> -->
+	<div class="diffDivExpertClass" *ngIf="expert_data && expert_data.length>0">
+		<!-- <ion-label class="forlabel" style=""><b>Experts</b></ion-label>	 -->
+		<div class="div-forlabel">
+			<div class="div-left forlabel"><b>{{title_data[1].name}}</b></div>
+			<div class="div-right forlabel" tappable (tap)="seeAllClick('Experts',expert_data)">See all</div>
+		</div>
+		<div class="forboderbottom"></div>
+		<ion-scroll scrollX="true" class="fromTop_forScroll">
+			<div class="inline inlineGap" *ngFor="let expert of expert_data" (click)="gotoDetailPage(expert, expert.template, 'Experts')" style="width:140px;margin-left:5px;margin-right:5px;">
+
+		      	<div class="expertimg img-overlay">
+		      		<img *ngIf="expert.local_image_url == '' || expert.local_image_url == null" src="{{expert.image_url}}"  class="expertClass" />
+
+		      		<img *ngIf="expert.local_image_url != '' && expert.local_image_url != null" [src]="expert.base64Image" alt="" class="expertClass">
+		      	</div>
+
+				<div class="expertName">
+					{{expert.name}}
+				</div>
+		    </div>
+		</ion-scroll>	
+	</div>
+
+	<div *ngIf="!expert_data">
+		<ion-scroll>
+			<div class="inline inlineGap whatsnew-tile-topic" *ngFor="let i of [0,1,2,3,4,5,6,7]">
+				<div class="avatarfortab">
+					<ion-avatar item-start>
+					<skeleton-item height="130px" width="133px" class="fortab"></skeleton-item>
+					</ion-avatar>
+				</div>
+			</div> 
+		</ion-scroll>
+	</div>
+
+
+	<span class="backgroundForVideo">
+		<!-- <div class="" *ngIf="topVideo_data"> -->
+		<div class="diffDivtopicClass" *ngIf="network_type != 'none' && topVideo_data && topVideo_data.length > 0">
+			<div class="div-forlabel">
+				<div class="div-left forlabel"><b>{{title_data[7].name}}</b></div>
+				<div class="div-right forlabel" tappable (click)="seeAllClick('TOP VIDEOS', topVideo_data)">See all</div>
+			</div>
+			<div class="forboderbottom"></div>
+			<ion-scroll scrollX="true"  class="fromTop_forScroll">
+				<ion-list scroll="true">
+				<div class="inline inlineGapforVideo" *ngFor="let top_video of education_item" (click)="gotoDetailPage(topVideo_listindata, topVideotemplate, 'TOP VIDEOS')" style="height:33vh;width:180px;">
+
+			      	<div class="mydivClass video-img-overlay">
+			      		<img src="{{top_video.iconUrl}}" alt="{{top_video.name}}" class="topVidoClass"/>
+						<!-- <img *ngIf="top_video.localIconUrl !='' && top_video.localIconUrl != null" src="{{path}}{{top_video.localIconUrl}}" alt="{{top_video.name}}" class="topVidoClass"/> -->
+			      		<i class="icon-play subtopic-card-img-icon"></i>
+			      	</div>
+
+					<div class="topVideoName">
+						<p class="textClass">{{top_video.name.slice(0, 35) + (top_video.name.length > 35 ? "..." : "")}}</p>
+					</div>
+			    </div>
+			    </ion-list>
+			</ion-scroll>	
+		</div>
+
+		<div *ngIf="network_type != 'none' && !topVideo_data && skeleton == true">
+			<ion-scroll>
+				<div class="inline inlineGap whatsnew-tile-topic" *ngFor="let i of [0,1,2,3,4,5,6,7]">
+					<div class="avatarfortab">
+						<ion-avatar item-start>
+						<skeleton-item height="130px" width="133px" class="fortab"></skeleton-item>
+						</ion-avatar>
+					</div>
+				</div> 
+			</ion-scroll>
+		</div>
+
+		<!-- <div class="" *ngIf="expert_data"> -->
+		<div class="diffDivtopicClass" *ngIf="topVideo_DetailsTemplate && topVideo_DetailsTemplate.length>0">
+			<!-- <ion-label class="forlabel" style=""><b>Experts</b></ion-label>-->
+			<div class="div-forlabel">
+				<div class="div-left forlabel"><b>{{title_data[7].name}}</b></div>
+				<div class="div-right forlabel" tappable (click)="seeAllClick('TOP VIDEOS', topVideo_DetailsTemplate)">See all</div>
+			</div>
+			<div class="forboderbottom"></div>
+			<ion-scroll scrollX="true" style="" class="fromTop_forScroll">
+				<div class="inline inlineGapforVideo" *ngFor="let expert of topVideo_DetailsTemplate" (click)="gotoDetailPage(expert, expert.template, 'TOP VIDEOS')" style="">
+
+			      	<div class="mydivClass video-img-overlay">
+			      		<img *ngIf="expert.local_image_url == '' || expert.local_image_url == null" src="{{expert.image_url}}"  class="topVidoClass" /> 
+			      		
+			      		<img *ngIf="expert.local_image_url != '' && expert.local_image_url != null" src="{{path}}{{expert.local_image_url}}" alt="" class="topVidoClass" />
+			      		<i class="icon-play subtopic-card-img-icon" style=""></i>
+			      	</div>
+
+					<div class="topVideoName">
+						<b style="" class="textClass">{{expert.name.slice(0, 35) + (expert.name.length > 35 ? "..." : "")}}</b>
+					</div>
+			    </div>
+			</ion-scroll>	
+		</div>
+
+		<div *ngIf="!topVideo_DetailsTemplate && skeleton == true">
+			<ion-scroll>
+				<div class="inline inlineGap whatsnew-tile-topic" *ngFor="let i of [0,1,2,3,4,5,6,7]">
+					<div style="" class="avatarfortab">
+						<ion-avatar item-start>
+						<skeleton-item height="130px" width="133px" class="fortab"></skeleton-item>
+						</ion-avatar>
+					</div>
+				</div> 
+			</ion-scroll>
+		</div>
+
+		<!-- <div class="playlistDiffDivClass" *ngIf="playlist_data"> -->
+		<div class="diffDivtopicClass" *ngIf="playlist_data && playlist_data.length > 0" >	
+			<!-- <ion-label class="forlabel" style=""><b>Playlist</b></ion-label> -->
+			<div class="div-forlabel">
+				<div class="div-left forlabel"><!-- <b>Curated Lists</b> --><b>{{title_data[3].name}}</b></div>
+				<div class="div-right forlabel" tappable (click)="seeAllClick('Playlist', playlist_data)">See all</div>
+			</div>
+			<div class="forboderbottom"></div>	
+			<ion-scroll scrollX="true" style="margin-left: 7px;" class="fromTop_forScroll">
+				<div class="inline inlineGapforVideo" *ngFor="let playlist of playlist_data" (click)="gotoDetailPage(playlist, playlist.template, 'Our Picks')" style="width:170px;">
+					<div class="expertimg video-img-overlay">
+
+						<img *ngIf="playlist.local_image_url == '' || playlist.local_image_url == null" src="{{playlist.image_url}}"  class="expertPlaylistClass"/>
+						<img *ngIf="playlist.local_image_url !='' && playlist.local_image_url != null" [src]="playlist.base64Image"  class="expertPlaylistClass"/>
+						<i class="icon-play ourPicks-img-icon" style=""></i>
+					</div>		
+
+					<!-- <div class="expertPlaylistName">
+						{{playlist.name}}
+					</div> -->
+
+					<div class="expertPlaylistName">
+						<b style="" class="textClass">{{playlist.name.slice(0, 35) + (playlist.name.length > 35 ? "..." : "")}}</b>
+					</div>
+				</div>
+			</ion-scroll>	
+		</div>
+
+		<div *ngIf="!playlist_data">
+			<ion-scroll>
+				<div class="inline inlineGap whatsnew-tile-topic" *ngFor="let i of [0,1,2,3,4,5,6,7]">
+					<div style="" class="avatarfortab">
+						<ion-avatar item-start>
+						<skeleton-item height="130px" width="153px;" class="fortab"></skeleton-item>
+						</ion-avatar>
+					</div>
+					<div style="position: relative; bottom: 0; width: 100%;" class="divskelfortab expertNameskeleton">
+						<skeleton-item height="25px" width="95%" class="skelfortab"></skeleton-item>
+					</div>
+				</div> 
+			</ion-scroll>
+		</div>
+	</span>
+
+	<!--- forum start---->
+
+	<!-- <div class="slides-container-forum " *ngIf="network_type != 'none' && forum_data && forum_data.length > 0"> -->
+	<!-- <div class="diffDivtopicClass" *ngIf="network_type != 'none' && forum_data && forum_data.length > 0">
+		<div class="div-forlabel">
+			<div class="div-left forlabel"><b>{{title_data[4].name}}</b></div>
+			<div class="div-right forlabel" tappable (click)="seeAllClick( 'Forums', forum_data)">See all</div>
+		</div>
+		<div class="forboderbottom"></div>	
+		
+		<ion-scroll scrollX="true" class="fromTop_forScroll">
+		      <div class="inline inlineGapFourm slideForumClass parentDiv" *ngFor="let forum of forum_data" (click)="onPromptForQna(forum ,'From WhatsNew')"  style="overflow-x: auto;">
+				 <div class="aligner"> <b> {{ forum.title | slice:0:280 }} </b> </div>
+			  </div>
+		</ion-scroll>
+	</div> -->
+
+	<!-- <div *ngIf="!forum_data && network_type != 'none'">
+		<ion-scroll>
+			<div class="inline inlineGapTopic" *ngFor="let i of [0,1,2,3,4,5,6,7,8]">
+				<div style="padding-top: 3%;" class="avatarfortab">
+					<ion-avatar item-start>
+					<skeleton-item height="30px" width="100%" class="fortab"></skeleton-item>
+					</ion-avatar>
+				</div>
+				<div style="position: absolute; bottom: 0; width: 100%;" class="divskelfortab">
+					<skeleton-item height="80px" width="100%" class="skelfortab"></skeleton-item>
+				</div>
+			</div>
+		</ion-scroll>
+	</div> -->
+	<!--- forum end---->
+	<!--- sponser slide start--->
+
+	<div class="sponser-slideshow  sponserClassTab" no-margin *ngIf="sponserSlides && sponserSlides.length > 0">
+
+		<div class="div-forlabel">
+			<div class="div-left forlabel intractlabel" style=""><b>{{title_data[8].name}}</b></div>
+		</div>
+
+		<div class="intractforboderbottom"></div>
+
+		<ion-slides loop="false" [pager]="sponserSlides.length > 1">
+			<ion-slide *ngFor="let slide of sponserSlides; let i = index;" (tap)="onBannerClick(slide, 'Sponser Banner')">
+				<figure no-margin>
+					<img *ngIf="slide.local_image_url == '' || slide.local_image_url == null" [src]="slide.image_url" alt="">
+					<img *ngIf="slide.local_image_url != '' && slide.local_image_url != null" [src]="slide.base64Image" alt="">						
+				</figure>
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+	<!--- sponser slide end--->
+
+
+<!-- 	<div  *ngIf="network_type != 'none' && calculator_data && calculator_data.length > 0" [ngClass]="{'diffDiv_topic_Class': topVideotemplate == 'expert_playlist', 'diffDivIntractClass': topVideotemplate != 'expert_playlist' }" style="color:#FFF; background-color: #0A434E;height: 200px;" class="intractClassTab"> -->
+
+	<div  *ngIf="network_type != 'none' && calculator_data && calculator_data.length > 0"  style="color:#FFF; background-color: #0A434E;" class="diffDiv_topic_Class intractClassTab">
+
+		<div class="div-forlabel">
+			<div class="div-left forlabel intractlabel" style="color:#FFF;"><b>{{title_data[2].name}}</b></div>
+		</div>
+		<div class="intractforboderbottom"></div>
+
+			<ion-row style="text-align: center;">
+				<ion-col tappable (click)="knowMoreClick('Calculators')">
+						<i id="" class="icon-icon-calculator intractIconClass" style="margin:20px 0px;" ></i>
+						<div style="font-size:1.2em;"><b>Calculator</b></div>
+				</ion-col>
+				<ion-col tappable (click)="knowMoreClick('Quiz')">
+					<i id="" class="icon-icon-quiz intractIconClass" style="margin:20px 0px;" ></i>
+					<div style="font-size:1.2em;"><b>Quiz</b></div>
+				</ion-col>
+				<ion-col tappable (click)="knowMoreClick('Survey')">
+					<i id="" class="icon-icon-survey intractIconClass" style="margin:20px 0px;" ></i>
+					<div style="font-size:1.2em;"><b>Survey</b></div>
+				</ion-col>
+				<!-- <ion-col tappable (click)="knowMoreClick('Polls')">
+					<i id="" class="icon-icon-poll intractIconClass" style="margin:20px 0px;" ></i>
+					<div style="font-size:1.2em;"><b>Poll</b></div>
+				</ion-col> -->
+				<ion-col tappable (click)="knowMoreClick('Drawn')">
+					<i id="" class="icon-icon-survey intractIconClass" style="margin:20px 0px;" ></i>
+					<div style="font-size:1.2em;"><b>Draw on image</b></div>
+				</ion-col>
+			</ion-row>
+	</div>
+
+
+	<div *ngIf="!calculator_data && network_type != 'none'">
+		<ion-scroll>
+			<div class="inline inlineGapTopic" *ngFor="let i of [0,1,2,3]">
+				<div style="padding-top: 3%;" class="avatarfortab">
+					<ion-avatar item-start>
+					<skeleton-item height="30px" width="100%" class="fortab"></skeleton-item>
+					</ion-avatar>
+				</div>
+				<div style="position: absolute; bottom: 0; width: 100%;" class="divskelfortab">
+					<skeleton-item height="80px" width="100%" class="skelfortab"></skeleton-item>
+				</div>
+			</div>
+		</ion-scroll>
+	</div>
+
+	<!-- <div class="playlistDiffDivClass" *ngIf="playlist_data"> -->
+	<!--- 	
+	<div class="playlistDiffDivClass" *ngIf="playlist_data && playlist_data.length > 0">	
+
+		<div class="div-forlabel">
+			<div class="div-left forlabel"><b>{{title_data[3].name}}</b></div>
+			<div class="div-right forlabel" tappable (click)="seeAllClick('Playlist', playlist_data)"><b>See all</b></div>
+		</div>	
+		<ion-scroll scrollX="true" style="">
+			<div class="inline inlineGapPlaylist" *ngFor="let playlist of playlist_data" (click)="gotoDetailPage(playlist, playlist.template, 'Our Picks')">
+				<div class="expertimg">
+
+					<img *ngIf="playlist.local_image_url == '' || playlist.local_image_url == null" src="{{playlist.image_url}}"  class="expertPlaylistClass"/>
+					<img *ngIf="playlist.local_image_url !='' && playlist.local_image_url != null" src="{{path}}{{playlist.local_image_url}}"  class="expertPlaylistClass"/>
+				</div>		
+
+				<div class="expertPlaylistName">
+					<b style="">{{playlist.name}}</b>
+				</div>
+			</div>
+		</ion-scroll>	
+	</div>
+
+	<div *ngIf="!playlist_data">
+		<ion-scroll>
+			<div class="inline inlineGap whatsnew-tile-topic" *ngFor="let i of [0,1,2,3,4,5,6,7]">
+				<div style="" class="avatarfortab">
+					<ion-avatar item-start>
+					<skeleton-item height="130px" width="153px;" class="fortab"></skeleton-item>
+					</ion-avatar>
+				</div>
+				<div style="position: relative; bottom: 0; width: 100%;" class="divskelfortab expertNameskeleton">
+					<skeleton-item height="25px" width="95%" class="skelfortab"></skeleton-item>
+				</div>
+			</div> 
+		</ion-scroll>
+	</div>
+	--->
+
+	<div style="padding: 35px 0px 35px 0px;">
+		<ion-row style="text-align: center;">
+			<ion-col tappable (click)="intractIcon('Facebook')">
+				<img class="social-container" src="assets/social-icon-facebook.jpg" alt="facebook">
+			</ion-col>
+			<ion-col tappable (click)="intractIcon('Twitter')">
+				<img class="social-container" src="assets/social-icon-twitter.jpg" alt="twitter">
+			</ion-col>
+			<ion-col tappable (click)="intractIcon('Instagram')">
+				<img class="social-container" src="assets/social-icon-instagram.jpg" alt="instagram">
+			</ion-col>
+			<ion-col tappable (click)="intractIcon('Linkedin')">
+				<img class="social-container" src="assets/social-icon-linkedin.jpg" alt="linkedin">
+			</ion-col>
+			<ion-col tappable (click)="intractIcon('Youtube')">
+				<img class="social-container" src="assets/social-icon-youtube.jpg" alt="youtube">
+			</ion-col>
+
+		</ion-row>
+	</div>
+	<!-- <div class="diffDivtopicClass onlyForBlog" *ngIf="network_type != 'none' && blog_post && blog_post.length > 0">	
+		<div class="div-forlabel">
+			<div class="div-left forlabel"><b>{{title_data[5].name}}</b></div>
+			<div class="div-right forlabel" tappable (click)="seeAllClick('Blogs', blog_post)">See all</div>
+		</div>
+		<div class="forboderbottom"></div>				
+
+		<ion-scroll scrollX="true" style="height: 310px !important;" class="fromTop_forScroll">
+			<div class="inline inlineGapBlog" *ngFor="let blog of blog_post" (click)="gotoDetailPage(blog, 'wordpress_blog', 'Health Blogs')">
+				<div class="expertimg">
+					<img src="{{blog.blog_image}}" class="expertClassBlog" /> 
+				</div>
+			</div>			
+		</ion-scroll>			
+	</div> -->
+	<!-- <div *ngIf="!blog_post && network_type != 'none'">
+		<ion-scroll style="height: 320px !important;">
+			<div class="whatsnew-tile-banner gapforipad" style="">
+				<div style="" class="avatarfortab">
+					<ion-avatar item-start>
+					<skeleton-item height="265px" width="100%" class="fortab"></skeleton-item>
+					</ion-avatar>
+				</div>
+			</div> 
+		</ion-scroll>
+	</div> -->
+
+	<!-- <div class="slides-container" *ngIf="network_type != 'none' && tweets_data"> -->
+	<!-- 
+	<div class="slides-container" *ngIf="network_type != 'none' && tweets_data && tweets_data.length > 0">	
+		<div class="div-forlabel">
+			<div class="div-left forlabel"> <b>{{title_data[6].name}}</b></div>
+			<div class="div-right forlabel" tappable (click)="seeAllClick( 'Tweets',tweets_data)"><b>See all</b></div>
+		</div>
+		<div class="forboderbottom"></div>	
+		<ion-slides #slides class="twitterText" (ionSlideDidChange)="slideChangedForTwiter()">
+		    <ion-slide class="divcenter1" (tap)="gotoDetailPage(twitter, 'twitter_msg', 'Tweets')" *ngFor="let twitter of tweets_data">
+		    	<span float-left class="forTwiterIcon" style="color: #00acee;"><img src="https://img.icons8.com/android/24/000000/twitter.png" style="height: 30px; width: 30px; ">
+		    		<b class="forDate">@CardioVisual {{ twitter.createdAt | date: 'MMM d, yyyy' }} </b>
+		    	</span>
+			    <span float-left class="text-justify-property">
+				   	<h3 style="">
+				   	 {{ twitter.tweet_text | slice:0:280 }}
+				   	</h3>
+				</span>
+		    </ion-slide>
+		</ion-slides>
+
+		<div float-left color="" class="swiper-button-prev swiper-button-black backBtn" (click)="prevSlide('slides')" [hidden]="isFirstArrowForTweet"></div>
+		<div color="" float-right class="swiper-button-next swiper-button-black nextBtn" (click)="nextSlide('slides')" [hidden]="isLastArrowForTweet"></div>
+	</div>
+
+	<div *ngIf="!tweets_data && network_type != 'none'">
+		<div class="whatsnew-tile-banner" style="padding-top:20%;">
+			<div style="" class="avatarfortab">
+				<ion-avatar item-start>
+				<skeleton-item height="155px" width="100%" class="fortab"></skeleton-item>
+				</ion-avatar>
+			</div>
+		</div> 
+	</div>
+	-->
+
+
+	</ion-grid>
+</ion-content>
+
+<ion-footer clean-footer style="background-color: #F0F0F0 !important;" [activeFootermenu]="false" [iswhatsNew]="true"></ion-footer>
+

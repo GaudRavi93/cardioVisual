@@ -1,0 +1,102 @@
+
+<!-- <ion-header class="headerColor">-->
+<ion-header class="headerColor">
+
+  <ion-navbar class="drawon-title" style=""><b class="marleft">{{drawOnImgTitle}}</b>
+  </ion-navbar>
+
+  <ion-navbar class="suheader" style="background-color: #111111 !important; color:#ffffff;text-align: center; min-height: 56px;">{{imageCopyright}}
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding no-bounce>
+
+	<div  #map id="canvasDiv" class="maiDivCanvas pinch-zoom-container" [ngClass]="{'enable_click': isclicked == true, 'disable_click':isclicked == false }" [style.position]="isclicked == true ? '' : (isclicked == false ? 'relative' : '')" style="overflow: scroll;">
+		<canvas #imageCanvas id="imageCanvas" (touchstart)="startDrawing($event)" (touchmove)="moved($event)" (touchend)="drawingEnd($event)" class="csnvssheight pinch-zoom-image">
+		</canvas>
+	</div> 
+	        
+</ion-content>
+
+<ion-footer style="background-color: #F0F0F0 !important;">
+    <ion-toolbar class="footercolor" transparent no-padding no-bounce>
+
+	    <!-- <ion-grid no-padding > 
+		 	<ion-row style="" no-padding>
+		      <ion-col *ngFor="let color of colors" [style.background]="color" class="color-block" tappable (click)="selectColor(color)"></ion-col>
+		    </ion-row>
+		   	<ion-row style="" >
+			   
+				<ion-col  col-2 style="text-align: center;padding:3px;" (click)='getClickedIcon("pen")'>
+					<ion-icon #pencontainer name="brush" class='icon pen' style="font-size: 1.4em; top: 6;"></ion-icon>
+				</ion-col>  
+				   
+				<ion-col col-2 style="text-align: center;padding:0px;" (click)='getClickedIcon("clear")'>
+					<ion-icon class='ion-close-round clear bg-transparent ' name="close" style="background-color: transparent; font-size: 2.2em;"></ion-icon>
+				</ion-col>
+
+				<ion-col col-2 style="text-align: center;padding:3px;" (click)='getClickedIcon("save")'>      
+					<ion-icon class='icon ion-document-text bg-transparent' name="document" style="background-color: transparent; font-size: 1.6em;"></ion-icon>
+				</ion-col>      
+
+				<ion-col col-2 style="text-align: center;padding:3px;" (click)='getClickedIcon("email")'>
+					 <ion-icon class='icon ion-email clear bg-transparent'  name="mail" style="background-color: transparent; font-size: 1.6em;"></ion-icon>
+				</ion-col>
+				<ion-col col-2 style="text-align: center;padding:3px;" (click)='getzoomPlus()'>
+				<ion-icon class='icon icon-zoom-in clear bg-transparent' style="background-color: transparent; font-size: 1.6em;color:#000;"></ion-icon>
+				</ion-col>
+				<ion-col col-2 style="text-align: center;padding:3px;" (click)='getzoomMinus()'>
+				<ion-icon class="icon icon-zoom-out" style="background-color: transparent; font-size: 1.6em;color:#000;"></ion-icon>
+				</ion-col>
+		    </ion-row>
+	   </ion-grid>  -->
+		<ion-buttons>	
+			<div *ngIf="drawingEnabled">
+				<button ion-button (click)="openColorsPopover($event)" icon-only style="margin-left: 2%;">
+					<ion-icon name="color-palette" style="color:#000000;"></ion-icon>
+				</button>
+
+				<button ion-button (click)="openWidthsPopover($event)" icon-only>
+					<ion-icon name="options" style="color:#000000;"></ion-icon>
+				</button>
+
+				<button ion-button (click)="openTypesPopover($event)" icon-only>
+					<ion-icon #pencontainer name="brush" style="color:#000000;"></ion-icon>
+				</button>
+
+				<button ion-button (click)='getClickedIcon("clear")' icon-only>
+					<ion-icon name="undo" style="color:#000000;"></ion-icon>
+				</button>
+
+				<button ion-button (click)="getClickedIcon('email')" icon-only>
+					<ion-icon class='icon ion-email clear bg-transparent'  name="mail" style="background-color: transparent; font-size: 1.6em;color:#000000;"></ion-icon>
+				</button>	
+
+				<button ion-button (click)='getClickedIcon("save")' icon-only>
+					<ion-icon class='icon ion-document-text bg-transparent' name="document" style="background-color: transparent; font-size: 1.6em;color:#000000;"></ion-icon>
+				</button>
+
+				<button ion-button (click)='getzoomPlus()' icon-only>
+					<ion-icon class='icon icon-zoom-in clear bg-transparent' style="background-color: transparent; font-size: 1.6em;color:#000;"></ion-icon>
+				</button>	
+
+				<button ion-button (click)='getzoomMinus()' icon-only>
+					<ion-icon class="icon icon-zoom-out" style="background-color: transparent; font-size: 1.6em;color:#000;"></ion-icon>
+				</button>	
+
+			</div>
+
+			<div *ngIf="!drawingEnabled">
+				<button ion-button (click)="ok()">
+				OK
+				</button>
+			</div>  
+
+		</ion-buttons> 
+  	</ion-toolbar>
+</ion-footer>
+
+
+
+

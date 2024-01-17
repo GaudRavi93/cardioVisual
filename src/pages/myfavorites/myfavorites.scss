@@ -1,0 +1,80 @@
+page-myfavorites {
+	.hide_row{
+		display:none;
+	}
+
+
+  .contentGrid{
+    //position:fixed;
+    //bottom:60px;
+    margin-bottom:70px;
+  }
+
+
+
+  .colContent{
+    //position:relative;
+    //top:40px;
+  }
+
+	/* iphone 6, 6s, 7, 8 */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+
+      .scroll-content {
+        margin-top:60px !important;
+        margin-bottom: 0px !important;
+        padding: 0 !important;
+      }
+
+    }
+
+  /*
+   ##Device = Tablets, Ipads (portrait)
+   ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+  }
+
+
+  /* (720x1280) Galaxy Nexus, WXGA */
+  /*Screen resolution (1080 X 2280) */
+  @media (min-width: 350px) and (max-width: 430px) {
+    ion-content{
+      top:-3px;
+    }
+  }
+
+  @media (min-width:481px) and (orientation: portrait), (min-width:800px) and (orientation: landscape) {
+
+  }
+}
+
+.rectanglImg{
+
+    //min-width: 5rem;    
+    //min-height: 5rem;
+    padding-left:4px;
+    
+
+}
+
+.thumbnilBackground{
+  background-color: #000000
+}
+
+.itemClassHeight{
+  min-height: 125px;
+}
+
+
+.rectangl_img{
+
+  opacity: 0.7;
+  min-width: 144px !important;
+  min-height: 81px !important;
+  margin: 0px;
+  object-fit: cover;
+
+}

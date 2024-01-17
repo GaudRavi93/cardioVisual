@@ -1,0 +1,76 @@
+{
+  "_from": "clevertap-cordova@latest",
+  "_id": "clevertap-cordova@2.7.1",
+  "_inBundle": false,
+  "_integrity": "sha512-YZi7PrlH7fsx3wiNB5KJTaa/PhhGNcckG+Jt27KkNVAAG0yy0Cht0ZOMiGSQ3fMIRWl2N8TWQAOE+l/xmLHFNw==",
+  "_location": "/clevertap-cordova",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "clevertap-cordova@latest",
+    "name": "clevertap-cordova",
+    "escapedName": "clevertap-cordova",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/clevertap-cordova/-/clevertap-cordova-2.7.1.tgz",
+  "_shasum": "976eaa7e02d7ecec3ec9accbff078803cf1f4833",
+  "_spec": "clevertap-cordova@latest",
+  "_where": "C:\\Users\\pc\\Downloads\\myaapp2",
+  "author": {
+    "name": "CleverTap"
+  },
+  "bugs": {
+    "url": "https://github.com/CleverTap/clevertap-cordova/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "clevertap-cordova",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "deprecated": false,
+  "description": "CleverTap Plugin for Cordova/PhoneGap",
+  "engines": {
+    "cordovaDependencies": {
+      "2.3.2": {
+        "cordova": ">=7.0.0",
+        "cordova-android": ">6.3.0",
+        "cordova-ios": ">=4.3.0"
+      },
+      "2.6.0": {
+        "cordova": ">=11.0.0",
+        "cordova-android": ">=11.0.0",
+        "cordova-ios": ">=4.3.0"
+      },
+      "2.7.0": {
+        "cordova": ">=12.0.0",
+        "cordova-android": ">=12.0.0",
+        "cordova-ios": ">=4.3.0"
+      }
+    }
+  },
+  "homepage": "https://github.com/CleverTap/clevertap-cordova#readme",
+  "keywords": [
+    "CleverTap",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "Commercial",
+  "name": "clevertap-cordova",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CleverTap/clevertap-cordova.git"
+  },
+  "version": "2.7.1"
+}

@@ -1,0 +1,63 @@
+
+<ion-content padding="false" class="user-setup-new">
+  
+  <div id="register" class="user-register"  *ngIf="requestType == 'chkLocation'">
+    <p class="or-tag font20" style="color: #151313;"><b>Choose Your Country Or Region</b></p>
+    <form name="signUpForm" novalidate=""  (ngSubmit)="onLocationSubmit()">
+      <div class="error text-center">{{error_msg}}</div>
+
+        <p class="text-center pg-second-message" style="color: #151313;">Please select your country to help us optimize streaming and personalize the video content for you. </p>
+        <p>
+          <ion-item class="selectdrop" text-center>
+            <ionic-selectable
+              item-content
+              name ="port"
+              [(ngModel)]="port"
+              [items]="ports"
+              itemValueField="name"
+              itemTextField="name"
+              [canSearch]="true"
+              placeholder="Please Select Country"
+              (onChange)="portChange($event)">
+            </ionic-selectable>
+          </ion-item> 
+        </p>
+
+        <div class="text-center">
+            <button class="white-button-btn"><b>SUBMIT</b></button>
+        </div>
+    </form>
+  </div>
+
+
+  <div id="register" class="user-register"  *ngIf="requestType == 'chkspecialities'">
+    <p class="or-tag font20" style="color: #151313;"><b>Choose Your Profession or Speciality</b></p>
+    <form name="signUpForm" novalidate=""  (ngSubmit)="onLocationSubmit()">
+      <div class="error text-center">{{error_msg}}</div>
+
+        <p class="text-center pg-second-message" style="color: #151313;">Please select your Profession/Speciality to help us optimize streaming and personalize the video content for you. </p>
+        <p>
+          <ion-item class="selectdrop" text-center>
+            <ionic-selectable 
+              item-content
+              [(ngModel)]="doctorport"
+              name ="doctorport"
+              itemValueField="doctorcode"
+              itemTextField="name"
+              [items]="doctorports" 
+              [canSearch]="true"
+              placeholder="Please Select Your Profession"
+              [hasVirtualScroll]="true"
+              [virtualScrollHeaderFn]="getGroupText"
+              (onChange)="docPortChange($event)">
+            </ionic-selectable>
+          </ion-item>
+        </p>
+
+        <div class="text-center">
+            <button class="white-button-btn"><b>SUBMIT</b></button>
+        </div>
+    </form>
+  </div>
+</ion-content>
+

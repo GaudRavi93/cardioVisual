@@ -1,0 +1,104 @@
+<!--
+  Generated template for the SignupwithgooglePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding="false" class="user-setup-new user-register">
+    <button class="previous" (click)="goBack()">&laquo;BACK</button>
+    <div id="register" class="loginScreen-center">
+        <form>
+            <div class="text-center" >
+                <img src="assets/images/cv-logo-subscription.png" style="height: 50px; width: 50px;">
+            </div>
+            <div class="error text-center">{{error_msg}}</div>
+            <p class="text-center">
+                <!-- <button class="loginBtn loginBtn--google signup-btn" style="text-align: center;" (click)="googleSignIn()"><b>Login with Google</b></button> -->
+
+                <button class="loginBtn loginBtn--google signup-btn" style="text-align: center;" (click)="googleSignIn()"><b>Sign in with Google</b></button>
+            </p>
+           <!--  <p class="text-center pg-second-message" style="color: #151313;">Please provide your profession and country to help us customize the app.</p> -->
+
+           <p class="text-center pg-second-message" style="color: #151313;"></p>
+
+            <p style="margin-top: 3px;">
+            	<!-- <ion-item class="selectdrop" text-center>
+  				  <ionic-selectable
+  				    item-content
+  				    name ="myuserRole"
+  				    [(ngModel)]="myuserRole"
+  				    [items]="myuserRoles"
+  				    itemValueField="code"
+  				    itemTextField="role"
+  				    [canSearch]="true"
+  				    placeholder="Please Select Your Profession"
+  				    (onChange)="roleChange($event)">
+  				  </ionic-selectable>
+  				  </ion-item>	
+                </p> -->
+            <ion-item class="selectdrop" text-center  [ngClass]="{'disabled': specilitiesDropDown == true, 'notdisabled':specilitiesDropDown == flase }">
+                <ionic-selectable 
+                    item-content
+                    [(ngModel)]="doctorport"
+                    name ="doctorport"
+                    itemValueField="doctorcode"
+                    itemTextField="name"
+                    [items]="doctorports" 
+                    [canSearch]="true"
+                    placeholder="Select Profession"
+                    [hasVirtualScroll]="true"
+                    [virtualScrollHeaderFn]="getGroupText"
+                    (onChange)="docPortChange($event)">
+                </ionic-selectable>
+            </ion-item>
+            </p><br/>
+            <p>
+              <ion-item class="selectdrop" text-center>
+                <ionic-selectable
+                item-content
+                name ="port"
+                [(ngModel)]="port"
+                [items]="ports"
+                itemValueField="name"
+                itemTextField="name"
+                [canSearch]="true"
+                placeholder="Select Country"
+                (onChange)="portChange($event)">
+                </ionic-selectable>
+              </ion-item>	
+            </p><br />
+            
+            <p *ngIf="isShow">
+              <ion-item class="selectdrop" text-center>
+                <ionic-selectable
+                  item-content
+                  name ="myState"
+                  [(ngModel)]="myState"
+                  [items]="myStates"
+                  itemValueField="code"
+                  itemTextField="name"
+                  [canSearch]="true"
+                  placeholder="Select State"
+                  (onChange)="stateChange($event)">
+                </ionic-selectable>
+              </ion-item>
+            </p>
+            
+            <!-- <div class="text-center terms-message" >
+                <a class="alinks text-left" style="margin-right:12px;  text-decoration: underline; color: #151313;" (click)="termsofservice()">Terms of Service</a> 
+                <a class="alinks text-right" style="margin-right:8px; text-decoration: underline; color: #151313;"  (click)="privacypolicy()" >Privacy Policy</a> 
+            </div>
+            <p class="text-center font12 white" style="color: #151313;">By clicking on submit,I agree to the privacy policy & terms of service.</p> -->
+            <div class="userConsent" style="margin-bottom: 14px;">
+              <p class=""> 
+                <ion-checkbox [(ngModel)]="userConsent2" name="userConsent2"></ion-checkbox> 
+              </p>
+              <p class="font12" style="color: #151313;">I agree to the  <a class="alinks" (click)="privacypolicy()"  style="color: #e85f4f; font-weight: bold;">Privacy Policy</a> & <a class="alinks" (click)="termsofservice()"  style="color: #e85f4f; font-weight: bold;" >Terms of Service</a> </p>
+            </div>
+            <p id="register_horizotalBar" style="margin: 19px; margin-top: 47px;"></p>
+            <div class="text-center">
+                <button class="white-button-btn" (click)="submitlogin()"><b>SUBMIT</b></button>
+            </div>
+        </form>
+    </div>
+</ion-content>

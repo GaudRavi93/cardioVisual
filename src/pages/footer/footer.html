@@ -1,0 +1,52 @@
+<ion-toolbar class="footercolor" transparent>
+	<ion-grid no-padding > 
+	    <ion-row style="width:100%;color:#474747;min-height:20px;text-align: center;">
+
+			<ion-col *ngIf="activeFootermenu">
+				<div><i class="icon-footer-icon-home selected-fav-icon new-font-icons" style="font-size: 2.4em;color:#E8604F;margin-top:0.2em;"></i></div>
+				<div style="" class="fntSize"><b>Home</b></div>
+			</ion-col>
+
+			<ion-col tappable (click)="gotoHome()" *ngIf="!activeFootermenu">
+				 <div><i class="icon-footer-icon-home selected-fav-icon new-font-icons" style="font-size: 2.4em;margin-top:0.2em;"></i></div>
+				 <div style="" class="fntSize"><b>Home</b></div>
+			</ion-col>
+
+			<!-- <ion-col tappable (click)="onPromptForProffesional()">
+				<div><i class="icon-cardio-discuss selected-fav-icon new-font-icons" style="font-size: 2.4em;margin-top:0.2em;"></i></div>
+				<div style="" class="fntSize"><b>Discuss</b></div>
+			</ion-col> -->
+
+			<ion-col *ngIf="iswhatsNew">
+				<div><i class="icon-footer-icon-updates selected-fav-icon new-font-icons" style="font-size: 2.6em;color:#E8604F;margin-top:0.1em;"></i></div>
+				<div style="" class="fntSize"><b>Featured</b></div>
+			</ion-col>
+
+			<ion-col tappable (click)="gotoWhatsnew()" *ngIf="!iswhatsNew">
+				<div><i class="icon-footer-icon-updates selected-fav-icon new-font-icons" style="font-size: 2.6em;margin-top:0.1em;"></i></div>
+				<div style="" class="fntSize"><b>Featured</b></div>
+			</ion-col>
+
+			<ion-col *ngIf="ismyChannel">
+				<div style="padding-right:15px;"><i class="icon-channelcon selected-fav-icon new-font-icons" style="font-size: 1.5em;color:#E8604F;margin-top:0.3em;margin-bottom:0.7em;"></i></div>
+				<div style="" class="fntSize"><b>Channels</b></div>
+			</ion-col>
+
+			<ion-col tappable (click)="comingsoonforchannels()" *ngIf="!ismyChannel">
+				<div style="padding-right:15px;"><i class="icon-channelcon selected-fav-icon new-font-icons" style="font-size: 1.5em;margin-top:0.3em;margin-bottom:0.7em;"></i></div>
+				<div style="" class="fntSize"><b>Channels</b></div>
+			</ion-col>
+
+			<ion-col *ngIf="ismyCv">
+				<div><i class="icon-footer-icon-mycv selected-fav-icon new-font-icons" style="font-size: 2.6em;color:#E8604F;margin-top:0.1em;"></i></div>
+				<div style="" class="fntSize"><b>My CV</b></div>
+			</ion-col>
+
+			<ion-col tappable (click)="gotoMyCV()" *ngIf="!ismyCv">
+				<div><i class="icon-footer-icon-mycv selected-fav-icon new-font-icons" style="font-size: 2.6em;margin-top:0.1em;"></i></div>
+				<div style="" class="fntSize"><b>My CV</b></div>
+			</ion-col>
+
+	    </ion-row>
+	</ion-grid> 
+</ion-toolbar>

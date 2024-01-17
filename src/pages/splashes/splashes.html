@@ -1,0 +1,31 @@
+
+
+<ion-content *ngIf="type == 'PoweredBy'">
+    <!-- <ion-slides pager #slides (ionSlideDidChange)="slideChanged()"  direction="vertical"> -->
+    <ion-slides pager="false" #slides (ionSlideDidChange)="slideChanged()"  direction="vertical">
+        <ion-slide *ngFor="let data of snapshot; let i = index;" background-size [ngStyle]="{ 'background-image': 'url('+ data.imageUrl +')' }" style="">
+
+            <button ion-button class="animated learn_more" color="primary" (click)="learn_more(data)">Learn More</button>
+           <button ion-button class="animated next" color="primary" [hidden]="isLastSlide" (click)="next(data)">NEXT</button>
+           <button ion-button class="animated next" color="primary" [hidden]="!isLastSlide" (click)="next(data)">Skip</button>
+        </ion-slide>
+
+    </ion-slides>
+</ion-content>
+
+<ion-content *ngIf="type != 'PoweredBy'">
+   <!--  <ion-slides pager #slides (ionSlideDidChange)="slideChanged()"  direction="vertical"> -->
+    <ion-slides pager="false" #slides (ionSlideDidChange)="slideChanged()"  direction="vertical">
+
+        <ion-slide *ngFor="let data of snapshot; let i = index;" background-size [ngStyle]="{ 'background-image': 'url('+ data.imageUrl +')' }" style="">
+
+            <button ion-button class="animated learn_more" color="primary" (click)="learn_more(data)">Learn More</button>
+
+           <button ion-button class="animated next" color="primary" [hidden]="isLastSlide" (click)="next(data)">NEXT</button>
+           
+
+           <button ion-button class="animated next" color="primary" [hidden]="!isLastSlide" (click)="next(data)">Skip</button>
+      </ion-slide>
+
+  </ion-slides>
+</ion-content>

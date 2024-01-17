@@ -1,0 +1,48 @@
+
+<ion-header clean-header  class="dashboard" style=""></ion-header>
+ <!--Content-->
+
+<!-- <ion-content [ngStyle]="banner_css" scroll="false" no-padding no-margin style="top: 0;"> -->
+<ion-content  no-padding no-margin scroll="false">
+
+
+	<!--
+		User Dashboard Grid Layout
+	-->
+
+	<div class="dashboard-cont">
+    <ng-container *ngIf='params' no-padding no-margin>
+      <!-- <div tappable class="dashboard-tile buttontransition" [ngStyle]="{backgroundColor:topic.hexcodeBase}" (click)="getTopicClick(topic)" *ngFor="let topic of params"> -->
+      <div tappable class="dashboard-tile" [ngStyle]="{backgroundColor:topic.hexcodeBase}" (click)="getTopicClick(topic)" *ngFor="let topic of params">
+          <div class="img-div home-logo">
+            <i class="logo-design" [ngClass]="topic.iconName"></i>
+            <p style="margin-top: 5px;">
+              <i class="icon-shadow" [ngStyle]="{color:topic.hexcodeContrast}" style="position: relative; top: 5px; right: 30px;"></i>
+            </p>
+          </div>
+
+          <div class="row-label" [ngStyle]="{backgroundColor:topic.hexcodeContrast}">
+            <b style="font-size:16px;">{{topic.name}}</b>
+            <!-- <b *ngIf="topic.name != 'Heart Health & Diabetes'">{{topic.name}}</b>
+           <b *ngIf="topic.name == 'Heart Health & Diabetes'" style="font-size:16px;">{{topic.name}}</b> -->
+          </div>
+      </div>     
+    </ng-container>
+
+    <ng-container *ngIf='!params'>
+      <div class="dashboard-tile" *ngFor="let i of [0,1,2,3,4,5]" style="padding-left:2px;">
+        <div style="padding-top: 3%;" class="avatarfortab">
+          <ion-avatar item-start>
+            <skeleton-item height="150px" width="95%" class="fortab"></skeleton-item>
+          </ion-avatar>
+        </div>
+        <div style="position: absolute; bottom: 0; width: 100%;" class="divskelfortab">
+          <skeleton-item height="25px" width="95%" class="skelfortab"></skeleton-item>
+        </div>
+      </div>     
+    </ng-container>
+	</div>
+</ion-content>
+
+
+<ion-footer clean-footer style="background-color: #F0F0F0 !important;" [activeFootermenu]="true" [ismyCv]="false" [ismyChannel]="false"></ion-footer>

@@ -1,0 +1,1312 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+/* by sanjeev start */
+
+//menu icon size
+.menu-icon-size {
+  font-size: 1.4em;
+  margin-left: 2%;
+}
+
+form input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  color: #333333;
+  font-family: inherit;
+  font-size: 14px;
+  height: 34px;
+  outline: none;
+  padding: 0px 10px;
+  width: 90%;
+  -webkit-appearance: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.terms-message {
+  color: #ffffff;
+  font-size: 12px;
+  /*margin-bottom: 16px;*/
+  margin-bottom: 14px;
+}
+.text-center {
+  text-align: center;
+  vertical-align: middle;
+}
+.alinks {
+  color: #ffffff;
+  //padding: 3px 0;
+  //font-size: 12px;
+}
+
+#login form p,
+#register form p {
+  margin-bottom: 5px;
+}
+
+.white-button-btn {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  color: #e85f4f;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 8px 0;
+  width: 90%;
+  margin: 16px auto;
+  -webkit-appearance: none;
+}
+.user-setup-new {
+  background-color: #ffffff !important;
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 14px;
+  color: #fff;
+  width: 280px;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
+}
+.loginBtn--facebook {
+  background-color: #4c69ba;
+  background-image: linear-gradient(#4c69ba, #3b55a0);
+  text-shadow: 0 -1px 0 #354c8c;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url("../assets/images/icon_facebook.png") 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5b7bd5;
+  background-image: linear-gradient(#5b7bd5, #4864b1);
+}
+.loginBtn--google {
+  background: #dd4b39;
+}
+.loginBtn--google:before {
+  border-right: #bb3f30 1px solid;
+  background: url("../assets/images/icon_google.png") 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #e74b37;
+}
+
+.loginBtn--email {
+  background: #78bbb2;
+}
+
+.loginBtn--email:before {
+  border-right: #047566 1px solid;
+  /*background: url('../img/389-mail2.png') 6px 6px no-repeat;*/
+}
+
+.loginBtn--email:hover,
+.loginBtn--email:focus {
+  background: #e74b37;
+}
+.or-tag {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+#login,
+#register {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.previous {
+  color: #e85f4f;
+  font-family: inherit;
+  font-size: 20px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.loginScreen-center {
+  padding-top: 30%;
+}
+#register {
+  top: 60%;
+}
+#register_horizotalBar {
+  margin: 3px auto;
+  border: 1px solid #dbdbdb;
+}
+.signup-btn {
+  width: 260px;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+.error {
+  color: #ea1800;
+}
+
+//added on 3rd april
+
+.back-color {
+  mix-blend-mode: unset !important;
+}
+
+.custom-menu .icon {
+  margin-right: 30px !important;
+}
+
+.pg-second-message {
+  margin-top: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.font12 {
+  font-size: 12px;
+}
+.white {
+  color: #ffffff;
+}
+.red {
+  color: #ff0000;
+}
+.white-ul li {
+  color: #ffffff;
+  margin-top: 5%;
+}
+
+//for nav menu color
+.menuColor {
+  color: #000000 !important;
+}
+
+.subscription-upgrade-icon {
+  font-size: 28px;
+  top: -11px;
+  @media screen and (max-width:525px) {
+    font-size: 24px;
+    top: 0px;
+  }
+}
+
+.search-input {
+  /*min-width: 85% !important;*/
+  width: 70%; /*change width from 80 to 70 for mic*/
+  height: 30px !important;
+  background: #fff;
+  color: #000000;
+  //line-height: 20px;
+  text-align: center;
+  box-shadow: inset 0.1px 0.9px 8px 0px #3c3b37 !important;
+  border: 1.3px solid;
+  top: -3px;
+  position: relative;
+  @media screen and (max-width:525px) {
+width: 100% !important;
+background: #fff;
+color: #000000;
+text-align: center;
+-webkit-box-shadow: inset 0.1px 0.9px 8px 0px #3c3b37 !important;
+box-shadow: inset 0.1px 0.9px 8px 0px #3c3b37 !important;
+border: 1.3px solid;
+top: 0px;
+position: relative;
+  }
+}
+//.search-btn{
+//    background: black !important;
+//    color:#000 !important;
+//    border-radius: 0.5px!important;
+//    min-width: 30px !important;
+//    min-height: 28px !important;
+//    border: none;
+//}
+
+.search-btn {
+  color: black !important;
+  border-radius: 0.9px !important;
+  width: 12%;
+  height: 28px ;
+  border: none;
+  top: -3px;
+  left: -3px;
+  position: relative;
+  @media screen and (max-width:525px) {
+    color: black !important;
+  border-radius: 0.9px !important;
+  width: unset !important;
+  height: unset !important;
+  border: none;
+  top: 0px;
+  left: 0px;
+  position: relative;
+      }
+}
+.icon-search {
+  font-size: 23px;
+}
+
+ion-header ion-icon.back-button-icon.icon {
+  color: #000000 !important;
+}
+.tabheader .toolbar-title {
+  color: #000000;
+}
+ion-header ion-icon.back-button-icon.icon,
+ion-header span.back-button-text.back-button-text-ios {
+  color: #000000;
+}
+
+///for header search start
+/*.search_input{
+            width:85%;
+            //padding: 4px;
+            padding: 2% 0% 3% 0%;
+
+        }
+        .search-button{
+            width:13%;
+            background-color: #2A3457;
+            margin-bottom:3px;
+            margin-left:1px;
+            padding: 2% 0% 2% 0%;
+            color:#FFF;
+        }
+        .search-center{
+            //padding: 1% 0% 1% 0%;
+        } */
+
+.search_input {
+  //width:85%;
+  //padding: 4px;
+}
+.search-button {
+  //background-color: #2A3457;
+  //width:11%;
+  //color:#FFF;
+  //padding:5px;
+  //text-align:center;
+}
+//end
+
+.platform-ios .arrow-back {
+  position: fixed;
+  top: 25% !important;
+  left: 7%;
+  font-size: 1em;
+  color: #fff;
+}
+
+.platform-android .arrow-back {
+  position: fixed;
+  top: 3% !important;
+  left: 6%;
+  font-size: 0.98em;
+  color: #fff;
+}
+.page_name {
+  left: 49% !important;
+  text-align: left;
+}
+.iconDash {
+  left: 35% !important;
+  margin-right: 5%;
+}
+
+.platform-ios .second_header {
+  margin-top: 17.2% !important;
+}
+
+.platform-android .second_header {
+  margin-top: 56px !important;
+}
+
+.tab-desc-size {
+  width: 100% !important;
+  display: block !important;
+  word-wrap: break-word;
+  white-space: normal;
+  color: #7a7671 !important;
+}
+.tab-desc-size1 {
+  min-width: 100px !important;
+  width: 100% !important;
+  display: block !important;
+  word-wrap: break-word;
+  white-space: normal;
+  color: #7a7671 !important;
+}
+.disp-new {
+  position: absolute;
+  font-weight: 600;
+  font-size: 12px;
+  left: 31%;
+  margin-bottom: 15px;
+}
+.ion-item-border {
+  background-color: #fff !important;
+  border-bottom: 1.55px solid #ededed;
+}
+.item-text-wrap {
+  color: #110f0f !important;
+  font-size: 1.4rem !important;
+  white-space: normal;
+}
+
+//.img-overlay { background-color: #edeaea;}
+.img-overlay {
+  background-color: #000000;
+}
+.img-overlay img {
+  opacity: 0.7;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  margin: 8px 0px 8px 0px;
+  object-fit: cover;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 22px;
+  //left: 2px;
+  left: 2px;
+}
+.img-overlay-1 {
+  background-color: #000000;
+}
+.img-overlay-1 img {
+  opacity: 0.5;
+  min-width: 85px !important;
+  min-height: 85px !important;
+  margin: 0px;
+  object-fit: cover;
+}
+.img-playlist img {
+  min-width: 85px !important;
+  min-height: 85px !important;
+  margin: 0px;
+  object-fit: cover;
+}
+.bottom-left-1 {
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+}
+
+.sidetrans {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.card-1 {
+  //box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  // box-shadow: 0 10px 38px rgba(0,0,0,0.30), 0 5px 10px rgba(0,0,0,0.22);
+}
+
+.platform-android.cardiacTreat {
+  background-color: #fff !important;
+  min-height: 100px !important;
+  height: 90% !important;
+}
+
+/* Ripple effect with transition start sanjeev by: sanjeev*/
+
+.boxbutton:hover {
+  //background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  background: #f2f2f2 radial-gradient(circle, transparent 1%, #f2f2f2 1%)
+    center/15000%;
+}
+.boxbutton:active {
+  background-size: 100%;
+  transition: background 0s;
+  transform: scale(0.99);
+  box-shadow: 0px 0px 20px #848484;
+}
+/* Ripple effect with transition End */
+
+/* only transition effect  start*/
+.buttontransition:active {
+  transition: background 0.8s;
+  transform: scale(0.95);
+  box-shadow: 0px 0px 20px #dbdee0;
+}
+.boldransition {
+  transform: scale(2.1);
+  box-shadow: 0px 0px 20px #dbdee0;
+}
+/* transition effect end*/
+
+.shareContent {
+  width: 20% !important;
+  text-align: center !important;
+  padding: 10px 5px 5px 5px !important;
+}
+.videodetailIongrid {
+  padding: 10px 3px;
+  background-color: #fff;
+  font-size: 1.3rem;
+  border-bottom: 0.1px solid #000000;
+}
+.fontSize2_6 {
+  font-size: 2.6em;
+}
+.shareVideoFont1_8 {
+  font-size: 1.8em;
+  margin-top: 5px;
+}
+.discussfont2_2 {
+  font-size: 2.2em;
+}
+.downloadFont3_6 {
+  font-size: 3.69em;
+  margin-top: 5px;
+}
+.favfont2_2 {
+  font-size: 2.3em !important;
+  margin-top: 5px !important;
+}
+
+.shareDownloaddiv {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #ccc;
+}
+.shareDownloadion_icon {
+  top: 8px;
+  font-size: 1.2em;
+  margin-right: 6px;
+  margin-left: 9px;
+}
+.shareDownloadion_icon_download {
+  position: relative;
+  top: 8px;
+  font-size: 2.2em;
+  margin-right: 6px;
+  margin-left: 9px;
+}
+.tabsharedownload {
+  position: relative;
+  top: 8px;
+  font-size: 1.5em;
+  margin-right: 8px;
+  margin-left: 11px;
+}
+.tabsfavshare {
+  top: 8px;
+  font-size: 1.2em;
+  margin-right: 8px;
+  margin-left: 11px;
+}
+
+/* start for ion segment by: sanjeev*/
+
+.platform-ios .main_tab {
+  ion-segment-button.segment-button {
+    border: none !important;
+    background-color: #247787 !important;
+    height: 56px !important;
+  }
+  ion-segment-button.segment-button.segment-activated {
+    background-color: #0a434e !important;
+    font-weight: bold !important;
+    border-bottom: none !important;
+  }
+}
+
+.platform-ios .sub_tab {
+  ion-segment-button.segment-button {
+    border: none !important;
+    background-color: #f0f0f0 !important;
+    height: 56px !important;
+  }
+}
+
+/* end for ion segment*/
+
+.font24 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.font22 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.font20 {
+  font-size: 20px;
+}
+.font18 {
+  font-size: 18px;
+}
+.font18-weight {
+  font-size: 18px;
+  font-weight: 700;
+}
+.font16 {
+  font-size: 16px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font12 {
+  font-size: 12px;
+}
+.font10 {
+  font-size: 10px;
+}
+.font8 {
+  font-size: 8px;
+}
+.font9 {
+  font-size: 9px;
+}
+.weight800 {
+  font-weight: 800;
+}
+.weight700 {
+  font-weight: 700;
+}
+.weight600 {
+  font-weight: 600;
+}
+.white {
+  color: #ffffff;
+}
+.red {
+  color: #ff0000;
+}
+.white {
+  color: #ffffff;
+}
+
+.newDarkBrown {
+  color: #333333 !important;
+}
+.newred {
+  color: #e8604f;
+}
+.newgray {
+  color: #f2f2f2 !important;
+}
+
+.newbrown-ul li {
+  color: #333333;
+  margin-top: 5%;
+}
+
+#outerdivinapp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 12px 5px 0px 9px; /* margin top is 25px ,right margin are 5px ,bottom margin is 0px and left margins are 9px*/
+}
+.innerdivinapp {
+  width: 50%;
+  display: inline-block;
+}
+
+.pg-message-inapp {
+  margin-top: 20px;
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.pg-message-inappnewred {
+  margin-top: 20px;
+  color: #e8604f;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.bordeer {
+  border-bottom: 2px solid #dbdbdb;
+  width: 20%;
+  margin: 10px auto;
+  padding: 15px 0px;
+}
+
+.button-inappnew {
+  background-color: #e8604f;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 0;
+  width: 50%;
+  margin: 16px auto;
+  -webkit-appearance: none;
+}
+.planButton {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 0;
+  width: 90%;
+  margin: 16px auto;
+  -webkit-appearance: none;
+}
+.subscription-content ul li {
+  list-style-type: disc;
+}
+.subscription-content-new ul li {
+  list-style-type: disc;
+}
+
+.headerColor .toolbar-background {
+  background-color: #f0f0f0 !important;
+}
+
+.color_red {
+  color: red;
+}
+.channelCss {
+  font-size: 1.4em;
+  margin-top: 0.4em !important;
+  padding: 6px 20px 0px 0px !important;
+}
+.channelCssText {
+  position: relative !important;
+  font-size: 1.2rem !important;
+  top: 0.6em !important;
+
+  padding-left: 21.2% !important;
+}
+
+.userConsent {
+  max-width: 100%;
+  padding-left: 2% !important;
+}
+.userConsent p {
+  display: inline-block;
+  max-width: 100%;
+  font-weight: bold;
+}
+.userConsent p:nth-child(1) {
+  float: left;
+  margin-left: 3px;
+}
+.userConsent p:nth-child(2) {
+  float: right;
+  margin-top: 17px;
+  margin-right: 9px;
+}
+
+.menu_list {
+  .input-wrapper {
+    padding-top: 5px;
+  }
+}
+
+.tabsharedownloadfev {
+  position: relative;
+  top: 8px;
+  font-size: 3.8rem;
+  margin-right: 6px;
+  margin-left: 8px;
+}
+
+.tabsharedownloaddlt {
+  position: relative;
+  top: 3.5px;
+  font-size: 2.2rem;
+  margin-right: 13px;
+  margin-left: 8px;
+  color: #000;
+}
+
+.myClassForWhatsNew {
+  padding-right: 15% !important;
+}
+
+.disable-action-sheet-btns {
+  display: none !important;
+}
+
+.enable-action-sheet-btns {
+  display: block !important;
+}
+
+.disable-action-sheet-btns_pub {
+  background-color: rgb(240, 209, 209) !important;
+}
+
+.platform-android .customePlaylistContent {
+  background-color: #fff !important;
+  min-height: 550px !important;
+  height: 100%; /*630px;*/
+}
+
+/*.tabsfavshare{
+        position:relative;
+        top:0px;
+        font-size:1.2em;
+        margin-right: 5px;
+        margin-left: 11px;
+    }*/
+
+.myPlusIcon {
+  position: relative;
+  top: 8px;
+  font-size: 2.3em;
+  right: 5px !important;
+}
+
+.myVideo {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: inherit;
+}
+/* end */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* //media query  start 17april2019 BY:-sanjeev */
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+/* iPad Air */
+@media (min-width: 481px) and (orientation: portrait),
+  (min-width: 800px) and (orientation: landscape) {
+  form input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"] {
+    //font-size: 24px !important;
+    // height: 50px !important;
+  }
+  .buttonLink {
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+  .logo-design {
+    font-size: 85px !important;
+    color: #fff;
+  }
+  .row-label {
+    position: absolute;
+    bottom: 0;
+    padding: 2% 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    b {
+      font-size: 25px !important;
+    }
+  }
+  .tabs-ios {
+    margin-top: 110px;
+  }
+
+  .tabs-md {
+    margin-top: 110px;
+  }
+  .search_input {
+    // width:85% !important;
+    //padding: 4px !important;
+    //margin-left:2% !important;
+  }
+  .search-button {
+    width: 8% !important;
+    padding: 6px !important;
+  }
+  .platform-ios .second_header {
+    margin-top: 8.4% !important;
+  }
+
+  .platform-ios .arrow-back {
+    top: 18% !important;
+    font-size: 1.2em !important;
+    left: 3% !important;
+  }
+
+  .tab-desc-size {
+    width: 100% !important;
+    font-size: 1.8rem !important;
+  }
+
+  .tab-desc-size1 {
+    width: 100% !important;
+    display: block !important;
+    word-wrap: break-word;
+    white-space: normal;
+    color: #7a7671 !important;
+    font-size: 1.6rem !important;
+  }
+
+  .disp-new {
+    left: 16% !important;
+  }
+  .img-left {
+    margin-left: 33% important;
+  }
+  .item-text-wrap {
+    font-size: 2.2rem !important;
+  }
+  .cardiacTreat {
+    min-height: 100px !important;
+    height: 90% !important;
+  }
+  .classWithPad {
+    line-height: 1.5 !important;
+    padding: 12px 0 !important;
+    /*margin: 0px 8px 16px 8px;*/
+    /*font-size: 16px;*/
+    font-size: 16px !important;
+    font-weight: 700;
+    margin: 3px !important;
+  }
+  .div-height {
+    width: 48% !important;
+    margin: 10px 0 0 0 !important;
+    text-align: center;
+  }
+  .show-on-tablet {
+    display: block !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
+
+  .button-btn {
+    font-size: 16px !important;
+    padding: 12px 0 !important;
+    width: 96% !important;
+    min-height: 10px !important;
+  }
+
+  .newDesignHcp-nonhcp {
+    width: 48% !important;
+    margin: 10px 10px 0 0 !important;
+    text-align: center !important;
+  }
+
+  .videoshareContent {
+    width: 30% !important;
+    text-align: right !important;
+    margin-left: 30px;
+    padding: 10px 5px 5px 5px !important;
+  }
+  .shareContent {
+    width: 30% !important;
+    text-align: center !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+  .fontSize2_6 {
+    font-size: 3.4em !important;
+  }
+  .shareVideoFont1_8 {
+    font-size: 2.6em !important;
+    margin-top: 5px;
+  }
+  .discussfont2_2 {
+    font-size: 3em;
+    margin-top: 5px;
+  }
+  .downloadFont3_6 {
+    font-size: 4.6em;
+    margin-top: 5px;
+  }
+  .textSize_tab {
+    font-size: 1em !important;
+    font-weight: 500 !important;
+  }
+  .favfont2_2 {
+    font-size: 3.2em !important;
+  }
+
+  /* start for ion segment by: sanjeev*/
+
+  .platform-ios .main_tab {
+    ion-segment-button.segment-button {
+      height: 55px !important;
+      font-size: 1.2em !important;
+      font-weight: 400 !important;
+    }
+  }
+  .segmttext {
+    margin-top: 11px !important;
+  }
+
+  .platform-ios .sub_tab {
+    ion-segment-button.segment-button {
+      height: 56px !important;
+    }
+  }
+
+  /* end for ion segment*/
+  .sgmntTabFont {
+    font-size: 1.8rem !important;
+    font-weight: 400 !important;
+  }
+  .videodetailIongridText1 {
+    font-size: 2.9rem !important;
+    font-weight: 400 !important;
+  }
+  .videodetailIongridText2 {
+    font-size: 1.62rem !important;
+    font-weight: 400 !important;
+  }
+
+  /* for listing tab button :by::Sanjeev */
+
+  .tab-button {
+    min-height: 4.9rem !important;
+  }
+  // .tab-button-text {
+  //   font-size: 16px !important;
+  //   font-weight: 400 !important;
+  // }
+
+  .iconDash {
+    margin-right: 1.9% !important;
+  }
+  .iconDownldTab {
+    font-size: 1.45em !important;
+  }
+  .iconfavShareTab {
+    font-size: 1.3em !important;
+  }
+
+  #dark-top-banner {
+    padding: 25px 16px !important;
+  }
+  #dark-top-banner .left {
+    width: 20% !important;
+  }
+  #dark-top-banner .left img {
+    width: 100px !important;
+  }
+  #dark-top-banner .right {
+    width: 80% !important;
+  }
+  .subscription-content {
+    padding: 30px 30px 30px 60px;
+  }
+
+  .shareDownloadion_icon {
+    top: 8px;
+    font-size: 1.6em !important;
+    margin-right: 15px !important;
+    margin-left: 10px !important;
+  }
+  .shareDownloadion_icon_download {
+    position: relative;
+    top: 8px;
+    font-size: 2.7em !important;
+    margin-right: 15px !important;
+    margin-left: 10px !important;
+  }
+
+  .tabsharedownloadfev {
+    font-size: 3.99rem !important;
+  }
+
+  .tabsharedownloaddlt {
+    top: 2px !important;
+    font-size: 2.2rem !important;
+  }
+
+  .tabsharedownload {
+    top: 8px;
+    font-size: 1.7em !important;
+    margin-right: 15px !important;
+    margin-left: 10px !important;
+  }
+  .tabsfavshare {
+    top: 8px;
+    font-size: 1.4em !important;
+    margin-right: 15px !important;
+    margin-left: 10px !important;
+  }
+  .platform-ios .channelCss {
+    font-size: 1.6em !important;
+    margin-top: 0.47em !important;
+    padding: 1px 0px 0px 9px !important;
+  }
+  .platform-ios .channelCssText {
+    position: relative !important;
+    font-size: 0.6em !important;
+    top: 0.89em !important;
+    padding-left: 20% !important;
+  }
+}
+
+/* iPhone < 5: */
+@media screen and (device-aspect-ratio: 2/3) {
+}
+
+/* iPhone 5: */
+@media screen and (device-aspect-ratio: 40/71) {
+  .logo-design {
+    font-size: 35px !important;
+    color: #fff;
+  }
+  .row-label {
+    position: absolute;
+    bottom: 0;
+    padding: 2% 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    b {
+      font-size: 15px !important;
+    }
+  }
+  .platform-ios .second_header {
+    margin-top: 20% !important;
+  }
+  .tab-desc-size {
+    width: 100% !important;
+    height: 20%;
+    font-size: 1.6rem !important;
+  }
+
+  .disp-new {
+    left: 36% !important;
+  }
+  .tabs-ios {
+    margin-top: 104px !important;
+  }
+
+  .tabs-md {
+    margin-top: 104px !important;
+  }
+  .subscription-upgrade-icon {
+    //font-size: 18px;
+  }
+}
+
+/* iPhone 6: */
+@media screen and (device-aspect-ratio: 375/667) {
+  .platform-ios .home-logo {
+    padding: 20% 0 28.2% 0;
+  }
+  .platform-ios .playlist-structure-wrapper {
+    width: 375px;
+  }
+}
+
+/* iPhone 6 Plus: */
+@media screen and (device-aspect-ratio: 9/16) {
+  .platform-ios .logo-design {
+    font-size: 73px;
+  }
+  .row-label {
+    font-size: 18px;
+  }
+  .platform-ios .second_header {
+    margin-top: 15.4% !important;
+  }
+}
+
+/* iPhone 6: */
+@media screen and (device-aspect-ratio: 375/667) and (orientation: landscape) {
+  .platform-ios .playlist-structure-wrapper {
+    width: 667px;
+  }
+}
+
+/* iPhone 6 Plus: */
+@media screen and (device-aspect-ratio: 9/16) and (orientation: landscape) {
+  .platform-ios .playlist-structure-wrapper {
+    width: 736px;
+  }
+}
+
+/* iPhone 7 landscape: */
+@media only screen and (min-width: 667px) and (orientation: landscape) {
+  .platform-ios .home-logo {
+    padding: 18% 0 28.2% 0;
+  }
+  .logo-design {
+    font-size: 44px;
+  }
+  .row-label {
+    font-size: 16px;
+  }
+}
+/* iPhone 7 Plus landscape: */
+@media only screen and (min-width: 736px) and (orientation: landscape) {
+  .platform-ios .playlist-content-more-options {
+    right: -70px;
+    bottom: -26px;
+  }
+  .platform-ios .playlist-structure-wrapper {
+    width: 736px;
+  }
+  .platform-ios .tabs-scroll-content {
+    padding-top: 70px;
+  }
+  .vertical-seperator {
+    height: 18px;
+    margin-top: 3px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 3/4) {
+  .platform-ios .home-logo {
+    padding: 20% 0;
+    color: #fff;
+  }
+  .logo-design {
+    font-size: 114.5px;
+  }
+  .row-label {
+    font-size: 28px !important;
+  }
+  .sub-tpc-content {
+    font-size: 22px;
+    vertical-align: middle;
+  }
+}
+
+// Android : abhishek
+
+.parentDiv {
+  text-align: center;
+}
+
+.parentDiv .aligner {
+  display: table-cell;
+  height: inherit;
+  width: inherit;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  white-space: normal;
+  vertical-align: middle;
+}
+
+// ##Device = Tablets, Ipads (portrait)
+// ##Screen = B/w 768px to 1024px
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  ion-tabs.category_tabs {
+    margin-top: 168px !important;
+  }
+
+  // .platform-android .second_header {
+  //   margin-top: 6.2% !important;
+  // }
+
+  .platform-android .segmttext {
+    margin-top: 0px !important;
+    margin-bottom: 11px !important;
+  }
+
+  .platform-android .customePlaylistContent {
+    /*height:620px;*/
+  }
+}
+
+/* (720x1280) Galaxy Nexus, WXGA */
+/*Screen resolution (1080 X 2280) */
+@media (min-width: 350px) and (max-width: 430px) {
+  ion-tabs.category_tabs {
+    margin-top: 168px !important;
+  }
+
+  .platform-android .home-logo {
+    padding: 22% 0 28.2% 0;
+  }
+  // .platform-android .second_header {
+  //   margin-top: 13.5% !important;
+  // }
+
+  .platform-android .customePlaylistContent {
+    /*height:480px;*/
+  }
+}
+
+@media (min-width: 481px) and (orientation: portrait),
+  (min-width: 800px) and (orientation: landscape) {
+  .myClassForWhatsNew {
+    padding-right: 8% !important;
+  }
+
+  .platform-android .customePlaylistContent {
+    /*height:600px;*/
+  }
+}
+
+/*custom for radiant player*/
+.rmp-custom-overlay {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000000;
+  border: 2px solid #000000;
+  position: absolute;
+  top: 35%;
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  width: 100%;
+  height: 58%;
+  /*opacity:1;*/
+  z-index: 999;
+  padding: 20px;
+  background-color: blue;
+}
+
+.rmp-custom-overlay > div:first {
+  margin-bottom: 10px;
+  border: 1px solid red;
+}
+/**/
+.ios .ion-page.show-page ~ .nav-decor {
+  background: transparent !important;
+}
+.segment-md .segment-button{
+  height: 56px !important;
+}

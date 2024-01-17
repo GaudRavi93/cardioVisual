@@ -1,0 +1,133 @@
+page-intro {
+    .center-title2-new{
+        color: #313131 !important;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 5px;
+        margin-top: 6%;
+    }
+    .bottom-div-interests{  
+        bottom: 0;
+        left: 16px;
+        right: 16px;
+    }
+    .user-interested-hcp{
+        background-color:#FFFFFF;
+    }
+    .user-interested-hcp .select-wrapper{
+        padding: 0 50px;
+    }
+    .user-interested-hcp select{
+        width: 100%;
+    }
+
+    .interested-hcp-demo-content img{
+        margin:20px auto;
+        width: 110px;
+        height:auto;
+        display:block;
+    }
+    .interested-hcp-demo-content h3{
+        margin: 20px 0px;
+    }
+    .interests-page-wrapper, .content-wrapper{
+        position: relative;
+    }
+    .newDesignHcp-nonhcp{
+        border: 2px solid #e85f4f !important;
+        width:48%;
+        margin:10px 10px 0 0;
+        text-align: center;
+    }
+    .div-height{
+        border: 2px solid #e85f4f !important;
+        width:48%;
+        margin:10px 0 0 0;
+        text-align: center;
+    }
+    .buttonLink {
+        text-align: center;
+        display:inline-block;
+        color: #313131;
+        text-decoration: underline;
+    }
+
+    .containerLink{
+      position: relative;   
+      width: 100%;
+      text-align: center;
+      top: 20px; 
+    }
+
+    .classWithPad{
+        color:#e85f4f !important;
+        text-align: center;
+        padding: 4px 0;
+        border-radius: 2px;
+        font-size: 11px;
+        font-weight: 400;
+        margin: 3px;
+        vertical-align: center;
+    }
+
+    /*.hidden-tablet, .show-on-tablet{
+        display: none;
+    }*/
+
+    .button-btn {
+        background-color: #e85f4f;
+        border: none;
+        border-radius: 3px;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        padding: 8px 0;
+        width: 90%;
+        margin: 16px auto;
+        -webkit-appearance:none;
+    }
+    .button-btn-new {
+        background-color: #e85f4f;
+        border: none;
+        border-radius: 3px;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        padding: 8px 0;
+        width: 70%;
+        margin: 5px auto;
+        -webkit-appearance:none;
+    }
+
+    #cad.cad_active, #chf.chf_active, #pad.pad_active, #afib.afib_active, #risk.risk_active, #av.av_active, #scd.scd_active, #stroke.stroke_active, #vein.vein_active, #aaa.aaa_active, #spanish.spanish_active, #featured.featured_active, #new.new_active, #learn.learn_active, #diabetes.diabetes_active{
+        background-color: #e85f4f;
+        div{
+            color: #FFFFFF !important;
+        }
+    }
+
+    /*.hidden-tablet, .show-on-tablet{
+        display: none;
+    }*/
+
+
+    @media only screen and (min-width : 768px){
+        .show-on-tablet{
+            display: block;
+        }
+        .hidden-tablet{
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width : 320px){
+        .hidden-tablet{
+            display: block;
+        }
+        .show-on-tablet{
+            display: none;
+        }   
+    }
+}    

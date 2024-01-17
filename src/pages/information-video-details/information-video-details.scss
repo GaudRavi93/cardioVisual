@@ -1,0 +1,251 @@
+info-page-video-details {
+
+
+	.radient-container{
+	    width: 100%;
+	    min-height: 212px;
+	    height: auto;
+	    margin: auto;
+	    overflow: hidden;
+	    position: relative; 
+	}
+
+	.rmp-playlist-side-menu{
+		display:none;
+	}
+
+	#singlePlayer{
+		.rmp-playlist-left-arrow {
+			display:none;
+		}
+
+		.rmp-playlist-right-arrow{
+			display:none;
+		}
+	}
+
+	ion-header {
+	    //height: 56px;
+	}
+
+
+ 	/* for video details screen start */
+
+
+	.playlist-title.text-center.white{
+	    position: absolute;
+	    top: 0;
+	    z-index: 50;
+	    left:30%;
+	    padding: 20px 0;
+	}
+	@media (min-width: 1200px) {
+
+	}
+	@media (min-width: 992px) and (max-width: 1199px) {
+
+	}
+	@media (min-width: 768px) and (max-width: 991px) {
+	   	.radient-container{
+			.rmp-playlist-player-wrapper {
+				width: 100% !important;
+				min-height: 432px !important;
+				height: auto;
+			}
+	    }
+	}
+
+	/* for video details screen end */
+
+
+
+	ion-tabs.cardiac .scroll-content .share_row{
+	    /*background-color:#C54333;*/
+	    background-color:#0A434E;
+	}
+	ion-tabs.cardiac .scroll-content .suggestion p{
+	    /*background-color:#e85f4f;*/
+	    background-color:#0d5563;
+	}
+
+	ion-tabs.ep .scroll-content .share_row{
+	    /*background-color:#003944;*/
+	    background-color:#0A434E;
+	}
+	ion-tabs.ep .scroll-content .suggestion p{
+	    /*background-color:#004958;*/
+	    background-color:#0d5563;
+	}
+
+	ion-tabs.structural .scroll-content .share_row{
+	    /*background-color:#23928b;*/
+	    background-color:#0A434E;
+	}
+	ion-tabs.structural .scroll-content .suggestion p{
+	    /*background-color:#45a69f;*/
+	    background-color:#0d5563;
+	}
+
+	ion-tabs.vascular .scroll-content .share_row{
+	    /*background-color:#872c3d;*/
+	    background-color:#0A434E;
+	}
+	ion-tabs.vascular .scroll-content .suggestion p{
+	    /*background-color:#953d4d;*/
+	    background-color:#0d5563;
+	}
+
+	ion-tabs.health .scroll-content .share_row{
+	    /*background-color:#62294c;*/
+	    background-color:#0A434E;
+	}
+	ion-tabs.health .scroll-content .suggestion p{
+	    /*background-color:#6e3659;*/
+	    background-color:#0d5563;
+	}
+
+	ion-tabs.playlist .scroll-content .share_row{
+	    /*background-color:#30407c;*/
+	    background-color:#0A434E;
+	}
+	ion-tabs.playlist .scroll-content .suggestion p{
+	    /*background-color:#41518c;*/
+	    background-color:#0d5563;
+	}
+
+
+
+	.share_row{
+	    background-color:#FFF;
+	}
+
+	.suggestion {
+	    background-color: #0d5563;
+	}
+
+		.searchbar-md .searchbar-search-icon{
+		left: 9px;
+	}
+
+	.searchbar-input{
+		width: 100%;
+	}
+	.searchbar-md .searchbar-input{
+		padding: 6px 35px;
+	}
+	.tabheader .toolbar-background {
+	    background-color: #F0F0F0 !important;
+	}
+	.active {
+	  //color: #c54334 !important;
+	  color: #000000 !important;
+	}
+	.non-active{
+		color:#cecece;
+	}
+	.sub_tab{
+		ion-segment-button.segment-button.segment-activated.expert{
+			/*background-color:#C3B868 !important;*/
+			color:#0A434E !important;
+			font-weight:bold !important;
+			border-bottom: 2px solid #0A434E !important;
+		}
+		ion-segment-button.segment-button.segment-activated.learn{
+			/*background-color:#78C157 !important;*/
+			color:#0A434E !important;
+			font-weight:bold !important;
+			border-bottom: 2px solid #0A434E !important;
+		}
+		ion-segment-button.segment-button.segment-activated.featured{
+			/*background-color:#4ABDC4 !important;*/
+			color:#0A434E !important;
+			font-weight:bold !important;
+			border-bottom: 2px solid #0A434E !important;
+		}
+		ion-segment-button.segment-button.segment-activated.product{
+			/*background-color:#4ABDC4 !important;*/
+			color:#0A434E !important;
+			font-weight:bold !important;
+			border-bottom: 2px solid #0A434E !important;
+		}
+		ion-segment-button.segment-button{
+			color:#000000 !important;
+			border-bottom: 1px solid #c0c0c0 !important;
+		}
+	}
+
+	.main_tab{
+		ion-segment-button.segment-button.segment-activated{
+			border-bottom: none !important;
+		}
+	}
+
+	.ion-toolbar {
+		//background-color: #191818 !important;
+		//display: none !important;
+	}
+
+	
+	/* (720x1280) Galaxy Nexus, WXGA */
+	/*Screen resolution (1080 X 2280) */
+	@media (min-width: 350px) and (max-width: 430px) {
+	  ion-content{
+	  	bottom:0px;
+	  	top:-8px;
+	  }
+	}
+
+}
+
+.rectanglImg{
+
+    //min-width: 5rem;    
+    //min-height: 5rem;
+    padding-left:4px;
+    
+
+}
+
+.thumbnilBackground{
+  background-color: #000000
+}
+
+.itemClassHeight{
+  min-height: 115px;
+}
+
+
+.rectangl_img{
+
+  opacity: 0.7;
+  min-width: 144px !important;
+  min-height: 81px !important;
+  margin: 0px;
+  object-fit: cover;
+
+}
+
+.centerBoxContent {
+	display: flex; 
+    flex-direction: column;
+    align-items: center;
+	padding: 5px 5px 10px !important;
+	ion-icon{
+		width: unset;
+		height: 50px;
+		display: flex;
+		align-items: center;
+	}
+	.icon-video-icons-share-doctor{
+		width: unset;
+	}
+	i{
+		width: unset;
+		height: 50px;
+		display: flex;
+		align-items: center;
+	}
+	.textSize_tab {
+		text-align: center ;
+	}
+}

@@ -1,0 +1,241 @@
+ion-tabbar {
+  background: theme-colors('mainColors', 'accent');
+}
+
+
+.tab-button-icon {
+  color: theme-colors('mainColors', 'mycustomInput', 'opacity50');
+}
+
+.tab-button[aria-selected=true] {
+  border-top: 3px solid theme-colors('mainColors', 'mycustomInput');
+  ion-icon{
+  color: theme-colors('mainColors', 'mycustomInput') !important;
+  font-size: 30px !important;
+}
+}
+
+.scroll-tabs {
+  top: 56px;
+}
+
+.list-ios .item-block .item-inner, .list-md .item-block .item-inner{
+	border: none !important;
+}
+
+.label-md{
+	margin: 0 8px 0 0 !important;
+	height: 88%;
+}
+
+
+
+.cv_tab .segment-md .segment-button{
+	color:#000;
+	border: none;
+}
+.cv_tab .segment-md .segment-button.activated, .cv_tab .segment-md .segment-button.segment-activated{
+	color:#C24533;
+	border-bottom:1px solid #C24533;
+}
+
+.searchbar-md .searchbar-search-icon{
+	left: 9px;
+}
+
+.searchbar-input{
+	width: 100%;
+}
+.searchbar-md .searchbar-input{
+	padding: 6px 35px;
+}
+
+ .tabheader .toolbar-background {
+    background-color: #F0F0F0 !important;
+  }
+
+  .iconDash_img{
+  	height: 25px; 
+  	width: 50%;
+  }
+  @media (min-width:481px) and (orientation: portrait), (min-width:800px) and (orientation: landscape) { 
+	  .iconDash_img{
+	  	height: 25px; 
+	  	width: 40%;
+	  }
+  }
+
+.cardiac_header.parent_tab, .heart_header.parent_tab{
+
+	ion-segment-button{
+	color:#000000 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.education{
+	color: #C54333 !important;	
+	font-weight:bold !important;
+	border-bottom:3px solid #C54333 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.information{
+	color: #C54333 !important;
+	font-weight:bold !important;
+	border-bottom:3px solid #C54333 !important;
+	}
+}
+
+.ep_header.parent_tab, .rhythm_header.parent_tab{
+
+	ion-segment-button{
+	color:#000000 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.education{
+	color: #003944 !important;	
+	font-weight:bold !important;
+	border-bottom:3px solid #003944 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.information{
+	color: #003944 !important;
+	font-weight:bold !important;
+	border-bottom:3px solid #003944 !important;
+	}
+}
+
+.structure_header.parent_tab, .structural_header.parent_tab{
+
+	ion-segment-button{
+	color:#000000 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.education{
+	color: #23928b !important;	
+	font-weight:bold !important;
+	border-bottom:3px solid #23928b !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.information{
+	color: #23928b !important;
+	font-weight:bold !important;
+	border-bottom:3px solid #23928b !important;
+	}
+}
+
+.circulation_header.parent_tab, .vascular_header.parent_tab{
+
+	ion-segment-button{
+	color:#000000 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.education{
+	color: #872c3d !important;	
+	font-weight:bold !important;
+	border-bottom:3px solid #872c3d !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.information{
+	color: #872c3d !important;
+	font-weight:bold !important;
+	border-bottom:3px solid #872c3d !important;
+	}
+}
+
+.health_header.parent_tab{
+
+	ion-segment-button{
+	color:#000000 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.education{
+	color: #62294c !important;	
+	font-weight:bold !important;
+	border-bottom:3px solid #62294c !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.information{
+	color: #62294c !important;
+	font-weight:bold !important;
+	border-bottom:3px solid #62294c !important;
+	}
+}
+
+.diabetes_header.parent_tab{
+	ion-segment-button{
+	color:#000000 !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.education{
+	color: #41518C !important;	
+	font-weight:bold !important;
+	border-bottom:3px solid #41518C !important;
+	}
+
+	ion-segment-button.segment-button.segment-activated.information{
+	color: #41518C !important;
+	font-weight:bold !important;
+	border-bottom:3px solid #41518C !important;
+	}
+}
+
+ion-segment.parent_tab .education, ion-segment.parent_tab .information{
+	//font-size:6.2em;
+}
+
+ion-segment.parent_tab .education, ion-segment.parent_tab .information{
+	font-size:1.2em; //android
+}
+
+.active {
+  //color: #c54334 !important;
+  color: #000000 !important;
+}
+
+
+/* start ion segment for double tab custome playlist listing */
+
+.platform-ios .segmentList_tab_custome{
+
+    ion-segment-button.segment-button{
+        border: none !important;
+        //background-color: #F0F0F0 !important;
+        height:40px !important;
+        font-size:1em !important;
+        font-weight:400 !important;
+    }
+} 
+
+/* END ion segment for double tab listing */
+
+
+ion-content .customePlaylistContent{
+  height:100%;
+}
+
+
+
+@media (min-width:481px) and (orientation: portrait), (min-width:800px) and (orientation: landscape) { 
+
+    .platform-ios .segmentList_tab_custome{
+
+        ion-segment-button.segment-button{
+            height:48.25px !important;
+            font-size:1.8em !important;
+        }
+    } 
+}
+.hide_row{
+	display:none;
+}
+.platform-android .playlistDelete{
+	font-size: 1.6em;color:#000;margin-left: 6%;
+}
+
+/* nexus 5*/
+@media (min-width: 360px)
+and (-webkit-min-device-pixel-ratio: 3.0) {
+
+  .customePlaylistContent ion-list{
+    padding-bottom: 70%;
+  }
+}

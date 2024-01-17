@@ -1,0 +1,38 @@
+page-qrcode {
+
+	#qrcode{
+		width: 200px;
+		margin: 16px auto;
+	}
+	.qrcode-wrapper .text-center{
+		margin: 16px 0;
+		font-size:15px;	
+	}
+
+	.suheader_qr .toolbar-background{
+        //background-color: #ebebeb !important;
+        background-color: transparent !important;
+    }
+
+    ._orseperator{
+    	font-size:19px !important;	
+    	//font-weight: bold;
+    }
+
+}
+	/* iPad Air */
+	@media (min-width:481px) and (orientation: portrait), (min-width:800px) and (orientation: landscape) { 
+
+
+		.qrcode-wrapper{
+			//height: 400px;
+			width: 480px !important;
+			margin: 25px 0px 75px 100px !important;
+		}
+
+		.qrcode-wrapper .text-center{
+			margin: 16px 0;
+			font-size:22px !important;	
+		}
+
+	}

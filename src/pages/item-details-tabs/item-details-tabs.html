@@ -1,0 +1,204 @@
+
+
+<ion-header clean-header class="tabheader hidetabHeader" [isTabs]="false"></ion-header>
+
+<ion-toolbar class="second_header hidetabHeader card-1" [ngClass]="headercolor">
+      <!-- <ion-icon name="arrow-round-back" style="font-size: 3.6em;color:#ffffff;"></ion-icon> -->
+  <div *ngIf="pageitem === 'channels'" class="toolbar-background" [ngStyle]="{'background-color': colorDash }"></div>
+  <ion-title text-center>
+  <ion-icon tappable (click)="goBack()" class="arrow-back" > 
+  <span class="icon-backarrow"></span>   
+  </ion-icon>
+  <ion-icon class='iconDash' *ngIf="pageitem !== 'channels' || request_from !== 'whatsnew_page' || request_from !== 'custom_playlist'"><i class="icon {{iconDash}}"></i></ion-icon>
+  <b class="page_name" *ngIf="pageitem !== 'channels'" [ngClass]="{'myClassForWhatsNew': request_from == 'whatsnew_page' || request_from == 'custom_playlist'}">{{pageitem}}</b>
+  <b class="page_name" *ngIf="pageitem === 'channels'">{{tabTitle}}</b>
+  <!--  <img class="iconDash iconDash_img" [src]="iconDash" style="" *ngIf="pageitem === 'channels'"/> -->
+  </ion-title>
+</ion-toolbar>
+
+<ion-segment [(ngModel)]="parent_tab" mode="md" [ngClass]="headercolor" class="parent_tab segmentList_tab" *ngIf="pageitem !== 'channels' && request_from!=='whatsnew_page' && request_from !=='custom_playlist' && request_from!=='splash' && request_from !=='branch'">
+    <ion-segment-button value="education" class="education" (click)="segmentClick('education')">
+      <div class="segmttext" style="margin-top: 4px;">PATIENT EDUCATION </div>
+    </ion-segment-button>
+    <ng-container *ngIf="userType == 'doctor'">
+      <ion-segment-button value="information" class="information" (click)="segmentClick('information')" *ngIf="show_info_tab == 1">
+        <div class="segmttext" style="margin-top: 4px;">HCP LEARNING </div>
+      </ion-segment-button>
+    </ng-container>
+</ion-segment>
+
+
+<ion-segment [(ngModel)]="parent_tab" style="" [ngClass]="headercolor" class="parent_tab segmentList_tab" *ngIf="request_from =='whatsnew_page' || request_from =='splash' || request_from =='branch'">
+  <ion-segment-button value="education" class="education" *ngIf="parent_tab == 'education'" (click)="segmentClick('education')">
+    <div class="segmttext" style="margin-top: 4px;">Videos</div>
+  </ion-segment-button>
+  <ion-segment-button *ngIf="parent_tab == 'information'" value="information" class="information" (click)="segmentClick('information')">
+   <div class="segmttext" style="margin-top: 4px;"> Videos </div>
+  </ion-segment-button>
+</ion-segment>
+
+  <ion-segment [(ngModel)]="parent_tab" style="background-color:#FFF;" class="parent_tab segmentList_tab_custome" *ngIf="request_from =='custom_playlist'">
+    <ion-segment-button value="education" class="education" (click)="segmentClick('education')"> 
+      <div class="segmttext" style="margin-top: 4px;">PATIENT EDUCATION </div>
+    </ion-segment-button>
+    <ng-container *ngIf="userType == 'doctor'">
+      <ion-segment-button value="information" class="information" (click)="segmentClick('information')"> 
+        <div class="segmttext" style="margin-top: 4px;">HCP LEARNING </div>
+      </ion-segment-button>
+    </ng-container>
+  </ion-segment>
+  
+  
+
+<tabs-layout-3 [data]="params.chnldata" [events]="params.events" [clrclass]="coloR" style="" *ngIf="pageitem === 'channels'">
+</tabs-layout-3>
+
+<div [ngSwitch]="parent_tab" *ngIf="pageitem !== 'channels' && request_from !== 'custom_playlist'">
+  
+  <tabs-layout-3 [data]="params.data" [events]="params.events" [clrclass]="coloR" style="" *ngIf="parent_tab == 'education'">
+  </tabs-layout-3>
+  
+  <tabs-layout-2 [data]="params.data" [events]="params.events" [clrclass]="coloR" style="" *ngIf="parent_tab == 'information'">
+  </tabs-layout-2>
+</div> 
+  <div [ngSwitch]="parent_tab" *ngIf="request_from == 'custom_playlist'">
+    <ion-content  ontouchstart="" class="customePlaylistContent" no-padding no-margin style="background-color: #ffffff;">
+      <ion-grid  *ngIf="parent_tab == 'education'" style="margin-bottom:65px;">
+        <ion-row *ngIf="data.education_item.length > 0">
+          <ion-col col-12 no-padding>
+            <ion-list no-margin>
+              <ion-item tappable no-padding *ngFor="let item of data.education_item;let i = index" (click)="onEvent('onEducationItemClick', item, data, $event)" class="ion-item-border itemClassHeight" [ngClass]="{'hide_row': item.show == 0}">
+                <ion-thumbnail item-left style="margin:0px 13px 0 0 !important;" class="rectanglImg">
+                  <div class="thumbnilBackground">
+                   <img *ngIf="item.localIconUrl =='' || imgSHownOnline != 'none'" [src]="item.iconUrl" alt="{{item.name}}" class="rectangl_img" />
+                   <img *ngIf="item.localIconUrl !='' &&  imgSHownOnline == 'none'" [src]="item.localIconUrl" alt="{{item.name}}" class="rectangl_img"/>
+                    <span id="progressBar_detail_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;"></span>
+
+                      <div class="bottom-left">
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF;font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF;font-size: 25px; "></i>
+                      </div>
+                  </div>   
+                </ion-thumbnail>
+
+                <div float-right style="position: absolute;top:10px;">
+
+                  <b item-title style="white-space: normal;word-wrap: break-word;" class="item-text-wrap">{{item.name}}</b>
+
+                  <p class="tab-desc-size tab-desc-size1" item-subtitle *ngIf="item.description != '' && item.description !='null'">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+                </div>
+
+                <div  float-right style="" class="shareDownloaddiv">
+                  
+                 <ion-icon  (click)="onEvent('onDownload', item, data, $event)" style="" *ngIf="item.subTopicType != 'image'" class="shareDownloadion_icon_download">
+                   <i style="" class="icon-video-icons-download can-download-icon new-font-icons" [ngClass]="(item.localUrl != '')?'active':''" id="download_{{item.id}}"></i>
+                 </ion-icon>
+
+                  <ion-icon  style="" *ngIf="item.subTopicType == 'image'"  (click)="onEvent('onImageCantDownload', 'image', $event)" class="shareDownloadion_icon_download">
+
+                  <i style="" class="icon-video-icons-download can-download-icon new-font-icons" ></i>
+                  </ion-icon>
+
+                  <ion-icon  (click)="onEvent('onFavorite', item, data, $event)" style="" class="shareDownloadion_icon">
+                       
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" [ngClass]="{'active': item.isFavourite}"></i>
+                    </ion-icon> 
+                 <ion-icon  style="" (click)="onEvent('onShare', item, data, $event)" class="shareDownloadion_icon">
+                  <i class="icon icon-list-share" ></i>
+                </ion-icon>
+
+                <ion-icon name="trash" (click)="playListDataDelete(item, data.playlist_id, 'education', $event)" class="playlistDelete" style=""></ion-icon>
+
+               </div>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="data.education_item.length == 0">
+          <ion-col col-12 no-padding>
+            <ion-list no-margin >
+              <ion-item style="min-height:120px;">
+                <p>No video found.</p>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid  *ngIf="parent_tab == 'information'" style="margin-bottom:65px;">
+        <ion-row *ngIf="data.information_item.length > 0">
+          <ion-col col-12 no-padding>
+            <ion-list no-margin >
+              <ion-item no-padding *ngFor="let item of data.information_item;let i = index" (click)="onEvent('onInfoItemClick', item, data, $event)" class="ion-item-border itemClassHeight" style="min-height:120px;" [ngClass]="{'hide_row': item.show == 0}">
+                <ion-thumbnail item-left style="margin:0px 13px 0 0 !important;" class="rectanglImg">
+                  <div class="thumbnilBackground">
+                    <img *ngIf="item.localIconUrl =='' || imgSHownOnline != 'none'" [src]="item.iconUrl" alt="{{item.name}}" class="rectangl_img" />
+                    <img *ngIf="item.localIconUrl !='' &&  imgSHownOnline == 'none'" src="{{file.dataDirectory}}{{item.localIconUrl}}" alt="{{item.name}}" class="rectangl_img"/>
+                    <span id="info_progressBar_detail_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;"></span>
+
+                      <div class="bottom-left">
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF;font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF;font-size: 25px; "></i>
+                      </div>
+                  </div>   
+                </ion-thumbnail>
+
+                <div float-right style="position: absolute;top:10px;">
+
+                  <b item-title style="white-space: normal;word-wrap: break-word;" class="item-text-wrap">{{item.name}}</b>
+
+                  <p class="tab-desc-size tab-desc-size1" item-subtitle *ngIf="item.description != '' && item.description !='null'">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+                </div>
+
+                <div  float-right style="" class="shareDownloaddiv">
+                 <ion-icon  (click)="onEvent('onInfoDownload', item, $event)" style="" *ngIf="item.subTopicType != 'image'" class="shareDownloadion_icon_download">
+                   <i style="" class="icon-video-icons-download can-download-icon new-font-icons" [ngClass]="(item.localUrl != '')?'active':''" id="download_{{item.id}}"></i>
+                 </ion-icon>
+
+                  <ion-icon  style="" *ngIf="item.subTopicType == 'image'"  (click)="onEvent('onImageCantDownload', 'image', $event)" class="shareDownloadion_icon_download">
+
+                  <i style="" class="icon-video-icons-download can-download-icon new-font-icons" ></i>
+                  </ion-icon>
+
+                  <ion-icon  (click)="onEvent('onInfoFavorite', item, $event)" style="" class="shareDownloadion_icon">
+                       
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" [ngClass]="{'active': item.isFavourite}"></i>
+                    </ion-icon> 
+                 <ion-icon  style="" (click)="onEvent('onShare', item, $event)" class="shareDownloadion_icon">
+                  <i class="icon icon-list-share" ></i>
+                </ion-icon>
+
+                <ion-icon name="trash" (click)="playListDataDelete(item, data.playlist_id, 'information', $event)" class="playlistDelete" style="font-size: 1.6em;color:#000;"></ion-icon>
+
+               </div>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="data.information_item.length == 0">
+          <ion-col col-12 no-padding>
+            <ion-list no-margin >
+              <ion-item style="min-height:120px;">
+                <p>No video found.</p>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </div>
+
+
+ <!-- <tabs-layout-3 [data]="params.data" [events]="params.events" [clrclass]="coloR" style="">
+  </tabs-layout-3> -->
+
+<ion-footer clean-footer style="background-color: #F0F0F0 !important;" [activeFootermenu]="false" [ismyCv]="false" [ismyChannel]="false"></ion-footer>

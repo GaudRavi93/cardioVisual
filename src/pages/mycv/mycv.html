@@ -1,0 +1,86 @@
+
+
+<ion-header clean-header  class="headerColor" ></ion-header>
+
+<ion-content padding class="bgcolor">
+
+  <ion-grid class="farfromHeadr"> 
+    <ion-row >
+        <ion-item transparent no-lines  style="border-bottom: 1px solid #e7e7e7;" no-margin>
+
+          <div *ngIf="data.userRoleId==5" style="font-size: 1em;float:left;margin:2px 0px;padding:2px 0px;"><b>Non-HCP Version</b></div>
+          <div *ngIf="data.userRoleId==1" style="font-size: 1em;float:left;margin:2px 0px;padding:2px 0px;"><b>HCP Version</b></div>
+        </ion-item>
+
+        <ion-item transparent no-lines class="nopadding" style="border-bottom: 1px solid #e7e7e7;">
+          <ion-thumbnail item-start> 
+            <img *ngIf="data.profile_pic != '' && data.profile_pic != 'null' && data.profile_pic != null
+              && data.profile_pic != 'undefined'" [src]="data.profile_pic" />
+            <img *ngIf="data.profile_pic == '' || data.profile_pic == 'null' || data.profile_pic == null
+              || data.profile_pic == 'undefined' " [src]="params.data.default_img" />
+          </ion-thumbnail>
+
+          <!-- <p class="subitem-title">{{ data.full_name }}</p> -->
+          <h3 class="subitem-subtitle" style="padding-bottom: 5px; margin-top:5px; font-size:18px;">{{ data.full_name }}</h3>
+          <p style="font-size:14px; padding-bottom: 3px;" *ngIf="data.email != '' && data.email != 'undefined'">{{ data.email }}</p>
+          <!-- <p style="font-size:14px; padding-bottom: 2px;" *ngIf="data.username != '' && data.username != 'undefined'">{{ data.username }}</p> -->
+          <P style="border-bottom:1px solid #e7e7e7;"></P>
+          <p class="anchor-link" tappable style="margin-top:5px;height:50px;">
+            <a style="font-size:18px; position:relative;" (click)="goToViewprofile(data)">Manage Profile</a> | <a style="font-size:18px; position:relative;" (click)="logout()">Logout</a>
+          </p>
+        </ion-item>
+        <ion-item tappable transparent no-lines class="itemListWidth" style="border-bottom: 1px solid #e7e7e7;" (click)="goToFavourites()">
+          <div style="float:left;" class="iconStyling">
+            <ion-avatar><i class="icon icon-cardio-like" style="color: #aba9a9;font-size: 20px;"></i></ion-avatar>
+          </div>
+          <h2 style="" class="textStyling">My Favorites</h2> 
+          <!-- <h2 style="padding-top: 15px;font-weight: 600;">Favorites Videos</h2>  -->
+        </ion-item>
+  
+        <ion-item tappable transparent no-lines class="itemListWidth" style="border-bottom: 1px solid #e7e7e7;" (click)="goToMydownloads()">
+          <div style="float:left;" class="iconStyling2">
+            <ion-avatar><i class="icon icon-video-icons-download" style="color: #aba9a9;font-size: 35px;"></i></ion-avatar>
+          </div>
+          <h2 style="" class="textStyling2">My Downloads</h2>
+          <!-- <h2 style="padding-top: 15px;font-weight: 600;">Downloaded Videos</h2>  -->
+        </ion-item>
+
+        <ion-item tappable transparent no-lines class="itemListWidth" style="border-bottom: 1px solid #e7e7e7;" (click)="goToPlaylist()">
+          <div style="float:left;" class="iconStyling2">
+            <ion-avatar><i class="icon icon-player-play" style="color: #aba9a9;font-size: 35px;"></i></ion-avatar>
+          </div>
+          <!-- <h2 style="padding-top: 15px;font-weight: 600;">My Playlists</h2>  -->
+          <!-- <h2 style="" class="textStyling2">Favorite Playlists</h2>  -->
+          <h2 style="" class="textStyling2">My Playlists</h2> 
+        </ion-item>
+
+        <ion-item tappable transparent no-lines class="itemListWidth" style="border-bottom: 1px solid #e7e7e7;" (click)="goToManageDevices()">
+          <div style="float:left;" class="iconStyling">
+            <ion-avatar><i class="icon icon-mobile" style="color: #aba9a9;font-size: 25px;"></i></ion-avatar>
+          </div>
+          <h2 style="" class="textStyling">Manage Devices</h2> 
+        </ion-item>
+
+        <ion-item tappable transparent no-lines class="itemListWidth" style="border-bottom: 1px solid #e7e7e7;padding-top:8px;padding-bottom:15px;">
+          <ion-label style="font-weight: 600; padding-left:10px;padding-bottom:10px;" class="">
+            <span class="icon-bell bellIconClass"></span> &nbsp; Notification</ion-label>
+          <ion-toggle [(ngModel)]="toggleValue" (ionChange)="myChange()"></ion-toggle>
+        </ion-item>
+
+        <ion-item tappable transparent no-lines class="" style="padding-top:10px;padding-bottom:18px;" *ngIf="sponsored_by_data.length != 0">
+          <div style="width:100%;">
+            <div style="margin-top:12%;margin-left:12%;float:left;">Sponsored By:</div>
+            <div>  
+              <!-- <img style="width:30%;height:30%;margin-left:8%;margin-right:auto;display:block;" src="assets/images/ABBOTT-LOGO.jpg" (click)="gotoSponsored('https://www.abbott.co.in')"/> -->
+              <img style="max-width:20%;max-height:30%;width:20%;height:20%;margin-left:8%;margin-right:auto;display:block;" src="{{path}}{{sponsored_by_data.local_image_url}}" (click)="gotoSponsored(sponsored_by_data)"/>
+            </div>  
+          </div>
+        </ion-item>
+     
+    </ion-row>
+   
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer clean-footer style="background-color: #F0F0F0 !important;" [activeFootermenu]="false" [ismyCv]="true" [ismyChannel]="false" ></ion-footer>

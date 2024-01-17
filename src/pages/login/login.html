@@ -1,0 +1,42 @@
+
+<ion-content padding="false" class="user-setup-new user-interested-hcp">
+    <div id="login" class="loginScreen-center">
+        <!-- <p class="or-tag font20" style="color: #151313;"><b>Log In</b></p> -->
+         <div class="text-center" >
+            <img src="assets/images/cv-logo-subscription.png" style="height: 60px; width: 60px;">
+        </div>
+        <p class="text-center">             
+            <button class="loginBtn loginBtn--apple" style="" (click)="openAppleSignIn()" *ngIf="showAppleSignIn">
+                <ion-icon name="logo-apple" slot="start" class="appleLogo"></ion-icon>
+                <b style="text-align: center;" class="appleLoginText">Sign in with Apple</b>
+            </button>
+        </p>
+
+        <p class="text-center">
+            <button class="loginBtn loginBtn--facebook"  style="text-align: center;" (click)="onFacebook()"><b>Sign in with Facebook</b></button>
+        </p>
+
+        <p class="text-center">
+            <button class="loginBtn loginBtn--google custombuttonGap" style="text-align: center;" (click)="onGoogle()"><b class="googleLoginText">Sign in with Google</b></button>
+        </p>
+        <span class="text-center" style="color: #151313;"><h5> Or Login with email </h5> </span>
+        <form name="loginForm" style="margin-top: 12px;">
+          <div class="error text-center">{{error_msg}}</div>
+            <p class="text-center">
+               <input type="email" id="email" name="email"  value="" placeholder="Email Address" [(ngModel)]="username" />
+            </p>
+            <p class="text-center">
+                <input type="password" id="password" name="password" value="" placeholder="Password" [(ngModel)]="password" />
+            </p>
+            <div class="text-center terms-message" style="margin-top: 10px;">
+                <a class="alinks text-left" style="color: #151313; #151313; font-size: 14px;" (click)="gotoForgotpasswordPage()"><strong>Forgot Password</strong></a><span style="color: #0F0505;"> | </span>
+                <a class="alinks text-right" (click)="register()" style="color: #151313; font-size: 14px;"><strong>Don't have an account?</strong>&nbsp;<span style="color: red;"><b>Sign Up</b></span></a>
+
+            </div>
+            <div class="text-center">
+                <button class="white-button-btn" (click)="login()"><b>SUBMIT</b></button>
+            </div>
+        </form>
+    </div>
+
+</ion-content>

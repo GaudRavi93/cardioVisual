@@ -1,0 +1,447 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="viewdata != 'forum'"><b>{{viewdata}}</b></ion-title>
+    <ion-title *ngIf="viewdata == 'forum'"><b>Discuss</b></ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">Close</button>
+
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding *ngIf="viewdata == 'New Release'">
+  <div class="zoom">
+    <img class="cover" alt="" src="{{img_Url}}">
+  </div>
+</ion-content>
+
+<ion-content padding *ngIf="viewdata == 'How to Share'">
+    <!-- <div *ngIf="isTablet">
+        <img class="cover" src="assets/images/how_to_tablet.jpg">
+    </div> -->
+    <!-- <div *ngIf="!isTablet">
+        <img class="cover" src="assets/images/how_to_phone.jpg">
+    </div> -->
+    <div class="zoom">
+      <!-- <img class="cover" alt="" src="assets/images/how_to_phone.jpg"> -->
+      <img class="cover" alt="" src="https://static.cardiovisual.com/images/cvapp/how_to_share-tablet.jpg">
+    </div>
+</ion-content>
+
+<ion-content class="popup-content" style="padding:0 16px;" scroll="false" padding *ngIf="viewdata == 'About Us'">
+    <!-- <img src="img/icon.png" alt="" class="about-logo"> -->
+    <img src="assets/images/icon.png" alt="" class="about-logo">
+    <div class="row align-center margin-0">Developed by practicing cardiologists, CardioVisual provides a vast library of educational videos and illustrations from trusted sources to help patients clearly understand complex cardiac and vascular conditions, treatments, procedures and devices.</div>            
+    <div class="row popup-row">
+        <div class="col secondDiv">
+            <div class="row color-b" style="padding: 0;">
+                <div class="col" (click)="visitSite(1)"><a target='_blank' href="javascript:void(0);" style="color:#0073D6;">Info and Support</a></div>
+            </div>
+            <!-- <div class="row color-b" style="margin-top: 0px;padding: 0;"> -->
+            <div class="row color-b" style="padding: 0;">
+                <div class="col" (click)="disclaimerpage('Disclaimer');"><a target='_blank' href="javascript:void(0);" style="color:#0073D6;">Disclaimer</a></div>
+            </div>
+            <div class="row color-b" style="padding: 0;">
+                <div class="col" (click)="visitSite(0)"><a target='_blank' href="javascript:void(0);" style="color:#0073D6;">End User License Agreement</a></div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+
+<ion-content  padding *ngIf="viewdata == 'Privacy Policy'">
+  <div style="padding:16px;">
+    <p class="text-center"><img src="assets/images/cv-logo-subscription.png" alt="" class="static-page-logo" ></p>
+    <h3><em>Your privacy is critically important to us. MedicalVisual,Inc 2019 operates under a few fundamental principles:</em></h3>
+    <p>We don&rsquo;t ask you for personal information unless we truly need it. (We can&rsquo;t stand services that ask you for things like your gender or income level for no apparent reason.)</p>
+    <p>We don&rsquo;t share your personal information with anyone except to comply with the law, develop our products, or protect our rights.</p>
+    <p>We don&rsquo;t store personal information on our servers unless required for the ongoing operation of one of our services.</p>
+    <p>Below is our privacy policy, which incorporates these goals.</p>
+    <p>If you have questions about deleting or correcting your personal data 
+    <!-- <p>If you have questions about deleting or correcting your personal data please contact us at <a href="mailto:info@cardiovisual.com?Subject=Question%20regarding%20my%20account%20information">info@cardiovisual.com</a> -->
+    <span style="text-decoration: underline; color: #f06262 !important;" (click)="chatwithus()"> <b>Please contact us</b></span>
+    .</p>
+    <p>It is MedicalVisual&rsquo;s policy to respect your privacy regarding any information we may collect while operating our apps.</p>
+    <h3>Gathering of Personally-Identifying Information</h3>
+    <p>MedicalVisual,Inc 2019, via its CardioVisual app, collects &mdash; but does not distribute in any way &mdash; personally identifiable information (PII).
+    <p>MedicalVisual may disclose to third party services certain personally identifiable information listed below:
+    a.)information you provide us such as email, device IMEI number.
+    b.)information we collect as you access and use our service, including device information, location and network carrier
+    This information is shared with third party service providers so that we can:
+    a.)personalize the app for you 
+    b.)perform behavioral analytics</p>
+    <p>From time to time, MedicalVisual may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its apps.</p>
+    <h3>Protection of Certain Personally-Identifying Information</h3>
+    <p>MedicalVisual discloses potentially personally-identifying and personally-identifying information only to those of its employees, contractors and affiliated organizations that (i) need to know that information in order to process it on MedicalVisual&rsquo;s behalf, and (ii) that have agreed not to disclose it to others. Some of those employees, contractors and affiliated organizations may be located outside of your home country; by using the CardioVisual app, you consent to the transfer of such information to them. MedicalVisual will not rent or sell potentially personally-identifying and personally-identifying information to anyone. Other than to its employees, contractors and affiliated organizations, as described above, MedicalVisual discloses potentially personally-identifying and personally-identifying information only in response to a subpoena, court order or other governmental request, or when MedicalVisual believes in good faith that disclosure is reasonably necessary to protect the property or rights of MedicalVisual, third parties or the public at large. If you are a user of the CardioVisual app, and have supplied your email address, MedicalVisual may occasionally send you an email to tell you about new features, solicit your feedback, or just keep you up to date with what&rsquo;s going on with MedicalVisual and our products. We expect to keep this type of email to a minimum. If you send us a request (for example via a support email or via one of our feedback mechanisms), we reserve the right to publish it in order to help us clarify or respond to your request or to help us support other users. MedicalVisual takes all measures reasonably necessary to protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying information.</p>
+    <h3>Business Transfers</h3>
+    <p>If MedicalVisual or substantially all of its assets, were acquired, or in the unlikely event that MedicalVisual goes out of business or enters bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of MedicalVisual may continue to use your personal information as set forth in this policy.</p>
+    <h3>Privacy Policy Changes</h3>
+    <p>Although most changes are likely to be minor, MedicalVisual may change its Privacy Policy from time to time, and in MedicalVisual&rsquo;s sole discretion. MedicalVisual encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this app after any change in this Privacy Policy will constitute your acceptance of such change.</p>
+  </div>
+</ion-content>
+
+<ion-content padding class="disclaimer-popup-content "*ngIf="viewdata == 'Disclaimer'">
+    <div style="padding:16px;">
+        <p><b>Disclaimer:</b></p>
+        <p>The content of this application are for informational purposes only and is not intended to be a 
+        substitute for professional medical advice, diagnosis or treatment. The content for this CardioVisual
+        app comes from a variety of sources with appropriate copyright release agreements. </p>
+        
+        <p>We thank these companies and sources for granting the permission to use the animation videos and graphics. 
+          CardioVisual does not assume any responsibility for the medical care and treatment of patients, or any 
+        clinical decisions related thereto. CardioVisual is not responsible for errors or omissions, or 
+        consequences from application of the information presented, and make no warranty, express or 
+        implied, with respect to the currency, completeness or accuracy of the contents of this application. </p>
+        
+        <p>Reference in this application to any specific commercial product, service, manufacturer or company 
+        does not constitute its endorsement or recommendation by CardioVisual or your medical provider. 
+        </p>
+        <br><br><br>
+    </div>
+</ion-content>
+
+
+<ion-content  padding *ngIf="viewdata == 'forum'">
+    <div style="">
+        <p style="text-align:center;">{{messageShow}}</p>
+        <br /><br />
+        <div class="error">{{msg}}</div> 
+        <br />  
+        <form name="ForumDetailForm"> 
+          <div>
+            <label style="">Email</label><br />
+            <input type="email" id="email" name="email" required placeholder="Email" [(ngModel)]="obj.userEmail" disabled="{{obj.disabled}}"/>  
+          </div>
+          <br />
+          <div>
+            <label style="">Create your Username</label><br />
+            <input type="text" min="4" max="16" id="username" name="username" required placeholder="Username"  [(ngModel)]="obj.username"/>
+          </div>
+          <br/>
+          <div class="">
+            <button class="button-btn-inappnew" type="submit" (click)="forumDetailSubmit(obj)">Proceed</button>
+          </div>
+        </form>
+        
+    </div>
+</ion-content>
+
+<ion-content padding class="popup-content"  *ngIf="viewdata == 'Subscription Terms'">
+    <div class="">
+        <p class="text-center"><img src="assets/images/cv-logo-subscription.png" alt="" class="static-page-logo" ></p>
+        <h2><span style="color: #000000;"><span><span style="font-size: small;">Subscriber Accounts</span></span></span></h2>
+        <p><span style="font-family: Times, serif;"><span style="font-size: small;"><span style="color: #000000;"><span>If you create a subscriber account for CardioVisual app, you agree to complete the registration process by providing current, complete, and accurate information as required by MedicalVisual. You are responsible for all activities that occur under your account. You agree to notify MedicalVisual immediately of any unauthorized use of your account or any other breach of security. MedicalVisual will not be liable for any loss that you may incur as a result of someone else using your account, either with or without your knowledge. In addition, you may be held liable for any losses incurred by MedicalVisual or another party due to someone else using your account. You may not use anyone else’s account at any time.</span></span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"><b>1. Subscription, Purchase, Free Trials, Payment methods and Cancellation</b></span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"><b>a. Subscription and Purchase</b></span></span></span></p>
+        <p><span style="color: #222222;"><span><span style="font-size: small;"> Payment will be charged to iTunes or Play Store account at confirmation of purchase. Subscription will automatically renew unless auto-renew is turned off at least 24-hours before the end of the current period. Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal. Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user’s Account Settings after purchase. </span></span></span><span style="color: #333333;"><span><span style="font-size: small;">We reserve the right to modify, terminate or otherwise amend our offered subscription or purchase plans.</span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"><b>b. Free Trials</b></span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"> Your CardioVisual subscription or purchase may start with a free trial. The free trial period lasts for one week, or as otherwise specified during sign-up. For combinations with other offers, restrictions may apply. </span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"> We reserve the right to adjust pricing for our service or any components thereof in any manner and at any time as we may determine in our sole and absolute discretion. Except as otherwise expressly provided for in these Terms of Use, any price changes to your service will be notified via iTunes or Play Store accounts.</span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"><b>c. Payment Methods.</b></span></span></span><span style="color: #333333;"><span><span style="font-size: small;">&nbsp;</span></span></span></p>
+        <p><span style="color: #222222;"><span><span style="font-size: small;"> Payment will be charged to iTunes or Play Store account at confirmation of purchase.</span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"><b>d. Cancellation.</b></span></span></span><span style="color: #333333;"><span><span style="font-size: small;">&nbsp;</span></span></span></p>
+        <p><span style="color: #333333;"><span><span style="font-size: small;"> You may cancel your CardioVisual subscription via iTunes or Play Store at any time, and you will continue to have access to the CardioVisual basic service without the features of the subscription or upgrade. </span></span></span><span style="color: #222222;"><span><span style="font-size: small;">Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user’s account Settings after purchase. </span></span></span><span style="color: #333333;"><span><span style="font-size: small;">We do not provide refunds or credits for any partial subscription periods. </span></span></span></p>
+    </div>
+</ion-content>
+
+<ion-content padding class="popup-content"  *ngIf="viewdata == 'Free Trial terms'">
+  <p class="text-center"><img src="assets/images/cv-logo-subscription.png" alt="" class="static-page-logo" ></p>
+  <div class="row popup-row">
+      <div class="col secondDiv">
+          <ul class="text-left font16 subscription-terms-popup" >
+              <li>
+                  Your subscription starts with 1 week free trial.
+              </li>
+              <li>
+                  In most cases free trial requires you to provide payment details that will get billed for a subsbscription once the free trial expires.
+              </li>
+              <li *ngIf="os!='Android'">
+                  If you do not wish to get billed once your trial expires, you must cancel CardioVisual premium auto-renewalable prior to expiration of your trial from your iTunes Account.
+              </li>
+              <li *ngIf="os=='Android'">
+                  If you do not wish to get billed once your trial expires, you must cancel CardioVisual premium auto-renewalable prior to expiration of your trial from your Google Play Account.
+              </li>
+          </ul>
+          
+      </div>
+  </div>
+</ion-content>
+
+<ion-content  padding class="popup-content" *ngIf="viewdata == 'Forum Rules'">
+  <div style="padding:16px;">
+    <p>
+      To ensure the best possible experience for all members, we have established some basic guidelines for participation.
+    </p>  
+
+    <p>By joining and using this discussion forum, you agree that you have read and will follow these rules and guidelines. You also agree to reserve discussions and shared files and content to that best suited to the medium. This is a great medium with which to solicit the advice of your peers, benefit from their experience, and participate in an ongoing conversation. </p>
+
+    <p>Please take a moment to acquaint yourself with these important guidelines. If you have questions or feedback, please contact us. In order to preserve a climate that encourages both civil and fruitful dialogue, we reserve the right to suspend or terminate membership in this forum for anyone who violate these rules.</p>
+
+    <h3>The Rules</h3>
+    <div class="row popup-row">
+      <div class="col secondDiv">
+        <ul class="text-left font16 subscription-terms-popup" >
+          <li>
+            Don’t challenge or attack others. The discussions and comments are meant to stimulate conversation not to create contention. Let others have their say, just as you may. 
+          </li>
+          <li>
+            Don’t post commercial messages on any discussion list, resource library entry, or other area where others might see it. Contact people directly with product and service information if you believe it would help them.
+          </li>
+          <li>
+            Use caution when discussing products. Information posted on the forum is available for all to see, and comments are subject to libel, slander, and antitrust laws.
+          </li>
+          <li>
+            All defamatory, abusive, profane, threatening, offensive, or illegal materials are strictly prohibited. Do not post anything that you would not want the world to see or that you would not want anyone to know came from you.
+          </li>
+          <li>
+            Please note carefully all items listed in the disclaimer and legal rules below, particularly regarding the copyright ownership of information posted.
+          </li>
+          <li>
+            Remember that other participants have the right to reproduce postings to this site unless you specify otherwise.
+          </li>
+          <li>
+            Post your message or documents only to the most appropriate topics or discussions. Do not spam several topics with the same message.
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+  
+      
+    <h3>Discussion Group Etiquette</h3>
+     
+    <div class="row popup-row">
+      <div class="col secondDiv">
+          <ul class="text-left font16 subscription-terms-popup" >
+            <li>
+              State concisely and clearly the topic of your comments in the subject line. This allows members to respond  more appropriately to your posting and makes it easier for members to search the archives by subject. 
+            </li>
+            <li>
+              Include only the relevant portions of the original message in your reply. Delete any header information, and put your response before the original posting. 
+            </li>  
+            <li>
+              Only send a message to the entire list when it contains information that everyone can benefit from.
+            </li>  
+            <li>
+              Do not send administrative messages, such as remove me from the list. Instead, use interface to change your  settings or to remove yourself from a list. If you are changing e-mail addresses, you do not need to remove yourself from the list and rejoin under your new e-mail address. Simply change your settings. 
+            </li>
+            <li>
+              Warn other list subscribers of lengthy messages either in the subject line or at the beginning of the message body with a line that says “Long Message.” 
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    <h3>The Legal Stuff</h3>
+    <p>
+      This site is provided as a service for the users of CardioVisual app. CardioVisual is not responsible for the opinions and information posted on this site by others. We disclaim all warranties with regard to information posted on this site, whether posted by CardioVisual or any third party; this disclaimer includes all implied warranties of merchantability and fitness. In no event shall CardioVisual be liable for any special, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, arising out of or in connection with the use or performance of any information posted on this site.
+    </p>
+    <p>  
+      Do not post any defamatory, abusive, profane, threatening, offensive, or illegal materials. Do not post any information or other material protected by copyright without the permission of the copyright owner. By posting material, the posting party warrants and represents that he or she owns the copyright with respect to such material or has received permission from the copyright owner. In addition, the posting party grants CardioVisual and users of this site the nonexclusive right and license to display, copy, publish, distribute, transmit, print, and use such information or other material.
+    </p>  
+    <p>
+      Messages should not be posted if they encourage or facilitate members to arrive at any agreement that either expressly or impliedly leads to price fixing, a boycott of another’s business, or other conduct intended to illegally restrict free trade. Messages that encourage or facilitate an agreement about the following subjects are inappropriate: prices, discounts, or terms or conditions of sale; salaries; profits, profit margins, or cost data; market shares, sales territories, or markets; allocation of customers or territories; or selection, rejection, or termination of customers or suppliers.
+    </p>  
+    <p>
+      CardioVisual does not actively monitor the site for inappropriate postings and does not on its own undertake editorial control of postings. However, in the event that any inappropriate posting is brought to the attention of CardioVisual we will take all appropriate action.
+    </p>
+    <p>  
+      CardioVisal reserves the right to terminate access to any user who does not abide by these guidelines.
+    </p>  
+
+    <h3>PRIVACY POLICY</h3>
+
+    <p>WE RESPECT YOUR PRIVACY</p>
+    <p>
+      Any personal information you provide to us including and similar to your name, address, telephone number and e-mail address will not be released, sold, or rented to any entities or individuals outside of our organization except as noted below.
+    </p>
+
+    <p>WITH WHOM DO WE SHARE THE PERSONAL INFORMATION WE COLLECT THROUGH THIS SITE</p>
+
+    <p>Our Service Providers. <br/>
+      We may share your personal information with companies (including our affiliates) that perform services on our behalf, for example, companies that help process credit card payments. Our service providers are required by contract to protect the confidentiality of the personal information we share with them and to use it only to provide specific services on our behalf. 
+    </p>  
+
+    <h3>Business Transfers. </h3>
+    <p>
+      Your personal information may be transferred to another entity (either an affiliated entity or an unrelated third party) in connection with a merger, reorganization, dissolution or similar corporate event. If such a transfer were ever to occur, the acquiring entity’s use of your personal information will still be subject to this Privacy Policy. 
+    </p>  
+
+    <h3>Government and Legal Disclosures </h3>
+    <p>
+      We may disclose the personal information we collect through this Site, when we, in good faith, believe disclosure is appropriate to comply with the law (or a court order or subpoena); to prevent or investigate a possible crime, such as fraud or identity theft; to enforce our Terms and Conditions or other agreements that govern your use of this Site; or to protect the rights, property or safety of our company, our users, or others.
+    </p>  
+
+    <h3>EXTERNAL SITES.</h3>
+    <p>
+      We are not responsible for the content of external internet sites. You are advised to read the privacy policy of external sites before disclosing any personal information.
+    </p>  
+
+    <h3>COOKIES</h3>
+    <p>
+      A “cookie” is a small data text file that is placed in your browser and allows us to recognize you each time you visit this site (personalization, etc). Cookies themselves do not contain any personal information, and we do not use cookies to collect personal information. Cookies may also be used by 3rd party content providers such as news feeds.
+    </p>  
+
+    <h3>REMEMBER THE RISKS WHENEVER YOU USE THE INTERNET</h3>
+    <p>
+      While we do our best to protect your personal information, we cannot guarantee the security of any information that you transmit to us and you are solely responsible for maintaining the secrecy of any passwords or other account information. In addition other Internet sites or services that may be accessible through our site have separate data and privacy practices independent of us, and therefore we disclaim any responsibility or liability for their policies or actions. Please contact those vendors and others directly if you have any questions about their privacy policies. For any other information please contact us using the Contact Us page.
+    </p>  
+  </div>
+</ion-content> 
+
+<ion-content padding class="popup-content" *ngIf="viewdata == 'Manage Profile'">
+  <div style="">
+
+    <div style="font-size: 2rem;border-bottom:1px solid #e7e7e7;">
+      <p style="text-align: left;">Full Name :
+        <span style="font-weight: 500;float: right;">{{user_data.full_name}}</span>
+      </p>
+    </div>
+    
+    <div style="font-size: 2rem;border-bottom:1px solid #e7e7e7;">
+      <p style="text-align: left;">Email :
+        <span style="font-weight: 500;float: right;">{{user_data.email}}</span>
+      </p>  
+    </div>
+    
+    <!-- <div style="font-size: 2rem;border-bottom:1px solid #e7e7e7;">
+      <p style="text-align: left;">Active Plan :
+        <span class="font20 newred" style="font-weight: 500;float: right;" *ngIf="productID!= cv_subscriptionId" >CardioVisual Pro </span><br/>
+        <span class="font20 newred" style="font-weight: 500;float: right;" *ngIf="productID == cv_subscriptionId">{{shownContent == 'true' ? "CardioVisual Premium  (Now PRO)" : "CardioVisual Pro"}} </span><br/>
+      </p>  
+    </div> -->
+
+    <div style="font-size: 2rem;border-bottom:1px solid #e7e7e7;" *ngIf="!(user_data.userRoleSubType == 'medical-device-pharma-professional' || user_data.userRoleSubType == 'Medical Device/Pharma Professional' || user_data.userRoleSubType == 'patient' || user_data.userRoleSubType == 'Patient' || user_data.userRoleSubType == 'curious-learner' || user_data.userRoleSubType == 'Curious learner/Other' || user_data.specialities =='Non-Healthcare Professional' || user_data.specialities =='Healthcare Industry Professional')">
+
+      <p style="text-align: left;">QnA Username :
+
+        <span (click)="setUsername(user_data)" *ngIf="user_data.username == undefined || user_data.username == 'undefined' || user_data.username == '' || user_data.username == 'null' || user_data.username == null " style="float: right;"><u>Set Username</u></span>
+
+        <span *ngIf='user_data.username != "undefined"' style="font-weight: 500;float: right;">{{user_data.username}}</span>
+
+      </p>
+    </div>
+    
+    <div style="font-size: 2rem;border-bottom:1px solid #e7e7e7;">
+      <p style="text-align: left;">Speciality :
+        <span style="font-weight: 500;float: right;">{{user_data.specialities}}</span>
+      </p>  
+    </div>
+    
+    <div style="font-size: 2rem;border-bottom:1px solid #e7e7e7;">
+      <p style="text-align: left;">Sub Speciality :
+        <span style="font-weight: 500;float: right;">{{user_data.user_role_sub_type}}</span> 
+      </p>  
+    </div>
+
+
+    <div class="mainDIV">
+      <div class="childTwo" (click)="editProfile()"><i class="icon-pencil subtopic-card-img-icon" style="color:#28bf30; font-size: 12px;"></i> <b> Edit </b>
+      </div>
+      <div class="childOne" (click)="chatwithus()"><ion-icon name="trash" style="font-size: 16px;"></ion-icon><b>Delete</b>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>
+
+
+<ion-content padding class="popup-content" *ngIf="viewdata == 'Add to Playlist'">
+
+  <div class="error" style="margin-bottom: 10px;">{{msg}}</div> 
+  
+  <form name="addPlaylistForm"> 
+
+    <ion-list radio-group name="playlist" id="playlist" [(ngModel)]="obj.playlist" style="">
+      <ion-item style=" border-bottom:1px solid grey;" *ngFor="let playlist of playlist_data">
+        <ion-label style="color:black;">{{playlist.name}}</ion-label>
+        <ion-radio (click)="radiocheck(playlist.id)" value="{{playlist.id}}"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="color:black;">Create New</ion-label>
+        <ion-radio (click)="radiocheck('create_new')" value="create_new"></ion-radio>
+      </ion-item>
+
+      <ion-item id="create_playlist" style="display: none;">
+        <input type="text" placeholder="Playlist Name" value="" name="playlist_name" id="playlist_name" [(ngModel)]="obj.playlist_name" style="margin-bottom: 10px;">
+      </ion-item>
+    </ion-list>
+    
+    <button class="custom-playList-btn" type="submit" (click)="playlistSubmit(obj)">Submit</button>
+    
+  </form>   
+</ion-content>
+<ion-content padding class="popup-content" *ngIf="viewdata == 'ProfessionInfo'" (tabGotClosed)="onTabGotClosed($event)">
+
+  <div id="professionregister" class="profession-register">
+    <form name="signUpForm" novalidate=""  (ngSubmit)="onProfessionSubmit()">
+      <div class="error text-center">{{error_msg}}</div>
+        <p *ngIf="!locationCheck">
+          <ion-item class="selectdrop" text-center>
+            <ionic-selectable
+              item-content
+              name ="port"
+              [(ngModel)]="port"
+              [items]="ports"
+              itemValueField="name"
+              itemTextField="name"
+              [canSearch]="true"
+              placeholder="Select Country (Optional)"
+              (onChange)="portChange($event)">
+            </ionic-selectable>
+          </ion-item> 
+        </p><br/>
+        <p *ngIf="isShow">
+          <ion-item class="selectdrop" text-center>
+            <ionic-selectable
+              item-content
+              name ="myState"
+              [(ngModel)]="myState"
+              [items]="myStates"
+              itemValueField="code"
+              itemTextField="name"
+              [canSearch]="true"
+              placeholder="Select State"
+              (onChange)="stateChange($event)">
+            </ionic-selectable>
+          </ion-item>
+          <br/> 
+        </p>
+        <p>
+          <ion-item class="selectdrop" text-center>
+            <ionic-selectable 
+              item-content
+              [(ngModel)]="doctorport"
+              name ="doctorport"
+              itemValueField="doctorcode"
+              itemTextField="name"
+              [items]="doctorports" 
+              [canSearch]="true"
+              placeholder="Select Profession"
+              [hasVirtualScroll]="true"
+              [virtualScrollHeaderFn]="getGroupText"
+              (onChange)="docPortChange($event)">
+            </ionic-selectable>
+          </ion-item>
+        </p>       
+        <div class="text-center">
+          <button class="white-button-btn"><b>SUBMIT</b></button>
+        </div>
+    </form>
+  </div>  
+</ion-content>

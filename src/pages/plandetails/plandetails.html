@@ -1,0 +1,195 @@
+<!--
+  Generated template for the PlandetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>plandetails</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+<ion-header clean-header  class="tabheader" [isTabs]="true"  [hideMenu]="true" ></ion-header>
+
+<ion-content  no-padding>
+    <div class="page-title-planslist myActiveplan" style="background-color:#E8604F;" *ngIf="myActiveplan">
+        <!-- <p class="font20">Choose your upgrade plan</p> -->
+        <p class="font20 white"><b>My Active Plan</b></p>
+    </div>
+    <div style="background-color:#DbDbDb; height: 2px;"></div>
+    <div id="dark-top-banner" class="myActiveplan" style="" (click)="planDetail('')" *ngIf="myActiveplan">
+        <div  class="img-text-wrapper planslist-wrapper">
+            <div class="text-center left">
+                <img src="assets/images/cv-logo-subscription.png">
+            </div>
+            <div class="text-left right weight700">
+                <span class="font20 newred" *ngIf="productID!= cv_subscriptionId" >CardioVisual Pro </span><br/>
+
+                <span class="font20 newred" *ngIf="productID == cv_subscriptionId">{{shownContent == 'true' ? "CardioVisual Premium  (Now PRO)" : "CardioVisual Pro"}} </span><br/>
+
+                <span class="font20 newDarkBrown ">{{ planPrice }}</span><br/><br/>
+                <!-- <span class="font20 newDarkBrown ">{{ productActiveTill }}</span><br/><br/> -->
+                <span class="newred" *ngIf="productID!= cv_productId"> Renewal On : {{ productExpiredate | date }}</span> 
+                
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #f2f2f2; height: 3px;"></div>
+    <div class="page-title-planslist choose_plan_tab" style="background-color:#E8604F; ">
+        <p class="font20 white"> <b>Presenting all new PRO plan </b></p>
+    </div>
+    <div style="background-color: #DbDbDb; height: 1px;"></div>
+	<div id="dark-top-banner"  class="choose_plan_yearly" style="" *ngIf="productID == cv_productId">
+        <!-- <div id="dark-top-banner"  class="choose_plan_yearly" style=""  ng-if="productID == cv_subscriptionId"> -->
+        <div *ngIf="promotionalCodeStatus">
+            <div style="text-align: center;"> <span> <b>A Big thank you for your support & early commitment to CardioVisual app.</b></span></div><br/>
+            <span >We are offering you <u><b>Exclusive Access</b></u> to our new PRO plan till 31st December 2019 for <u><b> FREE.</b></u></span>
+            <div class="subscription-content" style="text-align: center;"><span class="font14 newred"> <b>New PRO features </b> </span>
+                <ul class="newbrown-ul font16">
+                    <li>
+                        Exclusive content by industry experts.
+                    </li>
+                     <li>
+                        Download all videos for offline viewing.
+                    </li>
+                     <li>
+                        Customized playlists with autoplay.
+                    </li>
+                </ul>
+            </div>
+            <div style="text-align: center;"> <span class="font14 newred"> <b> Switch to new PRO </b> </span>
+            </div>
+            <span class="newDarkBrown">  Make sure you switch to our new PRO subscription before your exclusive access ends on <br /><b><u> 31st December 2019 </u></b> to continue enjoying new features & content.</span> <br /> <br />
+            <span class="font14 newDarkBrown" > <b>Choose from our easy pricing plans. </b></span>
+
+            <div id="outerdivinapp">
+                <div class="innerdivinapp">
+                    <button class="button-btn-inappnew inappButton1" (click)="buy('premium')"><span class="font14 white country-premium-price">{{ planPriceYearly }}</span></button>
+                    
+                </div>
+
+                <div class="innerdivinapp">
+                    <button class="button-btn-inappnew planButtonclick" (click)="buy('pro_monthly')"><span class="font14 white country-product-monthprice">{{ planPriceMonthly }}</span></button>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- <div *ngIf="promotionalCodeStatus != true"> -->
+        <div *ngIf="!promotionalCodeStatus">
+            <div style="padding: 15px;">
+                <p class="text-center pg-message-inapp font20"><b class="newred">DOWNLOAD</b> all videos for offline viewing</p>
+                <p class='bordeer'> </p>
+                <p class="text-center pg-message-inapp font20"><b class="newred">AUTOPLAY</b> videos in <b class="newred">PLAYLISTS</b></p>
+                <p class='bordeer'> </p>
+                <p class="text-center pg-message-inapp font20"> View <b class="newred">EXCLUSIVE</b> content</p>                   
+            </div>
+            <p class="text-center pg-message-inapp font16 newDarkBrown" > <b>Choose from our easy pricing plans. </b></p>
+            <div id="outerdivinapp">
+                <div class="innerdivinapp">
+                    <button class="button-btn-inappnew inappButton1" (click)="buy('premium')"><span class="font14 white country-premium-price">{{ planPriceYearly }}</span></button>
+                    
+                </div>
+
+                <div class="innerdivinapp">
+                    <button class="button-btn-inappnew planButtonclick" (click)="buy('pro_monthly')"><span class="font14 white country-product-monthprice">{{ planPriceMonthly }}</span></button>
+                   
+                </div>
+            </div>     
+        </div>                         
+    </div>
+
+    <div id="dark-top-banner"  class="choose_plan_yearly" style="background-color: #ffffff !important;"  *ngIf="productID != cv_productId">
+        <!-- <div id="dark-top-banner"  class="choose_plan_yearly" style=""  ng-if="productID == cv_productId"> -->
+        <div *ngIf="shownContent == 'true'">
+            <div style="text-align: center;"> <span> <b>A Big thank you for your support & early commitment to CardioVisual app.</b></span></div><br/>
+            <span> We are giving you <u><b>Exclusive Access</b></u> to our new PRO plan for <u><b> FREE </b></u> till your subscription ends.</span><br/>
+            <div class="subscription-content-new" style="text-align: center;" ><span class="font14 newred"> <b>New PRO features </b> </span>
+                <ul class="newbrown-ul font16" style="text-align: left">
+                    <li style="">
+                        Exclusive content by industry experts.
+                    </li>
+                     <li>
+                        Download all videos for offline viewing.
+                    </li>
+                     <li>
+                        Costomized playlists with autoplay.
+                    </li>
+                </ul>
+            </div>
+            <div style="text-align: center;"> <span class="font14 newred"> <b> Switch to PRO </b> </span>
+            </div><br />
+            <span class="newDarkBrown"> You can renew your current subscription with our new PRO plan at a discounted price of <b> $ 9.99/year </b> on your renewal date. You will be asked to renew at a new price plan before your plan expires.</span> <br />
+
+            <p style="text-align: center;"> <b>OR</b> </p>
+
+            <span class="font14 newDarkBrown" > <b>Switch to our monthly plan which renews after your current subscription ends.</b></span>
+
+
+
+            <div style="text-align: center;">
+                <button class="button-inappnew" (click)="buy('pro_monthly')"><span class="font14 white country-product-monthprice">{{ planPriceMonthly }}</span></button>
+            </div>                
+        </div>
+
+        <div *ngIf="shownContent == 'false'">
+            <div style="padding: 15px;">
+                <p class="text-center pg-message-inapp font20"><b class="newred">DOWNLOAD</b> all videos for offline viewing</p>
+                <p class='bordeer'> </p>
+                <p class="text-center pg-message-inapp font20"><b class="newred">AUTOPLAY</b> videos in <b class="newred">PLAYLISTS</b></p>
+                <p class='bordeer'> </p>
+                <p class="text-center pg-message-inapp font20"> View <b class="newred">EXCLUSIVE</b> content</p>                   
+            </div>
+            <p class="text-center pg-message-inapp font16 newDarkBrown" > <b>Choose from our easy pricing plans. </b></p>
+            <div id="outerdivinapp">
+                <!-- <div class="innerdivinapp">
+                    <button class="button-btn-inappnew" ng-click="buy('premium')"><span class="font14 white country-premium-price">$2.99 / year</span></button>
+                </div>
+
+                <div class="innerdivinapp">
+                    <button class="button-btn-inappnew" ng-click="buy('pro_monthly')"><span class="font14 white country-product-monthprice">$0.99 / Month</span></button>
+                </div> -->
+                <div class="innerdivinapp">
+                    <button class="button-btn-inappnew" (click)="buy('premium')" *ngIf="buttonYear != true"><span class="font14 white country-premium-price">{{ planPriceYearly }}</span></button>
+                    <button class="planButton" *ngIf="buttonYear == true"><span class="font14 white country-premium-price" >{{ planPriceYearly }} </span></button>
+                </div>
+
+                <div class="innerdivinapp">
+                    <button class="button-btn-inappnew" (click)="buy('pro_monthly')" *ngIf="buttonShow != true"><span class="font14 white country-product-monthprice">{{ planPriceMonthly }}</span></button>
+                    <button class="planButton" *ngIf="buttonShow == true"><span class="font14 white country-product-monthprice">{{ planPriceMonthly }}</span></button><!-- <span ng-if="buttonShow == true"><font color="green">Active</font></span> -->         
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="subscription-content" style="padding-top: 0; margin-top: 0;">
+        <ul class="newbrown-ul font12" style="text-align: left">
+            <li>
+                This autorenewable subscription starts with 1 week free trial. You will get billed once your free trial period expires. You can choose to cancel anytime during 1 week trial period.
+            </li>
+            <li>
+                Any unused portion of a free trial will be forfeited if user purchases a subscription.
+            </li>
+            <li *ngIf="os!='Android'">
+                Payment will be charged to your iTunes account at confirmation of purchase. Subscription will automatically renew unless cancelled at least 24-hours before the end of the current period.
+            </li>
+           <li *ngIf="os=='Android'">
+                Payment will be charged to your Google Play account at confirmation of purchase. Subscription will automatically renew unless cancelled at least 24-hours before the end of the current period.
+            </li>
+            <li>
+                Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal.
+            </li>
+            <li *ngIf="os!='Android'">
+                 Subscription can be cancelled by the user by going to the iTunes account settings after purchase.
+            </li>
+           <li *ngIf="os=='Android'">
+                 Subscription can be cancelled by the user by going to the Google Play account settings after purchase.                       
+            </li>
+        </ul>
+        
+        <p class="text-left pg-message-inapp font12 newDarkBrown">For queries please refer to our<span style="text-decoration: underline;"(click)="cardiofaq()"> FAQ</span> or <span style="text-decoration: underline;" (click)="chatwithus()">chat with us.</span></p>
+        <p class="text-left newred font14" style="margin-top: 30px;">For more information, read our <span style="text-decoration: underline;" (click)="showTermsPopup()">Subscription Terms</span>,&nbsp;<span style="text-decoration: underline;" (click)="privacyPopup()">Privacy Policy</span> and <span style="text-decoration: underline;" (click)="showSubscriptionPopup()">Free trial terms.</span></p>
+    </div>
+
+</ion-content>

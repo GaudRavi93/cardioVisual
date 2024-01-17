@@ -1,0 +1,33 @@
+<!--
+  Generated template for the AllcmetopiclistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar class="headerColor">
+    <ion-title>All Topic List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- <ion-list>
+        <ion-item *ngFor="let grocery of groceries">{{grocery}}</ion-item>
+    </ion-list>-->
+    <ion-list> 
+	    <ion-row>
+        <ion-item class="card card-1" *ngFor="let group of data;">
+          <div class = "">
+            <h4 class="divtext">{{group.title}}</h4>
+            <p class="divtext">{{group.description.slice(0,140)}}...</p>
+          </div>
+          <div style="" class="bottomDiv">
+            <div class="innerClass firsttext">{{group.total_Chapter}} Chapter&raquo;</div>
+            <div class="innerClass middletext">{{group.total_duration}}</div>
+            <div class="innerClass lasttest" (click)="startNow();">Start Now</div>
+          </div>
+        </ion-item>
+	    </ion-row>
+    </ion-list>
+</ion-content>

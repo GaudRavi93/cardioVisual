@@ -1,0 +1,13 @@
+page-footer {
+	.platform-android .whstsnew-footer{
+		width:20%;
+	}
+	/* nexus 5 */
+	@media (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 3){
+
+		.platform-android .whstsnew-footer{
+			width:20%;
+		}
+		
+	}
+}

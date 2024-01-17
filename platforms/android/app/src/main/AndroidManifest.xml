@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest android:hardwareAccelerated="true" android:versionCode="50122" android:versionName="5.1.22" xmlns:android="http://schemas.android.com/apk/res/android">
+  <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="com.cardiovisual.app.permission.C2D_MESSAGE"/>
+  <uses-permission android:name="android.permission.CAMERA" android:required="false"/>
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.CALL_PHONE"/>
+  <uses-permission android:name="com.android.vending.BILLING"/>
+  <uses-permission android:name="com.android.vending.BILLING"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:usesCleartextTraffic="true">
+    <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode" android:exported="true" android:label="@string/activity_name" android:launchMode="singleTask" android:name="MainActivity" android:theme="@style/Theme.App.SplashScreen" android:windowSoftInputMode="adjustResize">
+      <intent-filter android:label="@string/launcher_name">
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter android:name="io.branch.sdk.UriScheme">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="cardiovisual"/>
+      </intent-filter>
+      <intent-filter android:name="io.branch.sdk.AppLink" android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:host="app.cardiovisual.com" android:scheme="https"/>
+        <data android:host="cardiovisual.app.link" android:scheme="https"/>
+        <data android:host="cardiovisual-alternate.app.link" android:scheme="https"/>
+      </intent-filter>
+    </activity>
+    <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/fb_app_name" android:name="com.facebook.FacebookActivity"/>
+    <service android:exported="true" android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <service android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTNotificationIntentService">
+      <intent-filter>
+        <action android:name="com.clevertap.PUSH_EVENT"/>
+      </intent-filter>
+    </service>
+    <service android:name="com.freshchat.consumer.sdk.service.FreshchatService"/>
+    <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="888-989-K54Z"/>
+    <meta-data android:name="CLEVERTAP_TOKEN" android:value="cbc-bbb"/>
+    <meta-data android:name="CLEVERTAP_REGION" android:value=" "/>
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id"/>
+    <meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@string/fb_app_name"/>
+    <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="@bool/fb_auto_log_app_events_enabled"/>
+    <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="@bool/fb_advertiser_id_collection_enabled"/>
+    <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_pjyCJPU2PsimJxYZhu0SnfgeFziMzVJC"/>
+    <meta-data android:name="io.branch.sdk.TestMode" android:value="false"/>
+    <receiver android:enabled="true" android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver"/>
+    <receiver android:enabled="true" android:exported="true" android:name="nl.xservices.plugins.ShareChooserPendingIntent">
+      <intent-filter>
+        <action android:name="android.intent.action.SEND"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:exported="false" android:name="com.freshchat.consumer.sdk.receiver.FreshchatReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.LOCALE_CHANGED"/>
+        <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:exported="false" android:name="com.freshchat.consumer.sdk.receiver.FreshchatNetworkChangeReceiver">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+    </receiver>
+    <provider android:authorities="com.facebook.app.FacebookContentProvider494264524828488" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+    <provider android:authorities="${applicationId}.sharing.provider" android:exported="false" android:grantUriPermissions="true" android:name="nl.xservices.plugins.FileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/sharing_paths"/>
+    </provider>
+    <provider android:authorities="com.cardiovisual.app.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/freshchat_file_provider_paths"/>
+    </provider>
+  </application>
+  <queries>
+    <package android:name="com.facebook.katana"/>
+  </queries>
+  <permission android:name="com.cardiovisual.app.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+  <uses-feature android:name="android.hardware.camera" android:required="false"/>
+  <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+  <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+</manifest>

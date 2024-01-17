@@ -1,0 +1,835 @@
+
+
+<!-- <ion-header clean-header  class="search" [isTabs]="false" [hideMenu]="true"></ion-header> -->
+<ion-header clean-header  class="search" [isTabs]="true" [hideMenu]="true"></ion-header>
+<!--- Theme Parallax Product -->
+<!--- Header Big Image-->
+  
+<ion-content elastic-header *ngIf="data != null" style="background-color: #FFF;">
+  
+  <span id="static_download_prog" style="padding:0px; color:red; text-align:center !important;margin:0;display:block;"></span>
+  <ion-grid no-padding *ngIf="(data.length > 0)||(info_data.length > 0) || (playlist_data.length > 0) || (whatsnew_data.length > 0)">
+    
+    <ion-row>
+      <ion-col col-12>
+        <ion-list no-margin>
+          <p style="margin:0;padding:4px;background-color: #C54333;color:#FFF;text-align: center; height: 49px;"><b class="search_header">Search Result</b></p>
+        </ion-list>
+      </ion-col>
+
+      <ion-col col-12 *ngIf="topics_data.length > 0">
+        <ion-list no-margin>
+
+          <div style="margin:10px 5px;padding:5px 0px;background-color: #FFF;">
+            <div class="div-left" style="font-size:20px;"><b>{{topic_title}}</b></div>
+            <div class="div-right forlabel" tappable (click)="seeAllClick(search, 'topics')" style=""><b>See all</b></div>
+          </div>
+
+          <!-- <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let topic of topics_data;">
+              <div class="collapsible-header">
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <h2 padding-left item-title class="item-text-wrap">
+                    <b style="white-space: normal;word-wrap: break-word;">{{topic.name}}</b>
+                  </h2>                  
+                </ion-item>
+              </div>
+
+            </li>
+          </ul> -->
+          <div style="margin-top: 25px;">
+            <div class="inline inlineGapTopic flex-container" *ngFor="let topic of topics_data" (click)="gotoDetailPage(topic, topic.template, 'Featured Topics')" style="overflow-x: auto;">
+              <div class="" [ngClass]="{'textBreak': topic.name.length <= 11, 'longtextBreak': topic.name.length > 10 }"> 
+                <b> {{topic.name}}</b> 
+              </div>
+            </div>
+          </div>  
+        </ion-list>        
+      </ion-col>
+
+      <ion-col col-12 *ngIf="expert_data.length > 0" style="margin-top:5px;">
+        <ion-list no-margin>
+
+          <div style="margin:10px 5px;padding:5px 0px;background-color: #FFF;">
+            <div class="div-left" style="font-size:20px;"><b>{{expert_title}}</b></div>
+            <div class="div-right forlabel" tappable (click)="seeAllClick(search, 'experts')"><b>See all</b></div>
+          </div>
+
+          <!-- <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let expert of expert_data;">
+              <div class="collapsible-header">
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <h2 padding-left item-title class="item-text-wrap">
+                    <b style="white-space: normal;word-wrap: break-word;">{{expert.name}}</b>
+                  </h2>                  
+                </ion-item>
+              </div>
+
+            </li>
+          </ul> -->
+          <div style="margin-top: 20px;">
+            <div class="inline inlineGap" *ngFor="let expert of expert_data" (click)="gotoDetailPage(expert, expert.template, 'Experts')" style="height:130px;">
+              <div class="expertimg img-overlay">
+                <img src="{{expert.image_url}}"  class="expertClass" />
+                <!--<img *ngIf="expert.local_image_url == '' || expert.local_image_url == null" src="{{expert.image_url}}"  class="expertClass" />-->
+                <!--<img *ngIf="expert.local_image_url != '' && expert.local_image_url != null" src="{{path}}{{expert.local_image_url}}" alt="" class="expertClass" />-->
+
+              </div>
+
+              <div class="expertName"><b style="">{{expert.name}}</b></div>
+
+            </div>
+          </div>  
+        </ion-list>        
+      </ion-col>
+
+      <ion-col col-12 *ngIf="calculators_data.length > 0" style="margin-top:5px;">
+        <ion-list no-margin>
+
+          <div style="margin:10px 5px;padding:5px 0px;background-color: #FFF;">
+            <div class="div-left" style="font-size:20px;"><b>{{calculator_title}}</b></div>
+            <div class="div-right forlabel" tappable (click)="seeAllClick(search, 'calculator')"><b>See all</b></div>
+          </div>
+
+          <!-- <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let calculator of calculators_data;">
+              <div class="collapsible-header">
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <h2 padding-left item-title class="item-text-wrap">
+                    <b style="white-space: normal;word-wrap: break-word;">{{calculator.name}}</b>
+                  </h2>                  
+                </ion-item>
+              </div>
+
+            </li>
+          </ul> -->
+          <div style="margin-top:25px;">
+            <div class="inline inlineGapTopic flex-container"  *ngFor="let calculator of calculators_data" (click)="gotoDetailPage(calculator, calculator.template, 'Calculator')" style="overflow-x: auto;">
+              <div class="" [ngClass]="{'textBreak': calculator.name.length <= 11, 'longtextBreak': calculator.name.length > 10 }"> 
+                <b> {{calculator.name}}</b> 
+              </div>
+            </div>
+          </div>  
+
+        </ion-list>        
+      </ion-col>
+
+      <ion-col col-12 *ngIf="our_picks_data.length > 0" style="margin-top:5px;">
+        <ion-list no-margin>
+
+          <div style="margin:10px 5px;padding:5px 0px;background-color: #FFF;">
+            <div class="div-left" style="font-size:20px;"><b>{{our_pick_title}}</b></div>
+            <div class="div-right forlabel" tappable (click)="seeAllClick(search, 'our_pick')"><b>See all</b></div>
+          </div>
+
+          <!-- <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let our_pick of our_picks_data;">
+              <div class="collapsible-header">
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <h2 padding-left item-title class="item-text-wrap">
+                    <b style="white-space: normal;word-wrap: break-word;">{{our_pick.name}}</b>
+                  </h2>                  
+                </ion-item>
+              </div>
+
+            </li>
+          </ul> -->
+          <div style="margin-top:25px;">
+            <div class="inline inlineGapPlaylist" *ngFor="let our_pick of our_picks_data" (click)="gotoDetailPage(our_pick, our_pick.template, 'Our Picks')" style="height:130px;">
+              <div class="expertimg">
+                <img src="{{our_pick.image_url}}" class="expertPlaylistClass"/>
+                <!--<img *ngIf="our_pick.local_image_url == '' && our_pick.local_image_url == null" src="{{our_pick.image_url}}"  class="expertPlaylistClass" />-->
+                <!--<img *ngIf="our_pick.local_image_url !='' && our_pick.local_image_url != null" src="{{path}}{{our_pick.local_image_url}}"  class="expertPlaylistClass" />-->
+              </div>
+
+              <div class="expertPlaylistName">
+                <b style="">{{our_pick.name}}</b>
+              </div>
+            </div>
+          </div>  
+        </ion-list>        
+      </ion-col>  
+      
+      <ion-col col-12 *ngIf="playlist_data.length > 0" style="margin-top:5px;">
+        <ion-list no-margin>
+
+          <div style="margin:10px 5px;padding:5px 0px;background-color: #FFF;">
+            <div class="div-left" style="font-size:20px;"><b>PLAYLISTS</b></div>
+            <div class="div-right forlabel" tappable (click)="seeAllClick(search, 'playlist')"><b>See all</b></div>
+          </div>
+
+          <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let playlist of playlist_data;">
+              <div tappable class="collapsible-header playlist_header" (click)="toggleGroup(playlist)" style="">
+                <ion-item tappable no-padding no-margin style="background-color:#FFFFFF;height:135px;" [ngClass]="{'hide_row': playlist.isFavourite == 0 && request_from =='profile_page'}">
+                  <ion-thumbnail item-start no-margin class="rectanglImg">
+                    <div class="thumbnilBackground">
+                      <img src="{{playlist.URL}}" alt="{{playlist.title}}" style="width: 128px !important;height: 72px !important; border:1px solid black;" class="rectangl_img" />
+                      
+                      <i *ngIf="playlist.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': playlist.hexcodeContrast }" style="position: relative;left: 7px;bottom: 23px;color:#FFF;"></i>
+                      <i *ngIf="playlist.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': playlist.hexcodeContrast }" style="position: relative;left: 7px;bottom: 23px;color:#FFF;"></i>
+                      <i *ngIf="playlist.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': playlist.hexcodeContrast }" style="position: relative;left: 7px;bottom: 23px;color:#FFF;"></i>
+                    </div>  
+                  </ion-thumbnail>
+                  <h2 padding-left item-title class="item-text-wrap" style="white-space: normal;">
+                    <b class="item-text-wrap">{{playlist.name}}</b>
+                  </h2>
+
+                  <h3 padding-left>{{playlist.description}}</h3>
+                  
+                  <!-- <p class="tab-desc-size" padding-left item-subtitle *ngIf="playlist.long_description != '' && playlist.long_description !='null'">
+                    <span *ngIf="playlist.long_description.length < 76" style="white-space: normal;word-wrap: break-word;">{{playlist.long_description}}</span>
+                    <span *ngIf="group.long_description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{playlist.long_description.slice(0,75)}}...</span>
+                  </p> -->
+
+                  <div tappable float-right style="">
+                    <ion-icon  style="position:relative;right:23px;" *ngIf="request_from !='profile_page'">
+                      <i class="icon icon-cardio-like" (click)="onEvent('onPlaylistFavorite', playlist, $event)" [ngClass]="{'active': playlist.isFavourite}" [style.color]="(playlist.isFavourite == 1) ? '#c54334' : '#CCC'"></i>
+                    </ion-icon>
+
+                    <ion-icon  style="position:absolute;right:80px;bottom:12px;" *ngIf="request_from =='profile_page'">
+                      <i class="icon icon-cardio-like" (click)="onEvent('onPlaylistFavorite', playlist, $event)" [ngClass]="{'active': playlist.isFavourite}" [style.color]="(playlist.isFavourite == 1) ? '#c54334' : '#CCC'"></i>
+                    </ion-icon>
+
+                    <ion-icon *ngIf="request_from !='profile_page'" style="position:relative;right:16px;" (click)="onEvent('onPlay', playlist, $event)"  >
+                      <i style="color: #000 !important;" class="icon-list-play-all new-font-icons-playlist" ></i>
+                    </ion-icon>
+
+                    <ion-icon  *ngIf="request_from =='profile_page'" style="position:absolute;right:50px;bottom:12px;" (click)="onEvent('onPlay', playlist, $event)"  >
+                      <i style="color: #000 !important;" class="icon-list-play-all new-font-icons-playlist" ></i>
+                    </ion-icon>
+
+                    <ion-icon *ngIf="request_from !='profile_page'" style="position:relative; right:4px;"  (click)="onEvent('onShare', playlist, $event)">
+                      <i style="font-size:1.2em;" *ngIf="playlist.shareUrl != null" class="icon icon-list-share"></i>
+                    </ion-icon>
+
+                    <ion-icon *ngIf="request_from =='profile_page'" style="position:absolute; right:14px;bottom:12px;"  (click)="onEvent('onShare', playlist, $event)">
+                      <i style="font-size:1.2em;" *ngIf="playlist.shareUrl != null" class="icon icon-list-share"></i>
+                    </ion-icon>
+                  </div>
+                </ion-item>
+              </div>
+
+              <!-- display playlist content -->
+              <div class="item-accordion" [ngClass]="{'active': isGroupShown(playlist) }" [hidden]="!isGroupShown(playlist)">
+                <ion-item tappable no-lines *ngFor="let item of playlist.items;" (click)="onEvent('onPlay', playlist, $event)" style="color:#FFF;background-color:#e6e7e8;height:150px;">
+                  <ion-thumbnail item-start class="rectanglImg">
+                    <div class="thumbnilBackground">
+                      <img src="{{item.iconUrl}}" style="" alt="{{item.title}}" class="rectangl_img">
+                      <!--<img *ngIf="item.localIconUrl ==''" src="{{item.iconUrl}}" style="" alt="{{item.title}}" class="rectangl_img">-->
+                       <!--<img *ngIf="item.localIconUrl !=''" src="{{path}}{{item.localIconUrl}}" style="" alt="{{item.title}}" class="rectangl_img">-->
+                        <div class="bottom-left-1" style="position: absolute;bottom:36px;left:20px;">
+                          <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF;font-size: 30;"></i>
+                          <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 20;"></i>
+                          <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 20;"></i>
+                        </div>
+                    </div> 
+                  </ion-thumbnail>
+
+                  <h2 padding-left item-title class="item-text-wrap" style="font-size:1.4rem !important;white-space: normal;">
+                    <b class="38" style="color:#000;">{{item.title}}</b>                  
+
+                  </h2>
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75" style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0, 75)}}...</span>
+                  </p>
+                </ion-item>
+              </div>
+            </li>  
+          </ul>
+        </ion-list>  
+      </ion-col> 
+
+      <ion-col col-12 *ngIf="data.length > 0" style="margin-top:5px;">
+        <ion-list no-margin>
+
+          <div style="margin:10px 5px;padding:5px 0px;background-color: #FFF;">
+            <div class="div-left" style="font-size:20px;"><b>VIDEOS</b></div>
+            <div class="div-right forlabel" tappable (click)="seeAllClick(search, 'videos')"><b>See all</b></div>
+          </div>
+
+          <ul no-margin no-padding class="collapsible">
+
+            <li *ngFor="let item of data;">
+              <div class="collapsible-header">
+                <ion-item no-padding class="ion-item-border itemClassHeight" (click)="onEvent('onItemClick', item, $event)">
+                  <ion-thumbnail item-start no-margin class="rectanglImg">
+                    <div class="thumbnilBackground">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" class="rectangl_img" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 60px;top: 50px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'document'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <span *ngIf="item.subTopicType == 'other'">
+                          <i *ngIf="item.otherType == 'link'" class="icon-link subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                          <i *ngIf="item.otherType == 'qr_code'" class="icon-qrcode subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        </span>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;" class="video-share-div">
+                    <ion-icon style="position:relative; margin-right:10px; right:8px; top:10px;"  *ngIf="item.subTopicType !== 'image' && item.subTopicType !== 'other' && item.subTopicType !== 'document'">
+
+                      <i style="font-size:1.9em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon class="tabsfavshare">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon class="tabsfavshare">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+
+                    <ion-icon class="myPlusIcon" (click)="onEvent('onPlaylistAdd', item, $event)"   *ngIf="item.subTopicType !== 'image' && item.subTopicType !== 'other' && item.subTopicType !== 'document'"> 
+                      <i class="icon-video-icons-share-doctor" style=""></i>
+                    </ion-icon>
+                  </div>
+
+
+                </ion-item>
+              </div>    
+            </li>
+
+            <!-- information data -->
+            <li *ngFor="let item of info_data;">
+              <div class="collapsible-header">
+                <ion-item  class="ion-item-border itemClassHeight_info" (click)="onEvent('onItemClick', item, $event)" style="margin-left:3px;padding: 0px;">
+                  <ion-thumbnail item-start class="rectanglImg" style="margin:0px; padding:0px;">
+                    <div class="thumbnilBackground">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" class="rectangl_img" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 60px;top: 50px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left bottom-left-info">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'document'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <span *ngIf="item.subTopicType == 'other'">
+                          <i *ngIf="item.otherType == 'link'" class="icon-link subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                          <i *ngIf="item.otherType == 'qr_code'" class="icon-qrcode subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        </span>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;" class="video-share-div">
+                    <ion-icon style="position:relative; margin-right:10px; right:8px; top:8px;"   *ngIf="item.subTopicType !== 'image' && item.subTopicType !== 'other' && item.subTopicType !== 'document'">
+
+                      <i style="font-size:1.9em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon class="tabsfavshare">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon class="tabsfavshare">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+
+                    <ion-icon class="myPlusIcon" (click)="onEvent('onPlaylistAdd', item, $event)"  *ngIf="item.subTopicType !== 'image' && item.subTopicType !== 'other' && item.subTopicType !== 'document'"> 
+                      <i class="icon-video-icons-share-doctor" style=""></i>
+                    </ion-icon>
+                  </div>
+                </ion-item>
+              </div>    
+            </li>
+
+
+          </ul>  
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    
+
+    <!-- <ion-row *ngFor="let item1 of this.data.heart_result">
+      <ion-col col-12 *ngIf="item1.data != ''">
+        <ion-list no-margin>
+          <p [style.backgroundColor]="item1.color" style="color:#FFF;text-align: center;margin:0;padding:4px;"><b>{{ item1.type }}</b></p>
+        </ion-list>
+      </ion-col>
+    
+      <ion-col col-12>
+        <ion-list no-margin>
+          
+          <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let item of item1.data;">
+              <div class="collapsible-header">
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <ion-thumbnail item-start no-margin>
+                    <div class="img-overlay">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" style="width: 80px;" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;">
+                    <ion-icon style="margin-right:10px;">
+
+                      <i style="position:relative;top:5px;right:8px;font-size:1.8em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon style="margin-right:10px;">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon style="margin-right:10px;color:#CCC;">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+                  </div>
+
+
+                </ion-item>
+              </div>    
+            </li>
+          </ul>  
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngIf="this.data.ep_data != ''">
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item style="background-color: #003944;color:#FFF;text-align: center;"><b>EP</b></ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngFor="let item1 of this.data.ep_data_result">
+      <ion-col col-12 *ngIf="item1.data != ''">
+        <ion-list no-margin>
+          <p [style.backgroundColor]="item1.color" style="color:#FFF;text-align: center;margin:0;padding:4px;"><b>{{ item1.type }}</b></p>
+        </ion-list>
+      </ion-col>
+    
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let item of item1.data;">
+              <div class="collapsible-header">
+
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <ion-thumbnail item-start no-margin>
+                    <div class="img-overlay">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" style="width: 80px;" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap" style="" (click)="onEvent('onItemClick', item, $event)">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'"  (click)="onEvent('onItemClick', item, $event)">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;">
+                    <ion-icon style="margin-right:10px;">
+
+                      <i style="position:relative;top:5px;right:8px;font-size:1.8em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon style="margin-right:10px;">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon style="margin-right:10px;color:#CCC;">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+                  </div>
+
+
+                </ion-item>
+              </div>    
+            </li>
+          </ul>  
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngIf="this.data.structural_data != ''">
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item style="background-color: #23928B;color:#FFF;text-align: center;"><b>Structural</b></ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngFor="let item1 of this.data.structural_data_result">
+      <ion-col col-12 *ngIf="item1.data != ''">
+        <ion-list no-margin>
+          <p [style.backgroundColor]="item1.color" style="color:#FFF;text-align: center;margin:0;padding:4px;"><b>{{ item1.type }}</b></p>
+        </ion-list>
+      </ion-col>
+    
+      <ion-col col-12>
+        <ion-list no-margin>
+
+          <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let item of item1.data;">
+              <div class="collapsible-header" >
+
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <ion-thumbnail item-start no-margin>
+                    <div class="img-overlay">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" style="width: 80px;" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap" style="" (click)="onEvent('onItemClick', item, $event)">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'"  (click)="onEvent('onItemClick', item, $event)">
+                   <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;">
+                    <ion-icon style="margin-right:10px;">
+
+                      <i style="position:relative;top:5px;right:8px;font-size:1.8em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon style="margin-right:10px;">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon style="margin-right:10px;color:#CCC;">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+                  </div>
+
+
+                </ion-item>
+              </div>    
+            </li>
+          </ul>
+
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngIf="this.data.vascular_data != ''">
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item style="background-color: #872C3D;color:#FFF;text-align: center;"><b>Vascular</b></ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngFor="let item1 of this.data.vascular_data_result">
+      <ion-col col-12 *ngIf="item1.data != ''">
+        <ion-list no-margin>
+          <p [style.backgroundColor]="item1.color" style="color:#FFF;text-align: center;margin:0;padding:4px;"><b>{{ item1.type }}</b></p>
+        </ion-list>
+      </ion-col>
+    
+      <ion-col col-12>
+        <ion-list no-margin>
+          
+          <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let item of item1.data;">
+              <div class="collapsible-header">
+
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <ion-thumbnail item-start no-margin>
+                    <div class="img-overlay">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" style="width: 80px;" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap" style="" (click)="onEvent('onItemClick', item, $event)">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'"  (click)="onEvent('onItemClick', item, $event)">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;">
+                    <ion-icon style="margin-right:10px;">
+
+                      <i style="position:relative;top:5px;right:8px;font-size:1.8em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon style="margin-right:10px;">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon style="margin-right:10px;color:#CCC;">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+                  </div>
+
+
+                </ion-item>
+              </div>    
+            </li>
+          </ul>
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngIf="this.data.heart_health_data != ''">
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item style="background-color: #62294C;color:#FFF;text-align: center;"><b>Heart Health</b></ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngFor="let item1 of this.data.heart_health_data_result">
+      <ion-col col-12 *ngIf="item1.data != ''">
+        <ion-list no-margin>
+          <p [style.backgroundColor]="item1.color" style="color:#FFF;text-align: center;margin:0;padding:4px;"><b>{{ item1.type }}</b></p>
+        </ion-list>
+      </ion-col>
+    
+      <ion-col col-12>
+        <ion-list no-margin>
+          
+          <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let item of item1.data;">
+              <div class="collapsible-header">
+
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <ion-thumbnail item-start no-margin>
+                    <div class="img-overlay">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" style="width: 80px;" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap" style="" (click)="onEvent('onItemClick', item, $event)">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'"  (click)="onEvent('onItemClick', item, $event)">
+                    <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;">
+                    <ion-icon style="margin-right:10px;">
+
+                      <i style="position:relative;top:5px;right:8px;font-size:1.8em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon style="margin-right:10px;">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon style="margin-right:10px;color:#CCC;">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+                  </div>
+
+
+                </ion-item>
+              </div>    
+            </li>
+          </ul>
+
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngIf="this.data.diabetes_data != ''">
+      <ion-col col-12>
+        <ion-list no-margin>
+          <ion-item style="background-color: #41518C;color:#FFF;text-align: center;"><b>Diabetes</b></ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row *ngFor="let item1 of this.data.diabetes_data_result">
+      <ion-col col-12 *ngIf="item1.data != ''">
+        <ion-list no-margin>
+          <p [style.backgroundColor]="item1.color" style="color:#FFF;text-align: center;margin:0;padding:4px;"><b>{{ item1.type }}</b></p>
+        </ion-list>
+      </ion-col>
+    
+      <ion-col col-12>
+        <ion-list no-margin>
+          
+          <ul no-margin no-padding class="collapsible">
+            <li *ngFor="let item of item1.data;">
+              <div class="collapsible-header">
+
+                <ion-item  class="ion-item-border boxbutton" (click)="onEvent('onItemClick', item, $event)">
+                  <ion-thumbnail item-start no-margin>
+                    <div class="img-overlay">
+                      <img [src]="item.iconUrl" alt="{{item.name}}" style="width: 80px;" />
+
+                      <span id="progressBar_search_{{item.id}}" style="position: absolute;left: 36px;top: 40px;padding: 3px;height:auto;color: red;text-align: center;font-size: 10px;font-weight: 900;border-radius: 25px;">
+                      </span>
+                       
+                      <div class="bottom-left">
+
+                        <i *ngIf="item.subTopicType == 'video'" class="icon-play subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'image'" class="icon-pencil subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                        <i *ngIf="item.subTopicType == 'infographic'" class="icon-sheet subtopic-card-img-icon" [ngStyle]="{'backgroundColor': item.hexcodeContrast }" style="color:#FFF; font-size: 25px;"></i>
+                      </div>                    
+                    </div>                   
+                  </ion-thumbnail>
+                  
+                  <h2 padding-left item-title class="item-text-wrap" style="" (click)="onEvent('onItemClick', item, $event)">
+                    <b style="white-space: normal;word-wrap: break-word;">{{item.name}}</b>
+                  </h2>
+                  
+                  <p class="tab-desc-size"  padding-left item-subtitle   *ngIf="item.description != '' && item.description !='null'"  (click)="onEvent('onItemClick', item, $event)">
+                   <span *ngIf="item.description.length < 76" style="white-space: normal;word-wrap: break-word;">{{item.description}}</span>
+                   <span *ngIf="item.description.length > 75"  style="white-space: normal;word-wrap: break-word;">{{item.description.slice(0,75)}}...</span>
+                  </p>
+
+                  <div float-right style="color:#CCC;">
+                    <ion-icon style="margin-right:10px;">
+
+                      <i style="position:relative;top:5px;right:8px;font-size:1.8em;" class="icon-video-icons-download can-download-icon" [ngClass]="(item.localUrl != '')?'active':''" (click)="onEvent('onDownload', item, $event)" id="download_{{item.id}}"></i>
+
+                    </ion-icon>
+                    
+                    <ion-icon style="margin-right:10px;">
+                      
+                      <i class="icon icon-cardio-like" [ngClass]="{'active': item.isFavourite}" (click)="onEvent('onFavorite', item, $event)"></i>
+
+                    </ion-icon>
+
+                    <ion-icon style="margin-right:10px;color:#CCC;">  
+                      <i class="icon icon-list-share" (click)="onEvent('onShare', item, $event)"></i>
+                    </ion-icon>
+                  </div>
+
+
+                </ion-item>
+              </div>    
+            </li>
+          </ul>
+
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+
+  </ion-grid>
+
+  <ion-grid *ngIf="(data.length == 0)&&(info_data.length == 0) && (playlist_data.length == 0) && (whatsnew_data.length == 0)" style="background-color: #FFFFFF;">
+    <ion-row>
+      <ion-col col-12>
+        <ion-list no-margin>
+          <p style="color:#grey;text-align: center;margin:0;padding:4px;"><b>No data found.</b></p>
+        </ion-list>
+      </ion-col>
+    </ion-row>      
+  </ion-grid>
+
+</ion-content>

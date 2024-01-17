@@ -1,0 +1,78 @@
+
+<ion-content padding="false" class="user-setup-new user-register">
+  <p class="or-tag font20" style="color: #151313;"><b>Sign Up</b></p>
+  	<div id="registerfacebok" class="">
+	    <form name="signUpForm" novalidate=""  (ngSubmit)="onfacebokSubmit()">
+	      <div class="error text-center">{{error_msg}}</div>
+	        <p class="text-center">
+	            <input type="email" id="email" name="email" required value="" [(ngModel)]="email" placeholder="Email Address"/>
+	        </p>
+	        <!-- <p class="text-center pg-second-message"> </p> -->
+	        <!-- <p class="text-center pg-second-message" style="color: #151313;">Please provide your profession and country to help us customize the app.</p> -->
+	        <p class="text-center pg-second-message" style="color: #151313;"></p>
+		    <p style="margin-top: 3px;">
+	          <ion-item class="selectdrop" text-center>
+	            <ionic-selectable 
+	              item-content
+	              [(ngModel)]="doctorport"
+	              name ="doctorport"
+	              itemValueField="doctorcode"
+	              itemTextField="name"
+	              [items]="doctorports" 
+	              [canSearch]="true"
+	              placeholder="Please Select Your Profession"
+	              [hasVirtualScroll]="true"
+	              [virtualScrollHeaderFn]="getGroupText"
+	              (onChange)="docPortChange($event)">
+	            </ionic-selectable>
+	          </ion-item>
+	        </p><br/>
+	        <p>
+	          <ion-item class="selectdrop" text-center>
+	            <ionic-selectable
+	              item-content
+	              name ="port"
+	              [(ngModel)]="port"
+	              [items]="ports"
+	              itemValueField="name"
+	              itemTextField="name"
+	              [canSearch]="true"
+	              placeholder="Please Select Country"
+	              (onChange)="portChange($event)">
+	            </ionic-selectable>
+	          </ion-item> 
+	        </p><br/>
+	        <p *ngIf="isShow">
+              <ion-item class="selectdrop" text-center>
+                <ionic-selectable
+                  item-content
+                  name ="myState"
+                  [(ngModel)]="myState"
+                  [items]="myStates"
+                  itemValueField="name"
+                  itemTextField="name"
+                  [canSearch]="true"
+                  placeholder="Select State"
+                  (onChange)="stateChange($event)">
+                </ionic-selectable>
+              </ion-item>
+            </p>
+	        <div class="userConsent" style="">
+              <p class=""> 
+                <ion-checkbox [(ngModel)]="userConsent1" name="userConsent1"></ion-checkbox> 
+              </p>
+              <p class="font12" style="color: #151313;">I agree to the  <a class="alinks" (click)="privacypolicy()"  style="text-decoration: underline; color: #e85f4f; font-weight: bold;">Privacy Policy</a> & <a class="alinks" (click)="termsofservice()"  style="text-decoration: underline; color: #e85f4f; font-weight: bold;" >Terms of Service</a> </p>
+            </div>
+	       
+	        <div class="text-center">
+	            <button class="white-button-btn"><b>SUBMIT</b></button>
+	        </div>
+
+			<p class="text-center">
+				<button class="white-button-btn" (click)="goBack()">CLICK HERE TO LOG IN</button>
+			</p>
+	    </form>
+
+  	</div>
+</ion-content>
+

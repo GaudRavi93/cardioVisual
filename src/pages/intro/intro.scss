@@ -1,0 +1,111 @@
+page-intro {
+    [background-size] {
+        background-size: 100% 100% !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+        //background-blend-mode: luminosity;
+        border-radius: 4px;
+	    position: relative;
+	    overflow: hidden;
+	    //@include darkening-blend-mode;
+    }
+    .swiper-container-vertical > .swiper-pagination-bullets {
+        right: initial;
+        left: 10px;
+    }
+    .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 8px auto;
+    }
+    .swiper-pagination-bullet {
+        background-color: #c4c0c0 !important;
+        opacity: 1;
+        width: 6px;
+        height: 6px;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #E85F4F !important;
+        border-radius: 0;
+        width: 8px;
+        height: 8px;
+    }
+    .slide-content {
+        width: 100%;
+        position: absolute;
+        bottom: 44px;
+        left: 0;
+        padding: 16px;
+        background-color: #fff;
+        &.bg-transparent {
+            background-color: transparent;
+        }
+        &.bg-light-pink {
+            background-color: #F5EAD8;
+            h1, p {
+                color: #000;
+            }
+            .title {
+                &:before {
+                    background-color: #000;
+                }
+            }
+        }
+        .graphic {
+            .graphic-holder {
+                > img {
+                    width: 100%;
+                    max-width: 125px;
+                    display: block;
+                    margin: 32px auto;
+                }
+            }
+        }
+        h1, p {
+            color: #fff;
+        }
+        .title {
+            position: relative;
+            font-size: 18px;
+            margin-bottom: 26px;
+            padding-bottom: 16px;
+            &:before {
+                background-color: #fff;
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                margin-left: -45px;
+                width: 90px;
+                height: 1px;
+                opacity: 0.7;
+
+            }
+        }
+        .description {
+            font-size: 14px;
+        }
+    }
+    #getStarted {
+        background-color: #f06e59;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        border-radius: 0;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .next{
+       background-color: #f06e59;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       z-index: 2;
+       font-weight: 600;
+       margin: 0;
+       border-radius: 0;
+   }
+}

@@ -1,0 +1,144 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "branch-cordova-sdk": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "clevertap-cordova": {
+      "CLEVERTAP_ACCOUNT_ID": "888-989-K54Z",
+      "CLEVERTAP_TOKEN": "cbc-bbb",
+      "CLEVERTAP_REGION": " ",
+      "FIREBASE_MESSAGING_VERSION": "23.0.6",
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.",
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-base64-to-gallery": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-advanced-http": {
+      "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1",
+      "ANDROIDX_WEBKIT_VERSION": "1.4.0",
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-apprate": {
+      "PLAY_CORE_VERSION": "1.+",
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-enable-cleartext-traffic": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-facebook-connect": {
+      "APP_ID": "494264524828488",
+      "APP_NAME": "CardioVisual",
+      "FACEBOOK_URL_SCHEME_SUFFIX": " ",
+      "OTHER_APP_SCHEMES": " ",
+      "FACEBOOK_AUTO_LOG_APP_EVENTS": "true",
+      "FACEBOOK_HYBRID_APP_EVENTS": "false",
+      "FACEBOOK_ADVERTISER_ID_COLLECTION": "true",
+      "FACEBOOK_ANDROID_SDK_VERSION": "11.3.0",
+      "FACEBOOK_IOS_SDK_VERSION": "11.1.0",
+      "FACEBOOK_BROWSER_SDK_VERSION": "v11.0",
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-file": {
+      "ANDROIDX_WEBKIT_VERSION": "1.4.0",
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-freshchat": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-googleplus": {
+      "PLAY_SERVICES_VERSION": "15.0.1",
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-inapppurchase-2": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-native-spinner": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-speechrecognition": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-silent-mode": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "mx.ferreyra.callnumber": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "uk.co.workingedge.cordova.plugin.sqliteporter": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    }
+  }
+}

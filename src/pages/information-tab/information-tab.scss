@@ -1,0 +1,203 @@
+.information-tab {
+
+    li {
+     list-style-type: none;
+    }
+
+    [social] {
+        @include social;
+        margin-top: 30px;
+    }
+
+    .collapsible-header {
+        ion-thumbnail {
+          img {
+            width: 130px;
+            height: 130px;
+            
+          }
+        }
+    }
+    // For ios
+    .list-ios {
+        .item-accordion {
+            height: 0;
+            display: block !important;
+            -webkit-transition: all 300ms;
+            transition: all 300ms;
+            overflow: hidden;
+
+            &.active {
+                height: 290px !important;
+            }
+        }
+    }
+    // For Android
+
+    .list-md {
+        .item-accordion {
+            height: 0;
+            display: block !important;
+            -webkit-transition: all 300ms;
+            transition: all 300ms;
+            overflow: hidden;
+
+            &.active {
+             height: 385px !important;
+            }
+        }
+    }
+
+  #block_container
+  {
+      text-align:center;
+  }
+  #bloc1, #bloc2
+  {
+      display:inline;
+  }
+  
+}
+
+ion-content.cardiacTreat{
+  height:90%;
+}
+
+.active {
+  //color: #c54334 !important;
+  color: #000000 !important;
+}
+.card-title{
+    font-weight: 900;
+    width: 16em;
+}
+
+.fff_boxbutton:active{
+    -webkit-transform:scale(0.9); 
+    -moz-transform:scale(0.9); 
+    -ms-transform:scale(0.9); 
+    -o-transform:scale(0.9); 
+    transform:scale(0.9); 
+    -webkit-box-shadow:0px 0px 20px #FFF; 
+    -moz-box-shadow:0px 0px 20px #FFF; 
+    -o-box-shadow:0px 0px 20px #FFF; 
+    box-shadow:0px 0px 20px #FFF; 
+}
+
+div.mydivClass{
+    width:160px; 
+    //height:100px; 
+    position:relative;
+    //overflow:hidden;
+}
+
+div.mydivClass img{
+    position:absolute; 
+    width:176px;
+    //width:50%;
+    top: 0%;
+    height:99px; 
+    //object-fit: scale-down;
+    border: 3px solid #C0C0C0;
+    margin:0px 0px 7px 7px;
+}
+
+.fakeItem {
+
+
+   
+  .skeleton-rectangle {
+    width: 56px;
+    height: 56px;
+    border-radius: 2px;
+    @extend .animated-background;
+  }
+
+  .skeleton-title, .skeleton-text {
+    height: 14px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    @extend .animated-background;
+  }
+  .skeleton-text {
+    height: 8px;
+    width: 80%;
+  }
+
+
+  h2, h3, p {
+    background-color: lightgrey;
+    opacity: 0.5;
+    margin-top: 10px;
+    @extend .animated-background;
+  }
+
+  h2 {
+    width: 75%;
+    height: 1em; 
+  }
+
+  h3 {
+    width: 95%;
+    height: 0.5em;
+  }  
+
+  p {
+    width: 95%;
+    height: 0.2em;
+  }
+
+  .tabPageTitle{
+    top: 8px !important;
+    position: absolute !important;
+  }
+  .share_tray{
+    position: absolute;top:77px;
+  }
+
+  .rectanglImg{
+      //min-width: 5rem;    
+      //min-height: 5rem;
+      padding-left:4px;
+      
+  }
+
+  .thumbnilBackground{
+    background-color: #000000
+  }
+
+  .itemClassHeight{
+    min-height: 130px;
+    padding:0px;
+  }
+
+
+  .rectangl_img{
+
+    opacity: 0.7;
+    min-width: 144px !important;
+    min-height: 81px !important;
+    margin: 0px;
+    object-fit: cover;
+    
+  }
+}
+  /* nexus 5 */
+  @media only screen 
+    and (min-width: 360px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 3.0) {
+
+    .itemClassHeight{
+      height:140px;
+    } 
+
+    .bottom-left{
+      position:absolute;
+      bottom:37px;
+    }
+
+    .share_tray{
+      position: absolute;top:87px;
+    }
+  }
