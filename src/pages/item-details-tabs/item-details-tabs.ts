@@ -337,7 +337,7 @@ export class ItemDetailsPageTabs {
                 confirmPopup.present();
                 break;
             }
-});
+        });
       },
       'onShare': function (item: any) {
         event.stopPropagation();
@@ -387,21 +387,31 @@ export class ItemDetailsPageTabs {
             break;
         }
       },
-      'onInfoItemClick': function (item: any,total_data:any) {
+      'onInfoItemClick': function (item: any,data:any) {
+        const total_data = JSON.parse(JSON.stringify(data))
         var canShare = localStorage.getItem('userProAccess');
         var playlist_query = new Array(" WHERE id="+total_data.id);
         that.database_provider_object.fetchAllData('custom_playlist' , playlist_query).then(result => {
            total_data.list_values = result[0].list_values;
            total_data.list_values_1 = JSON.parse(total_data.list_values);
          
-                  var final_data = [];
-          _.each(total_data.information_item, function(value, index){
-            if(_.contains(total_data.list_values_1.information, value.id)){
-             final_data.push(value);
+            var final_data = [];
+            _.each(total_data.information_item, function(value, index){
+              if(_.contains(total_data.list_values_1.information, value.id)){
+              final_data.push(value);
+              }
+            });
+
+            // Find the index of the object
+            const index = final_data.findIndex(data => data.id === item.id);
+
+            // Move the object to the beginning of the array
+            if (index > -1) {
+              const shiftedObject = final_data.splice(index, 1)[0];
+              final_data.unshift(shiftedObject);
             }
-          });
         
-                      total_data.information_item = final_data;
+            total_data.information_item = final_data;
             var network_type = that.network_check_object.getNetworkType();
 
             switch(true){

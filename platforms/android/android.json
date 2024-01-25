@@ -18,6 +18,7 @@
                 "android:icon": "@mipmap/ic_launcher",
                 "android:label": "@string/app_name",
                 "android:largeHeap": "true",
+                "android:name": "com.clevertap.android.sdk.Application",
                 "android:networkSecurityConfig": "@xml/network_security_config",
                 "android:requestLegacyExternalStorage": "true",
                 "android:supportsRtl": "true",
@@ -526,6 +527,9 @@
       "PACKAGE_NAME": "com.cardiovisual.app"
     },
     "uk.co.workingedge.cordova.plugin.sqliteporter": {
+      "PACKAGE_NAME": "com.cardiovisual.app"
+    },
+    "cordova-plugin-sign-in-with-apple": {
       "PACKAGE_NAME": "com.cardiovisual.app"
     }
   },
@@ -1140,6 +1144,14 @@
       "clobbers": [
         "cordova.plugins.sqlitePorter"
       ]
+    },
+    {
+      "id": "cordova-plugin-sign-in-with-apple.SignInWithApple",
+      "file": "plugins/cordova-plugin-sign-in-with-apple/www/sign-in-with-apple.js",
+      "pluginId": "cordova-plugin-sign-in-with-apple",
+      "clobbers": [
+        "cordova.plugins.SignInWithApple"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -1179,6 +1191,7 @@
     "cordova-sqlite-storage": "6.1.0",
     "mx.ferreyra.callnumber": "0.0.2",
     "onesignal-cordova-plugin": "5.0.2",
-    "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.2"
+    "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.2",
+    "cordova-plugin-sign-in-with-apple": "0.1.2"
   }
 }

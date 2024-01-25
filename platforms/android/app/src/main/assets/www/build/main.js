@@ -882,23 +882,23 @@ var map = {
 		42
 	],
 	"../pages/aaplaunchlocation/aaplaunchlocation.module": [
-		730,
+		731,
 		41
 	],
 	"../pages/allcmetopiclist/allcmetopiclist.module": [
-		731,
+		730,
 		40
 	],
 	"../pages/bell-notification-list/bell-notification-list.module": [
-		732,
+		733,
 		39
 	],
 	"../pages/channel-list-tabs/channel-list-tabs.module": [
-		733,
+		734,
 		2
 	],
 	"../pages/channels/channels.module": [
-		734,
+		732,
 		15
 	],
 	"../pages/dashboard/dashboard.module": [
@@ -926,43 +926,43 @@ var map = {
 		35
 	],
 	"../pages/information-tab/information-tab.module": [
-		740,
+		739,
 		6
 	],
 	"../pages/information-video-details/information-video-details.module": [
-		742,
+		746,
 		21
 	],
 	"../pages/intro/intro.module": [
-		739,
+		741,
 		34
 	],
 	"../pages/item-details-tabs/item-details-tabs.module": [
-		743,
+		744,
 		1
 	],
 	"../pages/login/login.module": [
-		741,
+		740,
 		33
 	],
 	"../pages/manage-devices/manage-devices.module": [
-		744,
+		742,
 		13
 	],
 	"../pages/modal/modal.module": [
-		745,
+		743,
 		32
 	],
 	"../pages/mycv/mycv.module": [
-		746,
+		745,
 		12
 	],
 	"../pages/mydownloads/mydownloads.module": [
-		747,
+		749,
 		11
 	],
 	"../pages/myfavorites/myfavorites.module": [
-		749,
+		747,
 		10
 	],
 	"../pages/orientation-playlist-hcp/orientation-playlist-hcp.module": [
@@ -978,7 +978,7 @@ var map = {
 		20
 	],
 	"../pages/playlist/playlist.module": [
-		755,
+		753,
 		5
 	],
 	"../pages/popover/popover.module": [
@@ -986,15 +986,15 @@ var map = {
 		29
 	],
 	"../pages/qrcode/qrcode.module": [
-		753,
+		754,
 		0
 	],
 	"../pages/register/register.module": [
-		754,
+		757,
 		28
 	],
 	"../pages/search/search.module": [
-		757,
+		755,
 		19
 	],
 	"../pages/signupwithapple/signupwithapple.module": [
@@ -1006,11 +1006,11 @@ var map = {
 		26
 	],
 	"../pages/signupwithgoogle/signupwithgoogle.module": [
-		759,
+		760,
 		25
 	],
 	"../pages/signupwithsocialnoemail/signupwithsocialnoemail.module": [
-		760,
+		759,
 		24
 	],
 	"../pages/splashes/splashes.module": [
@@ -1018,11 +1018,11 @@ var map = {
 		23
 	],
 	"../pages/tab-page-2/tab-page-2.module": [
-		762,
+		763,
 		4
 	],
 	"../pages/upgrade-plan/upgrade-plan.module": [
-		763,
+		762,
 		18
 	],
 	"../pages/video-details/video-details.module": [
@@ -1381,7 +1381,6 @@ var RadientSettingsProvider = /** @class */ (function () {
         this.netWorkCheck = this.network_check_object.getNetworkType();
     }
     RadientSettingsProvider.prototype.setVideoSrcObject = function (videoData) {
-        console.log('----------------------------------------------->', videoData);
         var settings = {
             licenseKey: this.license_Key,
             relatedUpNextOffset: 10,
@@ -1398,7 +1397,6 @@ var RadientSettingsProvider = /** @class */ (function () {
             pip: true,
             playlistData: videoData
         };
-        console.log("=======================>", settings);
         var elementID = this.singlePlayerElementID;
         this.rmp = new RadiantMP(elementID);
         var that = this;
@@ -2487,7 +2485,7 @@ var ColorsPopoverPage = /** @class */ (function () {
     };
     ColorsPopoverPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-colors-popover',template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\pages\colors-popover\colors-popover.html"*/'<div colors-container>\n  <button *ngFor="let color of brushColors" [style.background]="color" (click)="setColor(color)"></button>\n</div>\n'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\pages\colors-popover\colors-popover.html"*/,
+            selector: 'page-colors-popover',template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\pages\colors-popover\colors-popover.html"*/'<div colors-container>\n\n  <button *ngFor="let color of brushColors" [style.background]="color" (click)="setColor(color)"></button>\n\n</div>\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\pages\colors-popover\colors-popover.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["y" /* ViewController */]])
     ], ColorsPopoverPage);
@@ -2547,7 +2545,7 @@ var WidthPopoverPage = /** @class */ (function () {
     };
     WidthPopoverPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-width-popover',template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\pages\width-popover\width-popover.html"*/'<ion-list>\n  <button *ngFor="let width of brushWidths" ion-item (click)="setWidth(width.value)">{{width.label}}</button>\n</ion-list>\n'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\pages\width-popover\width-popover.html"*/,
+            selector: 'page-width-popover',template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\pages\width-popover\width-popover.html"*/'<ion-list>\n\n  <button *ngFor="let width of brushWidths" ion-item (click)="setWidth(width.value)">{{width.label}}</button>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\pages\width-popover\width-popover.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["y" /* ViewController */]])
     ], WidthPopoverPage);
@@ -2595,7 +2593,7 @@ var BrushTypePopoverPage = /** @class */ (function () {
     };
     BrushTypePopoverPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-brush-type-popover',template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\pages\brush-type-popover\brush-type-popover.html"*/'<ion-list>\n  <button *ngFor="let type of brushTypes" ion-item (click)="setType(type.value)">{{type.label}}</button>\n</ion-list>\n'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\pages\brush-type-popover\brush-type-popover.html"*/,
+            selector: 'page-brush-type-popover',template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\pages\brush-type-popover\brush-type-popover.html"*/'<ion-list>\n\n  <button *ngFor="let type of brushTypes" ion-item (click)="setType(type.value)">{{type.label}}</button>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\pages\brush-type-popover\brush-type-popover.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["y" /* ViewController */]])
     ], BrushTypePopoverPage);
@@ -3386,42 +3384,42 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../components/tabs/layout-2/tabs-layout-2.module#TabsLayout2Module', name: 'TabsLayout2', segment: 'tabs-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/tabs/layout-3/tabs-layout-3.module#TabsLayout3Module', name: 'TabsLayout3', segment: 'tabs-layout-3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/aaplaunchlocation/aaplaunchlocation.module#AaplaunchlocationPageModule', name: 'AaplaunchlocationPage', segment: 'aaplaunchlocation', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/allcmetopiclist/allcmetopiclist.module#AllcmetopiclistPageModule', name: 'AllcmetopiclistPage', segment: 'allcmetopiclist', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/aaplaunchlocation/aaplaunchlocation.module#AaplaunchlocationPageModule', name: 'AaplaunchlocationPage', segment: 'aaplaunchlocation', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/channels/channels.module#ChannelsPageModule', name: 'ChannelsPage', segment: 'channels', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/bell-notification-list/bell-notification-list.module#BellNotificationListPageModule', name: 'BellNotificationListPage', segment: 'bell-notification-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/channel-list-tabs/channel-list-tabs.module#ChannelListTabsPageModule', name: 'ChannelListTabsPage', segment: 'channel-list-tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/channels/channels.module#ChannelsPageModule', name: 'ChannelsPage', segment: 'channels', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/drawon/drawon.module#DrawonPageModule', name: 'DrawonPage', segment: 'drawon', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/footer/footer.module#FooterPageModule', name: 'FooterPage', segment: 'footer', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/forgotpassword/forgotpassword.module#ForgotpasswordPageModule', name: 'ForgotpasswordPage', segment: 'forgotpassword', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/footer/footer.module#FooterPageModule', name: 'FooterPage', segment: 'footer', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/header/header.module#HeaderPageModule', name: 'HeaderPage', segment: 'header', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/intro/intro.module#IntroPageModule', name: 'IntroPage', segment: 'intro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/information-tab/information-tab.module#InformationTabModule', name: 'InformationTab', segment: 'information-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/information-video-details/information-video-details.module#InformationVideoDetailsPageModule', name: 'InformationVideoDetailsPage', segment: 'information-video-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-details-tabs/item-details-tabs.module#ItemDetailsPageTabsModule', name: 'ItemDetailsPageTabs', segment: 'item-details-tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/intro/intro.module#IntroPageModule', name: 'IntroPage', segment: 'intro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/manage-devices/manage-devices.module#ManageDevicesPageModule', name: 'ManageDevicesPage', segment: 'manage-devices', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/modal/modal.module#ModalPageModule', name: 'ModalPage', segment: 'modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-details-tabs/item-details-tabs.module#ItemDetailsPageTabsModule', name: 'ItemDetailsPageTabs', segment: 'item-details-tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mycv/mycv.module#MycvPageModule', name: 'MycvPage', segment: 'mycv', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mydownloads/mydownloads.module#MyDownloadPageModule', name: 'MyDownloadPage', segment: 'mydownloads', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/orientation-playlist-hcp/orientation-playlist-hcp.module#OrientationPlaylistHcpModule', name: 'OrientationPlaylistHcp', segment: 'orientation-playlist-hcp', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/information-video-details/information-video-details.module#InformationVideoDetailsPageModule', name: 'InformationVideoDetailsPage', segment: 'information-video-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/myfavorites/myfavorites.module#MyfavoritesPageModule', name: 'MyfavoritesPage', segment: 'myfavorites', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/orientation-playlist-hcp/orientation-playlist-hcp.module#OrientationPlaylistHcpModule', name: 'OrientationPlaylistHcp', segment: 'orientation-playlist-hcp', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mydownloads/mydownloads.module#MyDownloadPageModule', name: 'MyDownloadPage', segment: 'mydownloads', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/orientation-playlist-nonhcp/orientation-playlist-nonhcp.module#OrientationPlaylistNonHcpModule', name: 'OrientationPlaylistNonHcp', segment: 'orientation-playlist-nonhcp', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/plandetails/plandetails.module#PlandetailsPageModule', name: 'PlandetailsPage', segment: 'plandetails', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/qrcode/qrcode.module#QrcodePageModule', name: 'QrcodePage', segment: 'qrcode', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/playlist/playlist.module#PlaylistPageModule', name: 'PlaylistPage', segment: 'playlist', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signupwithapple/signupwithapple.module#SignupwithapplePageModule', name: 'SignupwithapplePage', segment: 'signupwithapple', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/qrcode/qrcode.module#QrcodePageModule', name: 'QrcodePage', segment: 'qrcode', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signupwithapple/signupwithapple.module#SignupwithapplePageModule', name: 'SignupwithapplePage', segment: 'signupwithapple', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signupwithfacebook/signupwithfacebook.module#SignupwithfacebookPageModule', name: 'SignupwithfacebookPage', segment: 'signupwithfacebook', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signupwithgoogle/signupwithgoogle.module#SignupwithgooglePageModule', name: 'SignupwithgooglePage', segment: 'signupwithgoogle', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signupwithsocialnoemail/signupwithsocialnoemail.module#SignupwithsocialnoemailPageModule', name: 'SignupwithsocialnoemailPage', segment: 'signupwithsocialnoemail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signupwithgoogle/signupwithgoogle.module#SignupwithgooglePageModule', name: 'SignupwithgooglePage', segment: 'signupwithgoogle', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/splashes/splashes.module#SplashesPageModule', name: 'SplashesPage', segment: 'splashes', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab-page-2/tab-page-2.module#TabPage2Module', name: 'TabPage2', segment: 'tab-page-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/upgrade-plan/upgrade-plan.module#UpgradePlanPageModule', name: 'UpgradePlanPage', segment: 'upgrade-plan', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tab-page-2/tab-page-2.module#TabPage2Module', name: 'TabPage2', segment: 'tab-page-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-list/video-list.module#VideoListPageModule', name: 'VideoListPage', segment: 'video-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video/video.module#VideoPageModule', name: 'VideoPage', segment: 'video', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-details/video-details.module#VideoDetailsPageModule', name: 'VideoDetailsPage', segment: 'video-details', priority: 'low', defaultHistory: [] },
@@ -5617,7 +5615,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\app\app.html"*/'\n\n<!-- <ion-split-pane when="md"> -->\n\n  <ion-menu [content]="content" *ngIf="params != null" persistent="true">\n\n    <!-- Menu Main Top -->\n\n    <!-- <ion-header padding background-size header-background-image class="back-color"\n\n    [ngStyle]="{\'background-image\': \'url(\' + params.background + \')\'}">\n\n      <ion-thumbnail>\n\n      </ion-thumbnail>\n\n       <h2 style="color: #e30808 !important;" item-title text-center>{{params.title}}</h2>\n\n    </ion-header> -->\n\n    <!-- Menu Main List -->\n\n    <!-- <ion-header>\n\n      <h2 style="color: #e30808 !important;" item-title text-center>{{params.title}}</h2>\n\n    </ion-header> -->\n\n\n\n    <ion-content class="menu custom-menu" style="background-color:#fff; min-height: 100% !important;opacity:2.6;">\n\n      <ion-list no-margin no-padding tappable class="menu_list">\n\n        <button  class="sidetrans boldtransition" menuClose ion-item  no-padding main-menu *ngFor="let p of pages" (click)="openPage(p)"  >\n\n        <ion-icon padding-left>\n\n          <i class="icon {{p.icon}}"></i>\n\n        </ion-icon>\n\n        {{p.title}}\n\n      </button>\n\n\n\n       \n\n    \n\n      </ion-list>\n\n    </ion-content>\n\n    <ion-footer class="bar-stable">\n\n        <ion-item nav-clear menu-close href="#" style="width: 100%; position:fixed;bottom:0; text-align: center;"><i style="color: #e30808 !important; font-size: 1.6em;" class="icon-footer-icon-mycv"></i> <p style="color: #0a0a0a !important;" item-title text-center>V {{app_version_number}}</p></ion-item>\n\n     \n\n    </ion-footer>\n\n  </ion-menu>\n\n  <!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n <!--  <ion-nav [root]="rootPage" #content main swipeBackEnabled="false"></ion-nav> -->\n\n  <ion-nav [root]="rootPage" #content  swipeBackEnabled="false" style=""></ion-nav>\n\n<!-- </ion-split-pane> -->\n\n\n\n\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\app\app.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\app\app.html"*/'\n\n<!-- <ion-split-pane when="md"> -->\n\n  <ion-menu [content]="content" *ngIf="params != null" persistent="true">\n\n    <!-- Menu Main Top -->\n\n    <!-- <ion-header padding background-size header-background-image class="back-color"\n\n    [ngStyle]="{\'background-image\': \'url(\' + params.background + \')\'}">\n\n      <ion-thumbnail>\n\n      </ion-thumbnail>\n\n       <h2 style="color: #e30808 !important;" item-title text-center>{{params.title}}</h2>\n\n    </ion-header> -->\n\n    <!-- Menu Main List -->\n\n    <!-- <ion-header>\n\n      <h2 style="color: #e30808 !important;" item-title text-center>{{params.title}}</h2>\n\n    </ion-header> -->\n\n\n\n    <ion-content class="menu custom-menu" style="background-color:#fff; min-height: 100% !important;opacity:2.6;">\n\n      <ion-list no-margin no-padding tappable class="menu_list">\n\n        <button  class="sidetrans boldtransition" menuClose ion-item  no-padding main-menu *ngFor="let p of pages" (click)="openPage(p)"  >\n\n        <ion-icon padding-left>\n\n          <i class="icon {{p.icon}}"></i>\n\n        </ion-icon>\n\n        {{p.title}}\n\n      </button>\n\n\n\n       \n\n    \n\n      </ion-list>\n\n    </ion-content>\n\n    <ion-footer class="bar-stable">\n\n        <ion-item nav-clear menu-close href="#" style="width: 100%; position:fixed;bottom:0; text-align: center;"><i style="color: #e30808 !important; font-size: 1.6em;" class="icon-footer-icon-mycv"></i> <p style="color: #0a0a0a !important;" item-title text-center>V {{app_version_number}}</p></ion-item>\n\n     \n\n    </ion-footer>\n\n  </ion-menu>\n\n  <!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n <!--  <ion-nav [root]="rootPage" #content main swipeBackEnabled="false"></ion-nav> -->\n\n  <ion-nav [root]="rootPage" #content  swipeBackEnabled="false" style=""></ion-nav>\n\n<!-- </ion-split-pane> -->\n\n\n\n\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\app\app.html"*/,
             providers: []
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__services_HttpService__["a" /* HttpService */],

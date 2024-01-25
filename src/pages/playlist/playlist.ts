@@ -159,8 +159,8 @@ export class PlaylistPage {
       onShare: function (item: any) {
         that.video_share_provider_object.sharePlaylistVideo(item);
       },
-      onPlay: function (item: any) {
-        var canShare = localStorage.getItem("canDownloadAccess");
+      onPlay: function (item: any, video: any) {
+        const index = item.items.findIndex(itm => itm.id === video.id);
 
         that.platform_object.ready().then(() => {
           var network_type = that.network_check_object.getNetworkType();
@@ -181,30 +181,7 @@ export class PlaylistPage {
           };
 
           switch (true) {
-            case canShare == "false" && item.is_paid == 1:
-              var confirmPopup = that.alert_controller_object.create({
-                title: "",
-                message:
-                  '<h4 style="color:#ffffff; text-align:center;">Upgrade required</h4><p style="color:#ffffff; text-align:center;font-weight:700;">Please upgrade to watch exclusive content.</p>',
-                enableBackdropDismiss: true,
-                buttons: [
-                  {
-                    text: "Upgrade",
-                    handler: () => {
-                      if (that.request_from == "profile_page") {
-                        that.navCtrl.push("UpgradePlanPage");
-                      } else {
-                        that.navCtrl.parent.parent.push("UpgradePlanPage");
-                      }
-                    },
-                  },
-                ],
-              });
-              confirmPopup.present();
-              break;
-            case canShare == "true" &&
-              item.is_paid == 1 &&
-              network_type == "none":
+            case network_type == "none":
               that.toast_controller_object
                 .create({
                   message: "You are now offline.",
@@ -213,10 +190,7 @@ export class PlaylistPage {
                 })
                 .present();
               break;
-            case canShare == "true" &&
-              item.is_paid == 1 &&
-              network_type != "none" &&
-              that.request_from == "profile_page":
+            case network_type != "none" && that.request_from == "profile_page":
               that.clevertap_object.recordEventWithNameAndProps(
                 "clickedOnPlaylist",
                 playlistParams
@@ -224,15 +198,12 @@ export class PlaylistPage {
               navCtrl.push("VideoDetailsPage", {
                 data: item,
                 type: "playlist",
-                index: 0,
+                index: index > -1 ? index : 0,
                 header: "hide",
                 sendTo: "Playlist",
               });
               break;
-            case canShare == "true" &&
-              item.is_paid == 1 &&
-              network_type != "none" &&
-              that.request_from != "profile_page":
+            case network_type != "none" && that.request_from != "profile_page":
               that.clevertap_object.recordEventWithNameAndProps(
                 "clickedOnPlaylist",
                 playlistParams
@@ -240,46 +211,7 @@ export class PlaylistPage {
               navCtrl.parent.parent.push("VideoDetailsPage", {
                 data: item,
                 type: "playlist",
-                index: 0,
-                header: "hide",
-                sendTo: "Playlist",
-              });
-              break;
-            case item.is_paid == 0 && network_type == "none":
-              that.toast_controller_object
-                .create({
-                  message: "You are now offline.",
-                  position: "bottom",
-                  duration: 5000,
-                })
-                .present();
-              break;
-            case item.is_paid == 0 &&
-              network_type != "none" &&
-              that.request_from == "profile_page":
-              that.clevertap_object.recordEventWithNameAndProps(
-                "clickedOnPlaylist",
-                playlistParams
-              );
-              navCtrl.push("VideoDetailsPage", {
-                data: item,
-                type: "playlist",
-                index: 0,
-                header: "hide",
-                sendTo: "Playlist",
-              });
-              break;
-            case item.is_paid == 0 &&
-              network_type != "none" &&
-              that.request_from != "profile_page":
-              that.clevertap_object.recordEventWithNameAndProps(
-                "clickedOnPlaylist",
-                playlistParams
-              );
-              navCtrl.parent.parent.push("VideoDetailsPage", {
-                data: item,
-                type: "playlist",
-                index: 0,
+                index: index > -1 ? index : 0,
                 header: "hide",
                 sendTo: "Playlist",
               });
@@ -1477,11 +1409,13 @@ export class PlaylistPage {
     );
   }
 
-  onEvent(event: string, item: any, e: any) {
+  onEvent(event: string, item: any, e: any, video: any) {
     if (e) {
       e.stopPropagation();
     }
-    if (this.events[event]) {
+    if(event == "onPlay" && video){
+      this.events[event](item, video);
+    } else if (this.events[event]) {
       this.events[event](item);
     }
   }

@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-CardioVisual/Pods-CardioVisual-resources.sh
+${PODS_ROOT}/FreshchatSDK/FreshchatSDK/FCResources.bundle
+${PODS_ROOT}/FreshchatSDK/FreshchatSDK/FreshchatModels.bundle
+${PODS_ROOT}/FreshchatSDK/FreshchatSDK/FCLocalization.bundle
+${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle

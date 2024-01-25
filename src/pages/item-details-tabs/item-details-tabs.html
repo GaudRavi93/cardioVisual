@@ -61,7 +61,7 @@
   <tabs-layout-2 [data]="params.data" [events]="params.events" [clrclass]="coloR" style="" *ngIf="parent_tab == 'information'">
   </tabs-layout-2>
 </div> 
-  <div [ngSwitch]="parent_tab" *ngIf="request_from == 'custom_playlist'">
+  <div [ngSwitch]="parent_tab" *ngIf="request_from == 'custom_playlist'" style="height: 100%;">
     <ion-content  ontouchstart="" class="customePlaylistContent" no-padding no-margin style="background-color: #ffffff;">
       <ion-grid  *ngIf="parent_tab == 'education'" style="margin-bottom:65px;">
         <ion-row *ngIf="data.education_item.length > 0">

@@ -1,0 +1,70 @@
+{
+    "declarations": {
+        "use_frameworks!": {
+            "declaration": "use_frameworks!",
+            "count": 3
+        }
+    },
+    "sources": {
+        "https://cdn.cocoapods.org/": {
+            "source": "https://cdn.cocoapods.org/",
+            "count": 4
+        },
+        "https://github.com/CleverTap/clevertap-ios-sdk.git": {
+            "source": "https://github.com/CleverTap/clevertap-ios-sdk.git",
+            "count": 1
+        },
+        "https://github.com/CocoaPods/Specs.git": {
+            "source": "https://github.com/CocoaPods/Specs.git",
+            "count": 1
+        }
+    },
+    "libraries": {
+        "Branch": {
+            "name": "Branch",
+            "spec": "~> 1.43.1",
+            "count": 1
+        },
+        "CleverTap-iOS-SDK": {
+            "name": "CleverTap-iOS-SDK",
+            "spec": "5.2.0",
+            "count": 1
+        },
+        "FBSDKCoreKit": {
+            "name": "FBSDKCoreKit",
+            "spec": "11.1.0",
+            "count": 1
+        },
+        "FBSDKLoginKit": {
+            "name": "FBSDKLoginKit",
+            "spec": "11.1.0",
+            "count": 1
+        },
+        "FBSDKShareKit": {
+            "name": "FBSDKShareKit",
+            "spec": "11.1.0",
+            "count": 1
+        },
+        "FreshchatSDK": {
+            "name": "FreshchatSDK",
+            "type": "podspec",
+            "spec": "4.1.5",
+            "count": 1
+        },
+        "GoogleSignIn": {
+            "name": "GoogleSignIn",
+            "spec": "~> 5.0.2",
+            "count": 1
+        },
+        "GoogleUtilities": {
+            "name": "GoogleUtilities",
+            "spec": "~> 7.2.2",
+            "count": 1
+        },
+        "OneSignalXCFramework": {
+            "name": "OneSignalXCFramework",
+            "spec": "5.0.2",
+            "count": 1
+        }
+    }
+}

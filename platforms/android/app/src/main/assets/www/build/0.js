@@ -41,7 +41,7 @@ var HeaderPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 753:
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49,7 +49,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QrcodePageModule", function() { return QrcodePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__qrcode__ = __webpack_require__(808);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__qrcode__ = __webpack_require__(809);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_header_module__ = __webpack_require__(726);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -515,7 +515,7 @@ var HeaderPage = /** @class */ (function () {
     HeaderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             //selector: 'page-header',
-            selector: '[clean-header]',template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\pages\header\header.html"*/'<ion-navbar hideBackButton class="search-center">\n\n  <div class="Row">\n    <div class="Column1">\n      <button  ion-button menuToggle  class="menuColor" *ngIf="!hideMenu"><ion-icon class="icon-hamburger-menu" style="font-size: 20px;color: black;"></ion-icon></button>\n\n      <div left *ngIf="isTabs" tappable (click)="doGoBack()" class="customIcon" >\n        <!-- <ion-icon class="" style="font-size: 1.5em;color: black;" ios="icon-backarrow" md="md-arrow-back" class="icon-backarrow"></ion-icon> -->\n        <ion-icon class="" style="font-size:2em;color: black;" class="customIcon" name="arrow-back"></ion-icon>\n      </div>\n    </div>\n    <div class="Column2" tappable (click)="gotoUpgradePlan()" style="font-size:20px;">\n      <span #upgradeIcon tappable class="forupgradeIcon"><i class="icon-upgrade subscription-upgrade-icon "></i></span>\n      <span #upgradeText class="subscription-upgrade-text effect3d">PRO</span>\n    </div>\n    <div class="Column3">\n      <input (keyup.enter)="searchInput(search)" class="search-input" type="text" placeholder="Search CardioVisual" [(ngModel)]="search">\n      <div tappable class="icon-search search-btn" (click)="searchInput(search)" style="font-size:20px; margin-left: 15px;"></div>\n      <!-- <div tappable class="icon-mic micClass" style="font-size: 20px;" (click)="getPermission()" style=""></div> -->\n    </div>\n    \n    <ion-badge class="cart-badge" *ngIf="messageUnSeen > 0 ">{{messageUnSeen}}</ion-badge>\n    <div tappable class="Column4" (click)="bellIconClick()">\n      <span class="icon-bell bellIconClass"></span>\n    </div>\n  </div>\n</ion-navbar>\n'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\pages\header\header.html"*/,
+            selector: '[clean-header]',template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\pages\header\header.html"*/'<ion-navbar hideBackButton class="search-center">\n\n\n\n  <div class="Row">\n\n    <div class="Column1">\n\n      <button  ion-button menuToggle  class="menuColor" *ngIf="!hideMenu"><ion-icon class="icon-hamburger-menu" style="font-size: 20px;color: black;"></ion-icon></button>\n\n\n\n      <div left *ngIf="isTabs" tappable (click)="doGoBack()" class="customIcon" >\n\n        <!-- <ion-icon class="" style="font-size: 1.5em;color: black;" ios="icon-backarrow" md="md-arrow-back" class="icon-backarrow"></ion-icon> -->\n\n        <ion-icon class="" style="font-size:2em;color: black;" class="customIcon" name="arrow-back"></ion-icon>\n\n      </div>\n\n    </div>\n\n    <div class="Column2" tappable (click)="gotoUpgradePlan()" style="font-size:20px;">\n\n      <span #upgradeIcon tappable class="forupgradeIcon"><i class="icon-upgrade subscription-upgrade-icon "></i></span>\n\n      <span #upgradeText class="subscription-upgrade-text effect3d">PRO</span>\n\n    </div>\n\n    <div class="Column3">\n\n      <input (keyup.enter)="searchInput(search)" class="search-input" type="text" placeholder="Search CardioVisual" [(ngModel)]="search">\n\n      <div tappable class="icon-search search-btn" (click)="searchInput(search)" style="font-size:20px; margin-left: 15px;"></div>\n\n      <!-- <div tappable class="icon-mic micClass" style="font-size: 20px;" (click)="getPermission()" style=""></div> -->\n\n    </div>\n\n    \n\n    <ion-badge class="cart-badge" *ngIf="messageUnSeen > 0 ">{{messageUnSeen}}</ion-badge>\n\n    <div tappable class="Column4" (click)="bellIconClick()">\n\n      <span class="icon-bell bellIconClass"></span>\n\n    </div>\n\n  </div>\n\n</ion-navbar>\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\pages\header\header.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Injector */]])
     ], HeaderPage);
@@ -1744,14 +1744,14 @@ exports.qrToImageData = function qrToImageData (imgData, qr, margin, scale, colo
 
 /***/ }),
 
-/***/ 808:
+/***/ 809:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QrcodePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_qrcode__ = __webpack_require__(809);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_qrcode__ = __webpack_require__(810);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_qrcode___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_qrcode__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_social_sharing__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_qr_scanner__ = __webpack_require__(326);
@@ -1998,7 +1998,7 @@ var QrcodePage = /** @class */ (function () {
     };
     QrcodePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-qrcode',template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\pages\qrcode\qrcode.html"*/'<!--\n  Generated template for the QrcodePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header clean-header  class="headerColor" [isTabs]="true" [hideMenu]="true"></ion-header> -->\n<ion-header class="headerColor">\n  <ion-navbar hideBackButton>\n    <div left tappable (click)="doGoBack()" class="customIcon" style="width:100%;">\n      <!-- <ion-icon class="" style="font-size: 1.5em;color: black;" ios="icon-backarrow" md="md-arrow-back" class="icon-backarrow"></ion-icon> -->\n      <ion-icon class="" style="font-size:2em;color: black;width:5%;float:left;" class="customIcon" name="arrow-back"></ion-icon>\n      <ion-title style="width:90%;text-align: center;">\n        <!-- <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 50px; width:50px;"/> -->\n        <!--  <p style="color: black; display: inline; position: relative;"> <b>SHARE</b> </p> -->\n        <b style="color: black;">{{headerTitle}}</b>\n      </ion-title>\n    </div>\n  </ion-navbar>\n  <!-- <ion-navbar class="suheader_qr" style="min-height: 56px;">\n      <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 50px; width:50px; left: 50;"/>\n      <p style="display: inline; background-color: transparent !important; color:#111111; height: 50px; width:50px;"> CardioVisual</p>\n  </ion-navbar> -->\n  <!-- <ion-navbar style="background-color:#ffffff !important;"> <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 52px; width:52px; margin-left: 140px !important; position: relative;"/> </ion-navbar> -->\n</ion-header>\n\n<!-- <ion-content padding class="">\n\n    <div class="qrcode-wrapper">\n        <div id="qrcode" style="text-align: center;"></div>\n        <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p>   \n    </div>        \n</ion-content> -->\n\n<ion-content style="background-color: #ffffff;">\n    <ion-card>\n        <ion-card-content>\n            <!-- <ion-input [(ngModel)]="code" type="text" placeholder="Enter code here"></ion-input>\n            <button ion-button block (click)="process();">Process</button> -->\n\n           <!--  <img *ngIf="displayQrCode()" [src]="generated" />\n             <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p> -->\n		    <div class="qrcode-wrapper">\n          <div class="" [innerHtml]="htmlToAdd"></div>\n\n	       <img *ngIf="displayQrCode()" [src]="generated" />\n	        <!-- <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p>   -->\n\n                <!--  <div style="text-align: center;" class="_orseperator" *ngIf="isShareOtherOption"> ------------ <b>OR</b> ------------ </div>\n\n                  <ion-grid style="background-color: transparent;" *ngIf="isShareOtherOption">\n                    <ion-row >\n                      <ion-col >\n                        <button ion-button icon-only (click)="shareSMS()" clear style="background-color: transparent; padding-right: 0px; color: #000000!important;">\n                            <ion-icon name="chatboxes"></ion-icon>\n                        </button>\n                      </ion-col>\n                      <ion-col >\n                        <button ion-button icon-only (click)="whatsappShare()" clear style="background-color: transparent; padding-right: 5px ; color: #25D366 !important;">\n                          <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>\n                        </button>\n                      </ion-col>\n                      <ion-col>\n                        <button ion-button icon-only (click)="facebookShare()" clear style="background-color: transparent; padding-right: 5px; color: #3B5998 !important;">\n                          <ion-icon  class="share-icon" name="logo-facebook"></ion-icon>\n                        </button>\n                      </ion-col>\n                      <ion-col>\n                        <button ion-button icon-only (click)="twitterShare()" clear style="background-color: transparent;  padding-right: 5px; color: #1DA1F2 !important;">\n                         <ion-icon class="share-icon" name="logo-twitter"></ion-icon>\n                        </button>\n                      </ion-col>\n                      <ion-col >\n                          <button ion-button icon-only (click)="emailShare()" clear style="background-color: transparent;  padding-right:0px; color: #DD4B39 !important;">\n                            <ion-icon class="share-icon" name="mail"></ion-icon>\n                        </button>\n                      </ion-col>\n                    </ion-row>\n                  </ion-grid> -->\n          <ion-col *ngIf="isShareOtherOption">\n            <button ion-button (click)="regularShare()" color="" clear style="background-color:#E74B37; height: 42px; width: 100%; color:#ffffff; padding-right: 0px !important;"><b>Share with Others</b>\n              <!-- <ion-icon class="share-icon" name="share"></ion-icon> -->\n            </button>\n          </ion-col> \n		    </div>    \n        </ion-card-content>\n    </ion-card>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\pages\qrcode\qrcode.html"*/,
+            selector: 'page-qrcode',template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\pages\qrcode\qrcode.html"*/'<!--\n\n  Generated template for the QrcodePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<!-- <ion-header clean-header  class="headerColor" [isTabs]="true" [hideMenu]="true"></ion-header> -->\n\n<ion-header class="headerColor">\n\n  <ion-navbar hideBackButton>\n\n    <div left tappable (click)="doGoBack()" class="customIcon" style="width:100%;">\n\n      <!-- <ion-icon class="" style="font-size: 1.5em;color: black;" ios="icon-backarrow" md="md-arrow-back" class="icon-backarrow"></ion-icon> -->\n\n      <ion-icon class="" style="font-size:2em;color: black;width:5%;float:left;" class="customIcon" name="arrow-back"></ion-icon>\n\n      <ion-title style="width:90%;text-align: center;">\n\n        <!-- <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 50px; width:50px;"/> -->\n\n        <!--  <p style="color: black; display: inline; position: relative;"> <b>SHARE</b> </p> -->\n\n        <b style="color: black;">{{headerTitle}}</b>\n\n      </ion-title>\n\n    </div>\n\n  </ion-navbar>\n\n  <!-- <ion-navbar class="suheader_qr" style="min-height: 56px;">\n\n      <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 50px; width:50px; left: 50;"/>\n\n      <p style="display: inline; background-color: transparent !important; color:#111111; height: 50px; width:50px;"> CardioVisual</p>\n\n  </ion-navbar> -->\n\n  <!-- <ion-navbar style="background-color:#ffffff !important;"> <img src="assets/CV-Red-logo-with-text-1024x1024.png" alt="" style="display: inline; height: 52px; width:52px; margin-left: 140px !important; position: relative;"/> </ion-navbar> -->\n\n</ion-header>\n\n\n\n<!-- <ion-content padding class="">\n\n\n\n    <div class="qrcode-wrapper">\n\n        <div id="qrcode" style="text-align: center;"></div>\n\n        <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p>   \n\n    </div>        \n\n</ion-content> -->\n\n\n\n<ion-content style="background-color: #ffffff;">\n\n    <ion-card>\n\n        <ion-card-content>\n\n            <!-- <ion-input [(ngModel)]="code" type="text" placeholder="Enter code here"></ion-input>\n\n            <button ion-button block (click)="process();">Process</button> -->\n\n\n\n           <!--  <img *ngIf="displayQrCode()" [src]="generated" />\n\n             <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p> -->\n\n		    <div class="qrcode-wrapper">\n\n          <div class="" [innerHtml]="htmlToAdd"></div>\n\n\n\n	       <img *ngIf="displayQrCode()" [src]="generated" />\n\n	        <!-- <p class="text-center">Scan the above QRcode and download the CardioVisual app.</p>   -->\n\n\n\n                <!--  <div style="text-align: center;" class="_orseperator" *ngIf="isShareOtherOption"> ------------ <b>OR</b> ------------ </div>\n\n\n\n                  <ion-grid style="background-color: transparent;" *ngIf="isShareOtherOption">\n\n                    <ion-row >\n\n                      <ion-col >\n\n                        <button ion-button icon-only (click)="shareSMS()" clear style="background-color: transparent; padding-right: 0px; color: #000000!important;">\n\n                            <ion-icon name="chatboxes"></ion-icon>\n\n                        </button>\n\n                      </ion-col>\n\n                      <ion-col >\n\n                        <button ion-button icon-only (click)="whatsappShare()" clear style="background-color: transparent; padding-right: 5px ; color: #25D366 !important;">\n\n                          <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>\n\n                        </button>\n\n                      </ion-col>\n\n                      <ion-col>\n\n                        <button ion-button icon-only (click)="facebookShare()" clear style="background-color: transparent; padding-right: 5px; color: #3B5998 !important;">\n\n                          <ion-icon  class="share-icon" name="logo-facebook"></ion-icon>\n\n                        </button>\n\n                      </ion-col>\n\n                      <ion-col>\n\n                        <button ion-button icon-only (click)="twitterShare()" clear style="background-color: transparent;  padding-right: 5px; color: #1DA1F2 !important;">\n\n                         <ion-icon class="share-icon" name="logo-twitter"></ion-icon>\n\n                        </button>\n\n                      </ion-col>\n\n                      <ion-col >\n\n                          <button ion-button icon-only (click)="emailShare()" clear style="background-color: transparent;  padding-right:0px; color: #DD4B39 !important;">\n\n                            <ion-icon class="share-icon" name="mail"></ion-icon>\n\n                        </button>\n\n                      </ion-col>\n\n                    </ion-row>\n\n                  </ion-grid> -->\n\n          <ion-col *ngIf="isShareOtherOption">\n\n            <button ion-button (click)="regularShare()" color="" clear style="background-color:#E74B37; height: 42px; width: 100%; color:#ffffff; padding-right: 0px !important;"><b>Share with Others</b>\n\n              <!-- <ion-icon class="share-icon" name="share"></ion-icon> -->\n\n            </button>\n\n          </ion-col> \n\n		    </div>    \n\n        </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\pages\qrcode\qrcode.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Injector */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_social_sharing__["a" /* SocialSharing */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_qr_scanner__["a" /* QRScanner */]])
     ], QrcodePage);
@@ -2009,12 +2009,12 @@ var QrcodePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 809:
+/***/ 810:
 /***/ (function(module, exports, __webpack_require__) {
 
-var QRCode = __webpack_require__(810)
-var CanvasRenderer = __webpack_require__(826)
-var SvgRenderer = __webpack_require__(827)
+var QRCode = __webpack_require__(811)
+var CanvasRenderer = __webpack_require__(827)
+var SvgRenderer = __webpack_require__(828)
 
 function renderCanvas (renderFunc, canvas, text, opts, cb) {
   var argsNum = arguments.length - 1
@@ -2071,23 +2071,23 @@ exports.qrcodedraw = function () {
 
 /***/ }),
 
-/***/ 810:
+/***/ 811:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(776)
 var Utils = __webpack_require__(774)
 var ECLevel = __webpack_require__(780)
-var BitBuffer = __webpack_require__(811)
-var BitMatrix = __webpack_require__(812)
-var AlignmentPattern = __webpack_require__(813)
-var FinderPattern = __webpack_require__(814)
-var MaskPattern = __webpack_require__(815)
+var BitBuffer = __webpack_require__(812)
+var BitMatrix = __webpack_require__(813)
+var AlignmentPattern = __webpack_require__(814)
+var FinderPattern = __webpack_require__(815)
+var MaskPattern = __webpack_require__(816)
 var ECCode = __webpack_require__(781)
-var ReedSolomonEncoder = __webpack_require__(816)
+var ReedSolomonEncoder = __webpack_require__(817)
 var Version = __webpack_require__(782)
-var FormatInfo = __webpack_require__(819)
+var FormatInfo = __webpack_require__(820)
 var Mode = __webpack_require__(775)
-var Segments = __webpack_require__(820)
+var Segments = __webpack_require__(821)
 var isArray = __webpack_require__(779)
 
 /**
@@ -2572,7 +2572,7 @@ exports.create = function create (data, options) {
 
 /***/ }),
 
-/***/ 811:
+/***/ 812:
 /***/ (function(module, exports) {
 
 function BitBuffer () {
@@ -2616,7 +2616,7 @@ module.exports = BitBuffer
 
 /***/ }),
 
-/***/ 812:
+/***/ 813:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(776)
@@ -2692,7 +2692,7 @@ module.exports = BitMatrix
 
 /***/ }),
 
-/***/ 813:
+/***/ 814:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -2782,7 +2782,7 @@ exports.getPositions = function getPositions (version) {
 
 /***/ }),
 
-/***/ 814:
+/***/ 815:
 /***/ (function(module, exports, __webpack_require__) {
 
 var getSymbolSize = __webpack_require__(774).getSymbolSize
@@ -2811,7 +2811,7 @@ exports.getPositions = function getPositions (version) {
 
 /***/ }),
 
-/***/ 815:
+/***/ 816:
 /***/ (function(module, exports) {
 
 /**
@@ -3031,11 +3031,11 @@ exports.getBestMask = function getBestMask (data, setupFormatFunc) {
 
 /***/ }),
 
-/***/ 816:
+/***/ 817:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(776)
-var Polynomial = __webpack_require__(817)
+var Polynomial = __webpack_require__(818)
 
 function ReedSolomonEncoder (degree) {
   this.genPoly = undefined
@@ -3097,11 +3097,11 @@ module.exports = ReedSolomonEncoder
 
 /***/ }),
 
-/***/ 817:
+/***/ 818:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(776)
-var GF = __webpack_require__(818)
+var GF = __webpack_require__(819)
 
 /**
  * Multiplies two polynomials inside Galois Field
@@ -3168,7 +3168,7 @@ exports.generateECPolynomial = function generateECPolynomial (degree) {
 
 /***/ }),
 
-/***/ 818:
+/***/ 819:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(776)
@@ -3247,7 +3247,7 @@ exports.mul = function mul (x, y) {
 
 /***/ }),
 
-/***/ 819:
+/***/ 820:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Utils = __webpack_require__(774)
@@ -3283,17 +3283,17 @@ exports.getEncodedBits = function getEncodedBits (errorCorrectionLevel, mask) {
 
 /***/ }),
 
-/***/ 820:
+/***/ 821:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Mode = __webpack_require__(775)
-var NumericData = __webpack_require__(821)
-var AlphanumericData = __webpack_require__(822)
-var ByteData = __webpack_require__(823)
-var KanjiData = __webpack_require__(824)
+var NumericData = __webpack_require__(822)
+var AlphanumericData = __webpack_require__(823)
+var ByteData = __webpack_require__(824)
+var KanjiData = __webpack_require__(825)
 var Regex = __webpack_require__(783)
 var Utils = __webpack_require__(774)
-var dijkstra = __webpack_require__(825)
+var dijkstra = __webpack_require__(826)
 
 /**
  * Returns UTF8 byte length
@@ -3620,7 +3620,7 @@ exports.rawSplit = function rawSplit (data) {
 
 /***/ }),
 
-/***/ 821:
+/***/ 822:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Mode = __webpack_require__(775)
@@ -3670,7 +3670,7 @@ module.exports = NumericData
 
 /***/ }),
 
-/***/ 822:
+/***/ 823:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Mode = __webpack_require__(775)
@@ -3736,7 +3736,7 @@ module.exports = AlphanumericData
 
 /***/ }),
 
-/***/ 823:
+/***/ 824:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(776)
@@ -3770,7 +3770,7 @@ module.exports = ByteData
 
 /***/ }),
 
-/***/ 824:
+/***/ 825:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Mode = __webpack_require__(775)
@@ -3831,7 +3831,7 @@ module.exports = KanjiData
 
 /***/ }),
 
-/***/ 825:
+/***/ 826:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4004,7 +4004,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 826:
+/***/ 827:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Utils = __webpack_require__(784)
@@ -4074,7 +4074,7 @@ exports.renderToDataURL = function renderToDataURL (qrData, canvas, options) {
 
 /***/ }),
 
-/***/ 827:
+/***/ 828:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Utils = __webpack_require__(784)

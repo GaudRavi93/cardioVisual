@@ -1,6 +1,6 @@
 webpackJsonp([34],{
 
-/***/ 739:
+/***/ 741:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntroPageModule", function() { return IntroPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(796);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var IntroPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 794:
+/***/ 796:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -131,7 +131,7 @@ var IntroPage = /** @class */ (function () {
     ], IntroPage.prototype, "slides", void 0);
     IntroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-intro',template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\pages\intro\intro.html"*/'<!--\n  Generated template for the IntroPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content>\n    <ion-slides pager="{{pagerShow}}" #slides (ionSlideDidChange)="slideChanged()"  direction="vertical" effect="fade">\n        <ion-slide *ngFor="let data of onboardingImgs; let i = index;" background-size [ngStyle]="{ \'background-image\': \'url(\'+ data.imageUrl +\')\' }">\n            \n        <button tappable ion-button button large class="animated next" color="primary" [hidden]="isLastSlide" (click)="next()">NEXT</button>    \n        </ion-slide>\n    </ion-slides>\n\n   <button tappable ion-button button large class="animated" color="primary" [hidden]="!isLastSlide" (click)="getStarted()" id="getStarted" [ngClass]="{\'fadeOut\' : buttonAnime == false}">{{ getStartedMsg }}</button>\n</ion-content>'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\pages\intro\intro.html"*/
+            selector: 'page-intro',template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\pages\intro\intro.html"*/'<!--\n\n  Generated template for the IntroPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-content>\n\n    <ion-slides pager="{{pagerShow}}" #slides (ionSlideDidChange)="slideChanged()"  direction="vertical" effect="fade">\n\n        <ion-slide *ngFor="let data of onboardingImgs; let i = index;" background-size [ngStyle]="{ \'background-image\': \'url(\'+ data.imageUrl +\')\' }">\n\n            \n\n        <button tappable ion-button button large class="animated next" color="primary" [hidden]="isLastSlide" (click)="next()">NEXT</button>    \n\n        </ion-slide>\n\n    </ion-slides>\n\n\n\n   <button tappable ion-button button large class="animated" color="primary" [hidden]="!isLastSlide" (click)="getStarted()" id="getStarted" [ngClass]="{\'fadeOut\' : buttonAnime == false}">{{ getStartedMsg }}</button>\n\n</ion-content>'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\pages\intro\intro.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["D" /* Injector */]])
     ], IntroPage);

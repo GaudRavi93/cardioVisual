@@ -73,8 +73,6 @@ export class RadientSettingsProvider {
 	}
 
 	setVideoSrcObject(videoData){
-		console.log('----------------------------------------------->',videoData);
-		
 		var settings = {
 			licenseKey: this.license_Key,
 			relatedUpNextOffset: 10,
@@ -91,8 +89,6 @@ export class RadientSettingsProvider {
     		pip: true, 
 			playlistData: videoData
 		};
-
-		console.log("=======================>",settings);
 		
 		var elementID = this.singlePlayerElementID;
 		this.rmp = new RadiantMP(elementID);

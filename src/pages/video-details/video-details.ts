@@ -454,8 +454,6 @@ export class VideoDetailsPage {
       var that = this;
       var frmbranch = that.nav_params_object.get('frmbranch');
       if (frmbranch == 'branchplaylist') {
-        // code...
-
         var playName = that.nav_params_object.get("playListName");
         that.playlistname = playName;
         that.data.playlist = that.data;
@@ -489,6 +487,13 @@ export class VideoDetailsPage {
             }
           });
         }
+
+        // Move the object to the beginning of the array
+        if (that.playlistindex > -1) {
+          const shiftedObject = brancharr.splice(that.playlistindex, 1)[0];
+          brancharr.unshift(shiftedObject);
+        }
+
         setTimeout(() => {
           that.radiant_setting_provider_object.data_set_array_of_objects_forPlaylist(brancharr);
           var playlistRmpContainer = document.getElementById('rmpPlayer');
@@ -539,6 +544,11 @@ export class VideoDetailsPage {
         });
 
         var arr = await this.createPlaylist();
+        // Move the object to the beginning of the array
+        if (that.playlistindex > -1) {
+          const shiftedObject = arr.splice(that.playlistindex, 1)[0];
+          arr.unshift(shiftedObject);
+        }
 
         setTimeout(() => {
 

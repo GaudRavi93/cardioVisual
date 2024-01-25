@@ -241,7 +241,7 @@
               tappable
               no-lines
               *ngFor="let item of group.items;"
-              (click)="onEvent('onPlay', group, $event)"
+              (click)="onEvent('onPlay', group, $event, item)"
               style="color: #fff; background-color: #e6e7e8; height: 150px"
             >
               <ion-thumbnail item-start no-margin class="rectanglImg">

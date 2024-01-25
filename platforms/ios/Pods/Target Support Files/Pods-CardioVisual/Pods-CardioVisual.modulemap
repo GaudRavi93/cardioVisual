@@ -1,0 +1,6 @@
+framework module Pods_CardioVisual {
+  umbrella header "Pods-CardioVisual-umbrella.h"
+
+  export *
+  module * { export * }
+}

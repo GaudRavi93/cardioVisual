@@ -1,6 +1,6 @@
 webpackJsonp([40],{
 
-/***/ 731:
+/***/ 730:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllcmetopiclistPageModule", function() { return AllcmetopiclistPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcmetopiclist__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcmetopiclist__ = __webpack_require__(785);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var AllcmetopiclistPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 786:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122,7 +122,7 @@ var AllcmetopiclistPage = /** @class */ (function () {
     };
     AllcmetopiclistPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-allcmetopiclist',template:/*ion-inline-start:"C:\Users\pc\Downloads\myaapp2\src\pages\allcmetopiclist\allcmetopiclist.html"*/'<!--\n  Generated template for the AllcmetopiclistPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar class="headerColor">\n    <ion-title>All Topic List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n    <!-- <ion-list>\n        <ion-item *ngFor="let grocery of groceries">{{grocery}}</ion-item>\n    </ion-list>-->\n    <ion-list> \n	    <ion-row>\n        <ion-item class="card card-1" *ngFor="let group of data;">\n          <div class = "">\n            <h4 class="divtext">{{group.title}}</h4>\n            <p class="divtext">{{group.description.slice(0,140)}}...</p>\n          </div>\n          <div style="" class="bottomDiv">\n            <div class="innerClass firsttext">{{group.total_Chapter}} Chapter&raquo;</div>\n            <div class="innerClass middletext">{{group.total_duration}}</div>\n            <div class="innerClass lasttest" (click)="startNow();">Start Now</div>\n          </div>\n        </ion-item>\n	    </ion-row>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\pc\Downloads\myaapp2\src\pages\allcmetopiclist\allcmetopiclist.html"*/,
+            selector: 'page-allcmetopiclist',template:/*ion-inline-start:"C:\Users\pc\Downloads\cardioVisual\src\pages\allcmetopiclist\allcmetopiclist.html"*/'<!--\n\n  Generated template for the AllcmetopiclistPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar class="headerColor">\n\n    <ion-title>All Topic List</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n\n\n    <!-- <ion-list>\n\n        <ion-item *ngFor="let grocery of groceries">{{grocery}}</ion-item>\n\n    </ion-list>-->\n\n    <ion-list> \n\n	    <ion-row>\n\n        <ion-item class="card card-1" *ngFor="let group of data;">\n\n          <div class = "">\n\n            <h4 class="divtext">{{group.title}}</h4>\n\n            <p class="divtext">{{group.description.slice(0,140)}}...</p>\n\n          </div>\n\n          <div style="" class="bottomDiv">\n\n            <div class="innerClass firsttext">{{group.total_Chapter}} Chapter&raquo;</div>\n\n            <div class="innerClass middletext">{{group.total_duration}}</div>\n\n            <div class="innerClass lasttest" (click)="startNow();">Start Now</div>\n\n          </div>\n\n        </ion-item>\n\n	    </ion-row>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\pc\Downloads\cardioVisual\src\pages\allcmetopiclist\allcmetopiclist.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
     ], AllcmetopiclistPage);

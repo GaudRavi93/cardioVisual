@@ -609,6 +609,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.plugins.sqlitePorter"
       ]
+    },
+    {
+      "id": "cordova-plugin-sign-in-with-apple.SignInWithApple",
+      "file": "plugins/cordova-plugin-sign-in-with-apple/www/sign-in-with-apple.js",
+      "pluginId": "cordova-plugin-sign-in-with-apple",
+      "clobbers": [
+        "cordova.plugins.SignInWithApple"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -648,6 +656,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-sqlite-storage": "6.1.0",
     "mx.ferreyra.callnumber": "0.0.2",
     "onesignal-cordova-plugin": "5.0.2",
-    "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.2"
+    "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.2",
+    "cordova-plugin-sign-in-with-apple": "0.1.2"
   };
 });
