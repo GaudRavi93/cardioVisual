@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = FreshchatSDK;
+			productName = FreshchatSDK;
 		};
 		CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */ = {
 			isa = PBXAggregateTarget;
@@ -27,6 +28,7 @@
 				9DFEBB7A02BBF0648BD737B1827D02F8 /* PBXTargetDependency */,
 			);
 			name = GoogleSignIn;
+			productName = GoogleSignIn;
 		};
 		F783E7E9F8591E6CF73ED67143335F50 /* OneSignalXCFramework */ = {
 			isa = PBXAggregateTarget;
@@ -37,6 +39,7 @@
 			dependencies = (
 			);
 			name = OneSignalXCFramework;
+			productName = OneSignalXCFramework;
 		};
 /* End PBXAggregateTarget section */
 
@@ -1817,7 +1820,7 @@
 		04C96F9AE7E7E7206CEB671E9B502E0A /* SDInternalMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDInternalMacros.m; path = SDWebImage/Private/SDInternalMacros.m; sourceTree = "<group>"; };
 		04D9762EB1FA58F366F06E75A6607C6D /* FBSDKDeviceDialogView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKDeviceDialogView.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Device/FBSDKDeviceDialogView.h; sourceTree = "<group>"; };
 		04FFE50A4CD7FFF43924A5C82C10C074 /* FBCoreKitBasicsImportForAEMKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBCoreKitBasicsImportForAEMKit.h; path = Sources/FBAEMKit/FBCoreKitBasicsImportForAEMKit.h; sourceTree = "<group>"; };
-		055F3848125AE528E9E7679DDC8B2D4D /* OneSignalFramework.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalFramework.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_XCFramework/OneSignalFramework.xcframework; sourceTree = "<group>"; };
+		055F3848125AE528E9E7679DDC8B2D4D /* OneSignalFramework.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalFramework.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_XCFramework/OneSignalFramework.xcframework; sourceTree = "<group>"; };
 		0566BBC81F9153D3E6D5EBD729B88119 /* GoogleUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-umbrella.h"; sourceTree = "<group>"; };
 		056E5E696118AD041E41D115CE82576E /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkURLSession.h; sourceTree = "<group>"; };
 		0582747C1814401DB7E0212797FC54AC /* GTMKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMKeychain.m; path = GTMAppAuth/Sources/GTMKeychain.m; sourceTree = "<group>"; };
@@ -1909,7 +1912,7 @@
 		13E5EDAEA442736E1A4A0F5ABE0CE9CE /* FBAEMNetworker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBAEMNetworker.m; path = Sources/FBAEMKit/FBAEMNetworker.m; sourceTree = "<group>"; };
 		13F3F5D226857471EFB1CD59D9DCEB02 /* CleverTapUTMDetail.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CleverTapUTMDetail.m; path = CleverTapSDK/CleverTapUTMDetail.m; sourceTree = "<group>"; };
 		143F3A7C8AF8834224DEEF333B505BAD /* ResourceBundle-SDWebImage-SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SDWebImage-SDWebImage-Info.plist"; sourceTree = "<group>"; };
-		147C3C21779654BA8AD4A3F144AEDF40 /* OneSignalOutcomes.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalOutcomes.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Outcomes/OneSignalOutcomes.xcframework; sourceTree = "<group>"; };
+		147C3C21779654BA8AD4A3F144AEDF40 /* OneSignalOutcomes.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalOutcomes.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Outcomes/OneSignalOutcomes.xcframework; sourceTree = "<group>"; };
 		14936AA2D3EFA5840C08E7C59AFB4E75 /* CleverTapInboxMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CleverTapInboxMessage.m; path = CleverTapSDK/Inbox/models/CleverTapInboxMessage.m; sourceTree = "<group>"; };
 		14A4ED1CCDEAC05CC0B81EDB403ABEDD /* FBSDKGraphRequestDataAttachment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestDataAttachment.h; path = FBSDKCoreKit/FBSDKCoreKit/GraphAPI/FBSDKGraphRequestDataAttachment.h; sourceTree = "<group>"; };
 		14BEF9BDC81D64460585B3AD436E6DD1 /* Pods-CardioVisual */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CardioVisual"; path = Pods_CardioVisual.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2403,7 +2406,7 @@
 		600AB98782E2906AD488A55DBBE19748 /* CTInterstitialViewController~iphoneland.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = "CTInterstitialViewController~iphoneland.xib"; path = "CleverTapSDK/InApps/resources/CTInterstitialViewController~iphoneland.xib"; sourceTree = "<group>"; };
 		60361ABCBD78F0D946E7BB08115140BA /* FBSDKAccessToken+AccessTokenProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKAccessToken+AccessTokenProtocols.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKAccessToken+AccessTokenProtocols.h"; sourceTree = "<group>"; };
 		6044513230E48374C4062370D76F4639 /* FBAEMKitVersions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAEMKitVersions.h; path = Sources/FBAEMKit/FBAEMKitVersions.h; sourceTree = "<group>"; };
-		608262171DB9297AD31EBC85C18987A2 /* OneSignalNotifications.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalNotifications.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Notifications/OneSignalNotifications.xcframework; sourceTree = "<group>"; };
+		608262171DB9297AD31EBC85C18987A2 /* OneSignalNotifications.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalNotifications.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Notifications/OneSignalNotifications.xcframework; sourceTree = "<group>"; };
 		608954FFFF397461E9958C81B9CF870F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
 		60A11D5FB93910214B9994784D20E3E4 /* FBSDKGameRequestURLProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGameRequestURLProvider.h; path = FBSDKShareKit/FBSDKShareKit/FBSDKGameRequestURLProvider.h; sourceTree = "<group>"; };
 		60D8336DB8A1AC6CF6EB21EF0E6AE312 /* SDCallbackQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCallbackQueue.h; path = SDWebImage/Core/SDCallbackQueue.h; sourceTree = "<group>"; };
@@ -2520,14 +2523,14 @@
 		7268746638865BDB6532FF9B36EA8197 /* FreshchatSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FreshchatSDK.h; path = FreshchatSDK/FreshchatSDK.h; sourceTree = "<group>"; };
 		7270053D0CD4BC891BEFEFBE9043C9DC /* GULObjectSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULObjectSwizzler.m; path = GoogleUtilities/ISASwizzler/GULObjectSwizzler.m; sourceTree = "<group>"; };
 		72C894E7A75D660959B113F67DD9C74E /* OIDExternalUserAgentIOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOS.h; path = Source/AppAuth/iOS/OIDExternalUserAgentIOS.h; sourceTree = "<group>"; };
-		73168E337CC1C9CB1A88186C78C79D0A /* OneSignalExtension.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalExtension.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Extension/OneSignalExtension.xcframework; sourceTree = "<group>"; };
+		73168E337CC1C9CB1A88186C78C79D0A /* OneSignalExtension.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalExtension.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Extension/OneSignalExtension.xcframework; sourceTree = "<group>"; };
 		7332B6A96844BDBBBD019E07ACF42EEE /* FBSDKSKAdNetworkEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKSKAdNetworkEvent.h; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/SKAdNetwork/FBSDKSKAdNetworkEvent.h; sourceTree = "<group>"; };
 		735D836D5CBEC048F9804242D463FBA1 /* SDImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoader.m; path = SDWebImage/Core/SDImageLoader.m; sourceTree = "<group>"; };
 		738E1B4FA9288279F7F126D7A76938A2 /* FBSDKGraphRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequest.h; path = FBSDKCoreKit/FBSDKCoreKit/GraphAPI/FBSDKGraphRequest.h; sourceTree = "<group>"; };
 		7399E9BA291E534428E49CD48BEBBE8C /* FBSDKLikeObjectType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKLikeObjectType.m; path = FBSDKShareKit/FBSDKShareKit/FBSDKLikeObjectType.m; sourceTree = "<group>"; };
 		73E2477D0C293F0C24130025E816CC97 /* CleverTap+ProductConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CleverTap+ProductConfig.h"; path = "CleverTapSDK/CleverTap+ProductConfig.h"; sourceTree = "<group>"; };
 		73F8E17F127DC93CA4980D93248B625F /* FBSDKGraphRequestDataAttachment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequestDataAttachment.m; path = FBSDKCoreKit/FBSDKCoreKit/GraphAPI/FBSDKGraphRequestDataAttachment.m; sourceTree = "<group>"; };
-		7441BB63B8C26BC58CCE91D3696A3009 /* AmazonRootCA1.cer */ = {isa = PBXFileReference; includeInIndex = 1; name = AmazonRootCA1.cer; path = CleverTapSDK/AmazonRootCA1.cer; sourceTree = "<group>"; };
+		7441BB63B8C26BC58CCE91D3696A3009 /* AmazonRootCA1.cer */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = AmazonRootCA1.cer; path = CleverTapSDK/AmazonRootCA1.cer; sourceTree = "<group>"; };
 		74A0D29CA6347E5D36C4C25740F34D6B /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/Core/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		74DF068B8F2F7FF26AA211B3BBC06C1B /* FBSDKLoginKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSDKLoginKit.modulemap; sourceTree = "<group>"; };
 		750780C035FE349EBF56DAB014905C5F /* FBAEMConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBAEMConfiguration.m; path = Sources/FBAEMKit/FBAEMConfiguration.m; sourceTree = "<group>"; };
@@ -2555,7 +2558,7 @@
 		781B5B453BA9FF976ED21973732C8EBB /* FBSDKServerConfigurationManager+ServerConfigurationProviding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKServerConfigurationManager+ServerConfigurationProviding.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKServerConfigurationManager+ServerConfigurationProviding.h"; sourceTree = "<group>"; };
 		784C30776AEBC6C5CD5EEE8946411108 /* Branch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Branch-umbrella.h"; sourceTree = "<group>"; };
 		78625463E4B381F510F5D4E035FDD535 /* FBSDKWebViewAppLinkResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKWebViewAppLinkResolver.m; path = FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKWebViewAppLinkResolver.m; sourceTree = "<group>"; };
-		78670519EF5592386435A2AE2B3079F2 /* OneSignalCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalCore.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Core/OneSignalCore.xcframework; sourceTree = "<group>"; };
+		78670519EF5592386435A2AE2B3079F2 /* OneSignalCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalCore.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Core/OneSignalCore.xcframework; sourceTree = "<group>"; };
 		78710AD658E3EABE983A2C809FBEF64E /* CTHeaderViewController~iphoneland.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = "CTHeaderViewController~iphoneland.xib"; path = "CleverTapSDK/InApps/resources/CTHeaderViewController~iphoneland.xib"; sourceTree = "<group>"; };
 		787E1579BC0C22A9E5E14B965CB2A307 /* BNCConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BNCConfig.m; path = "Branch-SDK/BNCConfig.m"; sourceTree = "<group>"; };
 		78C5436E48BB55E05FFA3163E3D0237A /* BNCNetworkService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BNCNetworkService.m; path = "Branch-SDK/BNCNetworkService.m"; sourceTree = "<group>"; };
@@ -2687,7 +2690,7 @@
 		90010B22550A1BFE9648CA3BF27AA7B0 /* GTMSessionFetcher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTMSessionFetcher.modulemap; sourceTree = "<group>"; };
 		9030CC6276B5EAA50D8D4BCD53A42906 /* FBSDKCodelessParameterComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKCodelessParameterComponent.m; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/Codeless/FBSDKCodelessParameterComponent.m; sourceTree = "<group>"; };
 		9031248F95606A3FC1A137C6D08FAA2E /* LoginConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginConfiguration.swift; path = FBSDKLoginKit/FBSDKLoginKit/Swift/LoginConfiguration.swift; sourceTree = "<group>"; };
-		905E773FCE5E128BD202EB79CE28828E /* FBSDKModelManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKModelManager.mm; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/ML/FBSDKModelManager.mm; sourceTree = "<group>"; };
+		905E773FCE5E128BD202EB79CE28828E /* FBSDKModelManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FBSDKModelManager.mm; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/ML/FBSDKModelManager.mm; sourceTree = "<group>"; };
 		90E92E1DB38A16B1B47FCE1B52F3F774 /* CTValidationResultStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CTValidationResultStack.h; path = CleverTapSDK/CTValidationResultStack.h; sourceTree = "<group>"; };
 		9126C4DCA27A3E6DEB8D0C5F8336F696 /* FBSDKCrashShield+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKCrashShield+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/Instrument/CrashReport/FBSDKCrashShield+Internal.h"; sourceTree = "<group>"; };
 		91513105B0F32438C4262CF54EB52759 /* FBSDKGateKeeperManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGateKeeperManager.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKGateKeeperManager.m; sourceTree = "<group>"; };
@@ -2751,7 +2754,7 @@
 		983FD4EFB2CF91FBDB1A93F357449247 /* GTMKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMKeychain.h; path = GTMAppAuth/Sources/Public/GTMAppAuth/GTMKeychain.h; sourceTree = "<group>"; };
 		985634463C1CCF8A3CB0EC8A7BB87758 /* FBSDKMessageDialog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKMessageDialog.h; path = FBSDKShareKit/FBSDKShareKit/FBSDKMessageDialog.h; sourceTree = "<group>"; };
 		989B806735EF251E570E072438BB242F /* FreshchatSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FreshchatSDK.release.xcconfig; sourceTree = "<group>"; };
-		98A3380FFDF71430A3B0C5AA24D0D33B /* FBSDKModelParser.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKModelParser.mm; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/ML/FBSDKModelParser.mm; sourceTree = "<group>"; };
+		98A3380FFDF71430A3B0C5AA24D0D33B /* FBSDKModelParser.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FBSDKModelParser.mm; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/ML/FBSDKModelParser.mm; sourceTree = "<group>"; };
 		98AA5E5119E9E02997340BFAFDD92AEB /* FBSDKFeatureManager+FeatureDisabling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKFeatureManager+FeatureDisabling.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/FeatureManager/FBSDKFeatureManager+FeatureDisabling.h"; sourceTree = "<group>"; };
 		98EC79BFCD9F58B53F1F600E34073627 /* NSBundle+InfoDictionaryProviding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+InfoDictionaryProviding.h"; path = "Sources/FBSDKCoreKit_Basics/include/NSBundle+InfoDictionaryProviding.h"; sourceTree = "<group>"; };
 		98FD99BE3E3B575281E61472E5EE5FA9 /* FBSDKServerConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKServerConfiguration.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKServerConfiguration.h; sourceTree = "<group>"; };
@@ -2776,7 +2779,7 @@
 		9D3BFFFCDA85CB854FF281FB53E262B3 /* FBSDKLoginManager+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKLoginManager+Internal.h"; path = "FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginManager+Internal.h"; sourceTree = "<group>"; };
 		9D8438936DD89B90856473B9289A2AFC /* FBSDKBasicUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBasicUtility.h; path = Sources/FBSDKCoreKit_Basics/include/FBSDKBasicUtility.h; sourceTree = "<group>"; };
 		9D8BE4E5403647789DFA2725E2C429C9 /* FBSDKCrashObserving.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKCrashObserving.h; path = Sources/FBSDKCoreKit_Basics/include/FBSDKCrashObserving.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D970C46DB5E854612D3058AE0D273FA /* FBSDKTimeSpentData+SourceApplicationTracking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKTimeSpentData+SourceApplicationTracking.h"; path = "FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/FBSDKTimeSpentData+SourceApplicationTracking.h"; sourceTree = "<group>"; };
 		9DBB3464D94BFC9ADF652E4A3BFBC911 /* GTMSessionFetcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-umbrella.h"; sourceTree = "<group>"; };
 		9DCF37FFF01B9F12D435366877BD17DB /* CTInAppFCManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CTInAppFCManager.h; path = CleverTapSDK/CTInAppFCManager.h; sourceTree = "<group>"; };
@@ -2929,7 +2932,7 @@
 		B89A69A0CCA60CE37D679CAF3563621A /* CTVar-Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CTVar-Internal.h"; path = "CleverTapSDK/ProductExperiences/CTVar-Internal.h"; sourceTree = "<group>"; };
 		B9377F634843BEC860F1A9FA284BC725 /* OIDExternalUserAgentSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentSession.h; path = Source/AppAuthCore/OIDExternalUserAgentSession.h; sourceTree = "<group>"; };
 		B94C9F6408B127022A673FF9E308638E /* SDWebImageOptionsProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageOptionsProcessor.m; path = SDWebImage/Core/SDWebImageOptionsProcessor.m; sourceTree = "<group>"; };
-		B95005AF5554D7459DE781472AE288EF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = WebImage/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		B95005AF5554D7459DE781472AE288EF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = WebImage/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		B97D8902857B8E01C793756FBF08AF8B /* FBSDKLoginKit+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKLoginKit+Internal.h"; path = "FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginKit+Internal.h"; sourceTree = "<group>"; };
 		B9C00C0850222951E06CCA24C6CBEC6F /* FBSDKAppEventsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppEventsConfiguration.h; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/FBSDKAppEventsConfiguration.h; sourceTree = "<group>"; };
 		B9C68B7BB842541ACEA2BB51F83C4302 /* FBLPromise+Validate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Validate.m"; path = "Sources/FBLPromises/FBLPromise+Validate.m"; sourceTree = "<group>"; };
@@ -2954,7 +2957,7 @@
 		BD2793F0ACACFD9AC2C2FF3885F150DE /* FBSDKShareButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKShareButton.m; path = FBSDKShareKit/FBSDKShareKit/FBSDKShareButton.m; sourceTree = "<group>"; };
 		BD30F742F03C48E601825C81F9530DCD /* OIDFieldMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDFieldMapping.h; path = Source/AppAuthCore/OIDFieldMapping.h; sourceTree = "<group>"; };
 		BD55EE2ECCFCA6BBCF80309BCC84C515 /* CTUriHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CTUriHelper.m; path = CleverTapSDK/CTUriHelper.m; sourceTree = "<group>"; };
-		BD5A6C43C128D016DA90BE59BC8B4870 /* OneSignalUser.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalUser.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_User/OneSignalUser.xcframework; sourceTree = "<group>"; };
+		BD5A6C43C128D016DA90BE59BC8B4870 /* OneSignalUser.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalUser.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_User/OneSignalUser.xcframework; sourceTree = "<group>"; };
 		BD6D8B335F44F92D81A25269AE412070 /* CleverTapInboxMessageContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CleverTapInboxMessageContent.m; path = CleverTapSDK/Inbox/models/CleverTapInboxMessageContent.m; sourceTree = "<group>"; };
 		BD713E61C2F2036EFABC659A32D398EA /* BNCSpotlightService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BNCSpotlightService.h; path = "Branch-SDK/BNCSpotlightService.h"; sourceTree = "<group>"; };
 		BDAB4B0193A967FC454C9CA8B07B23D1 /* FBSDKPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKPermission.h; path = FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKPermission.h; sourceTree = "<group>"; };
@@ -3009,7 +3012,7 @@
 		C506965E0403FC62841BCFE8C720DB80 /* FBAEMEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBAEMEvent.m; path = Sources/FBAEMKit/FBAEMEvent.m; sourceTree = "<group>"; };
 		C50B80385F0C942A51FADFFFCECB2655 /* OIDRegistrationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationRequest.h; path = Source/AppAuthCore/OIDRegistrationRequest.h; sourceTree = "<group>"; };
 		C536CDEA47EFB0399D4DAC0C575F76DB /* BranchShareLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BranchShareLink.h; path = "Branch-SDK/BranchShareLink.h"; sourceTree = "<group>"; };
-		C570BA415F4927894E96160527BB8F59 /* OneSignalInAppMessages.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalInAppMessages.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_InAppMessages/OneSignalInAppMessages.xcframework; sourceTree = "<group>"; };
+		C570BA415F4927894E96160527BB8F59 /* OneSignalInAppMessages.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalInAppMessages.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_InAppMessages/OneSignalInAppMessages.xcframework; sourceTree = "<group>"; };
 		C571C40E09276712E84259C500383621 /* FacebookSDK.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = FacebookSDK.strings; path = zh_Hant_HK.lproj/FacebookSDK.strings; sourceTree = "<group>"; };
 		C5AABB4346D9D266295BD1B905154109 /* FBLPromiseError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromiseError.h; path = Sources/FBLPromises/include/FBLPromiseError.h; sourceTree = "<group>"; };
 		C6FA1DA13A4B9A766DFE37B238129526 /* FBSDKMeasurementEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKMeasurementEvent.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKMeasurementEvent.m; sourceTree = "<group>"; };
@@ -3145,7 +3148,7 @@
 		DBDE62413C3A00D463C76DDB36374CAA /* FBSDKLogo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKLogo.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKLogo.m; sourceTree = "<group>"; };
 		DCBDAB207E2B8C408C8999079A04451C /* FBLPromise+Delay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Delay.m"; path = "Sources/FBLPromises/FBLPromise+Delay.m"; sourceTree = "<group>"; };
 		DCC8B919064018CA37E18E3DA013E285 /* CTImageInAppViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CTImageInAppViewController.m; path = CleverTapSDK/InApps/CTImageInAppViewController.m; sourceTree = "<group>"; };
-		DCFC0617F1718B22D1D5CFA40B42DA83 /* OneSignalLocation.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalLocation.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Location/OneSignalLocation.xcframework; sourceTree = "<group>"; };
+		DCFC0617F1718B22D1D5CFA40B42DA83 /* OneSignalLocation.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalLocation.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_Location/OneSignalLocation.xcframework; sourceTree = "<group>"; };
 		DD151BAD895FEC805A02E63D7CB5D022 /* FBSDKModelManager+IntegrityProcessing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKModelManager+IntegrityProcessing.h"; path = "FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/ML/FBSDKModelManager+IntegrityProcessing.h"; sourceTree = "<group>"; };
 		DD234F5D8B781DCF898BE6AD22EEAE14 /* FBSDKAuthenticationToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAuthenticationToken.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAuthenticationToken.h; sourceTree = "<group>"; };
 		DD2E5F814EDEA85939B5C8474667E0E8 /* FBSDKSKAdNetworkReporter+AppEventsReporter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKSKAdNetworkReporter+AppEventsReporter.h"; path = "FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/SKAdNetwork/FBSDKSKAdNetworkReporter+AppEventsReporter.h"; sourceTree = "<group>"; };
@@ -3178,7 +3181,7 @@
 		E0DD78980D91D4300A0E9553AC741BF4 /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/Core/SDImageCacheConfig.m; sourceTree = "<group>"; };
 		E12D24E2925CFA5553CBD79BF4A1E40D /* BNCApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BNCApplication.h; path = "Branch-SDK/BNCApplication.h"; sourceTree = "<group>"; };
 		E14648E8CB8C00DEF3F3DB3D23743B1F /* FBSDKButtonImpressionTracking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKButtonImpressionTracking.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKButtonImpressionTracking.h; sourceTree = "<group>"; };
-		E1668867C2A259BEE5D934EC9D3AD718 /* OneSignalOSCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OneSignalOSCore.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_OSCore/OneSignalOSCore.xcframework; sourceTree = "<group>"; };
+		E1668867C2A259BEE5D934EC9D3AD718 /* OneSignalOSCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = OneSignalOSCore.xcframework; path = iOS_SDK/OneSignalSDK/OneSignal_OSCore/OneSignalOSCore.xcframework; sourceTree = "<group>"; };
 		E19A44DFDA15760736ADB693E485476A /* OIDRegistrationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationResponse.h; path = Source/AppAuthCore/OIDRegistrationResponse.h; sourceTree = "<group>"; };
 		E1A05E5862D09B189736372C3520D331 /* FBSDKAppEventsDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppEventsDeviceInfo.h; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/FBSDKAppEventsDeviceInfo.h; sourceTree = "<group>"; };
 		E1AE56B615DC6F4154D934D6C6B6AAB5 /* AppAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.debug.xcconfig; sourceTree = "<group>"; };
@@ -3533,7 +3536,6 @@
 				B0DECFAE1CCF2166AD0E4928FDFAC1BF /* GTMOAuth2KeychainCompatibility.m */,
 				6A4F915F2CC7BCD8E9C621E5BA22783D /* Support Files */,
 			);
-			name = GTMAppAuth;
 			path = GTMAppAuth;
 			sourceTree = "<group>";
 		};
@@ -3575,7 +3577,6 @@
 				F066546AD24C3E51EC81563DCBD13751 /* Share */,
 				2D68E312CF74FC6F628003232EAB19BA /* Support Files */,
 			);
-			name = FBSDKShareKit;
 			path = FBSDKShareKit;
 			sourceTree = "<group>";
 		};
@@ -3705,7 +3706,6 @@
 				E996D17933F17366CEC4E9A7CE988E77 /* OneSignalUser */,
 				9E3A96D3A7835B5668EE284AF512466B /* Support Files */,
 			);
-			name = OneSignalXCFramework;
 			path = OneSignalXCFramework;
 			sourceTree = "<group>";
 		};
@@ -3820,7 +3820,6 @@
 				292C62D5B2A88DAFCF04676BFBF19102 /* AEM */,
 				1016631F6CD2371CC5CA5A4DFC1F3855 /* Support Files */,
 			);
-			name = FBAEMKit;
 			path = FBAEMKit;
 			sourceTree = "<group>";
 		};
@@ -4034,7 +4033,6 @@
 				208B39CAFBF3A066526FA1ED8C38B83C /* Resources */,
 				332A7A3486F1424BB9D5434BD356008A /* Support Files */,
 			);
-			name = "CleverTap-iOS-SDK";
 			path = "CleverTap-iOS-SDK";
 			sourceTree = "<group>";
 		};
@@ -4229,7 +4227,6 @@
 				13BFCB93D9DCC3190D788578A648C3D2 /* Resources */,
 				AF9A2DF798B8974FA9BFD7C037030925 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -4252,7 +4249,6 @@
 				CDE83D4CA926497F9FB825ABD552754B /* Resources */,
 				1231FD845B1A497C67639B1A844A76BE /* Support Files */,
 			);
-			name = FreshchatSDK;
 			path = FreshchatSDK;
 			sourceTree = "<group>";
 		};
@@ -4262,7 +4258,6 @@
 				542A9612F14570E51CB0E514A6677C80 /* Basics */,
 				041E4DBDE411AEB124A566828A020EDE /* Support Files */,
 			);
-			name = FBSDKCoreKit_Basics;
 			path = FBSDKCoreKit_Basics;
 			sourceTree = "<group>";
 		};
@@ -4411,7 +4406,6 @@
 				F05447ED7F50D92235D1B283D21C9C28 /* FBLPromises.h */,
 				9BFA7576853FCB2BD805B432618421CE /* Support Files */,
 			);
-			name = PromisesObjC;
 			path = PromisesObjC;
 			sourceTree = "<group>";
 		};
@@ -5013,7 +5007,6 @@
 				981996CDE3B588970B7CF082D8A53210 /* ExternalUserAgent */,
 				999D89483986C61C1D853DAA158AE60E /* Support Files */,
 			);
-			name = AppAuth;
 			path = AppAuth;
 			sourceTree = "<group>";
 		};
@@ -5033,7 +5026,6 @@
 				68C975F3E4BE77570B3D8ED37363979F /* Login */,
 				3D9D668678D35215ABB4A3FCC962E752 /* Support Files */,
 			);
-			name = FBSDKLoginKit;
 			path = FBSDKLoginKit;
 			sourceTree = "<group>";
 		};
@@ -5277,7 +5269,6 @@
 				CB66B2B47F00A81D00B111FB45F86EEB /* SwizzlerTestHelpers */,
 				9FD7E0617C52EA3CD4D1763635657A46 /* UserDefaults */,
 			);
-			name = GoogleUtilities;
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
@@ -5394,7 +5385,6 @@
 				95C00A26C7271EC3C1D475F5C7731C6D /* Core */,
 				4DC3A4DE1187E99AE30A1151E8CD76F1 /* Support Files */,
 			);
-			name = FBSDKCoreKit;
 			path = FBSDKCoreKit;
 			sourceTree = "<group>";
 		};
@@ -5436,7 +5426,6 @@
 				D1D1036AC4E569FF3D9D0D4F3475E8C0 /* Resources */,
 				B1EA511B7A14D3AAA6A01B33276EAF8E /* Support Files */,
 			);
-			name = GoogleSignIn;
 			path = GoogleSignIn;
 			sourceTree = "<group>";
 		};
@@ -5603,7 +5592,6 @@
 				15722CEA5432838C6F7CFD57238095D8 /* UIViewController+Branch.m */,
 				48586A00C96633CDE6A9E73A0783B6CF /* Support Files */,
 			);
-			name = Branch;
 			path = Branch;
 			sourceTree = "<group>";
 		};
@@ -5749,7 +5737,6 @@
 				490879F08B28683010F605CFCA2E46F2 /* Core */,
 				DBCC77789E84BC260DAEB8271090BEA0 /* Support Files */,
 			);
-			name = GTMSessionFetcher;
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
@@ -9715,6 +9702,7 @@
 			children = (
 				2171455143E8C1B36A0ED6209DFB18A9 /* Inbox.xcdatamodel */,
 			);
+			currentVersion = 2171455143E8C1B36A0ED6209DFB18A9 /* Inbox.xcdatamodel */;
 			name = Inbox.xcdatamodeld;
 			path = CleverTapSDK/Inbox/resources/Inbox.xcdatamodeld;
 			sourceTree = "<group>";

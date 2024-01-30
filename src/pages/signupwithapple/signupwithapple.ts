@@ -1,5 +1,5 @@
 import { Component, Injector} from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Modal, ModalOptions, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Modal, ModalOptions, ModalController, ToastController } from 'ionic-angular';
 import { IonicSelectableComponent } from 'ionic-selectable';
 import { CountryandrolelistProvider } from '../../providers/countryandrolelist/countryandrolelist';
 import { LoadingService } from '../../services/loading-service';
@@ -66,6 +66,7 @@ export class SignupwithapplePage {
 	clevertap_object: CleverTap;
 	device_object: Device;
 	popup_user_type:any;
+	toast_controller_object: ToastController;
 	constructor(public navCtrl: NavController,public injector: Injector) {
 		this.country_and_role_list_provider_object = injector.get<CountryandrolelistProvider>(CountryandrolelistProvider);
 		this.loading_service_object = injector.get<LoadingService>(LoadingService);
@@ -76,6 +77,7 @@ export class SignupwithapplePage {
 		this.storage_object = injector.get<Storage>(Storage);
 		this.in_app_browser_object = injector.get<InAppBrowser>(InAppBrowser);
 		this.modal_controllar_object = injector.get<ModalController>(ModalController);
+		this.toast_controller_object = injector.get<ToastController>(ToastController);
 		this.clevertap_object = new CleverTap();
 		this.device_object = injector.get<Device>(Device);
 
@@ -199,7 +201,11 @@ export class SignupwithapplePage {
 				});
 				confirmalert.present();
 				confirmalert.onDidDismiss((alertData) => {
-
+					this.toast_controller_object.create({
+						message: 'Fill in the fields below and click the submit button to continue.',
+						position: 'top',
+						duration: 3000
+					}).present();
 					if (this.popup_user_type == "1") {
 						this.doctorports = this.country_and_role_list_provider_object.getOnlyDoctorRoles();
 					}else if (this.popup_user_type == "5") {
@@ -419,11 +425,11 @@ export class SignupwithapplePage {
 		localStorage.setItem('userliveId',data[0].id);
 		this.syncLocalDB(data[0].userRoleId);
 		this.insertUpdateLocalDB(data[0], password);
-		this.loading_service_object.hide();
 		this.userType = data[0].userRoleId;
 		//console.log('this.userType--> login success-->'+this.userType);
 		this.userRoleparams = (this.userType == 1) ?  "doctor" : "patient";
 		this.http_service_object.getPoweredByData(this.userRoleparams).subscribe(results => {
+			this.loading_service_object.hide();
 			//console.log('results-->'+JSON.stringify(results));
 			var that = this;
 			var splash_data = [];

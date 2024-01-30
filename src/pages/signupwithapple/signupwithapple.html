@@ -22,7 +22,7 @@
             </div>
             <div class="error text-center">{{error_msg}}</div>
             <p class="text-center">             
-              <button class="loginBtn loginBtn--apple" style="" (click)="onAppleSignIn()">
+              <button class="loginBtn loginBtn--apple" [disabled]="appleDetails ? true : false" (click)="onAppleSignIn()">
                   <ion-icon name="logo-apple" slot="start" class="appleLogo"></ion-icon>
                   <b style="text-align: center;" class="appleLoginText">Sign in with Apple</b>
               </button>

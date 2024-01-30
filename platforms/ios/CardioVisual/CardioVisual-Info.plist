@@ -17,60 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>5.1.23</string>
+	<string>5.1.27</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>5.1.23</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>NSMainNibFile</key>
-	<string/>
-	<key>NSMainNibFile~ipad</key>
-	<string/>
-	<key>UILaunchStoryboardName</key>
-	<string>CDVLaunchScreen</string>
-	<key>UIRequiresFullScreen</key>
-	<true/>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>m.facebook.com</key>
-			<dict/>
-			<key>graph.facebook.com</key>
-			<dict/>
-			<key>api.facebook.com</key>
-			<dict/>
-			<key>fbcdn.net</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-			<key>akamaihd.net</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-			<key>accounts.google.com</key>
-			<dict/>
-		</dict>
-	</dict>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -107,30 +56,117 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb494264524828488</string>
-				
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb494264524828488</string>
 			</array>
 		</dict>
 	</array>
-	<key>branch_key</key>
-	<string>key_live_pjyCJPU2PsimJxYZhu0SnfgeFziMzVJC</string>
-	<key>branch_app_domain</key>
-	<string>app.cardiovisual.com</string>
+	<key>CFBundleVersion</key>
+	<string>5.1.27</string>
 	<key>CleverTapAccountID</key>
 	<string>888-989-K54Z</string>
+	<key>CleverTapRegion</key>
+	<string></string>
 	<key>CleverTapToken</key>
 	<string>cbc-bbb</string>
-	<key>CleverTapRegion</key>
-	<string/>
-	<key>FacebookAppID</key>
-	<string>494264524828488</string>
-	<key>FacebookDisplayName</key>
-	<string>CardioVisual</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<true/>
-	<key>FacebookHybridAppEvents</key>
-	<string>false</string>
 	<key>FacebookAdvertiserIDCollectionEnabled</key>
 	<true/>
+	<key>FacebookAppID</key>
+	<string>494264524828488</string>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>FacebookDisplayName</key>
+	<string>CardioVisual</string>
+	<key>FacebookHybridAppEvents</key>
+	<string>false</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -138,25 +174,72 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>accounts.google.com</key>
+			<dict/>
+			<key>akamaihd.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>api.facebook.com</key>
+			<dict/>
+			<key>fbcdn.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>graph.facebook.com</key>
+			<dict/>
+			<key>m.facebook.com</key>
+			<dict/>
+		</dict>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>The camera is used to scan QR codes.</string>
+	<key>NSMainNibFile</key>
+	<string></string>
+	<key>NSMainNibFile~ipad</key>
+	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Request to use Microphone</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Request to use Speech Recognition</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>This app requires photo library access to function properly.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requires photo library access to function properly.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Request to use Speech Recognition</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
 	</array>
-	
-	
-	
-	
-	
-	
+	<key>UILaunchStoryboardName</key>
+	<string>CDVLaunchScreen</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>branch_app_domain</key>
+	<string>app.cardiovisual.com</string>
+	<key>branch_key</key>
+	<string>key_live_pjyCJPU2PsimJxYZhu0SnfgeFziMzVJC</string>
 </dict>
 </plist>
